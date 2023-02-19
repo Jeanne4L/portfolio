@@ -6,8 +6,10 @@
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <meta name="description" content="">
 
-        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
         <title>Sandra Petereau - Portfolio</title>
+        <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
@@ -19,7 +21,7 @@
                 <i class="close-cross hidden"></i>
                 <i class="menu-icon"></i>
 
-                <nav class="menu">
+                <nav class="menu hidden">
                     <ul>
                         <li>
                             <a href="#projects">
@@ -44,9 +46,9 @@
             </div>
         </header>   
 
-        <div class="overlay"></div>
+        <div class="overlay hidden"></div>
 
-        <section>
+        <section class="about">
             <div class="container">
                 <img src="images/profile__photo.avif" alt="Photo de Sandra Petereau">
 
@@ -54,17 +56,23 @@
                     <h1>Sandra Petereau</h1>
                     <h2>Développeuse web</h2>
 
-                    <a href="#contact">
-                        me contacter
-                        <div class="arrow"></div>
-                    </a>
+                    <div class="btn--arrow">
+                        <a href="#contact">
+                            me contacter
+                        </a>
+                        <div class="arrow">
+                            <div class="line"></div>
+                            <div class="chevron"></div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Mes projets</h2>
+        <section id="projects">
             <div class="container">
+                <h2>Mes projets</h2>
+
                 <a href="https://jeanne4l.github.io/oc-booki/" aria-label="Aller sur le site Booki">
                     <figure>
                         <div class="img-container">
@@ -167,18 +175,26 @@
                 </a>
             </div>
         </section>
-        <section>
-            <h2>Envie d'en savoir plus ?</h2>
+
+        <section class="more">
             <div class="container">
-                <a href="career.html">
-                    voir mon parcours
-                    <div class="arrow"></div>
-                </a>
+                <h2>Envie d'en savoir plus ?</h2>
+
+                <div class="btn--arrow">
+                    <a href="career.html">
+                        voir mon parcours
+                    </a>
+                    <div class="arrow">
+                        <div class="line"></div>
+                        <div class="chevron"></div>
+                    </div>
+                </div>
             </div>
         </section>
-        <section>
-            <h2>Contactez-moi !</h2>
+        <section id="contact">
             <div class="container">
+                <h2>Contactez-moi</h2>
+                
                 <form action="php/form-res.php" method="post">
                     <label for="name">Nom *</label>
                     <input type="text" id="name" name="name" aria-required="true" required>
