@@ -153,6 +153,7 @@ header img {
 
 .btn--arrow {
 	display: inline-block;
+    margin-top: 40px;
 }
 .btn--arrow a {
 	margin-right: 8px;
@@ -179,6 +180,9 @@ header img {
 	right: 0;
 }
 
+.about {
+    padding-bottom: 30px;
+}
 .presentation h1, .presentation h2 {
     font-size: 2.2rem;
     text-align: left;
@@ -188,6 +192,7 @@ header img {
 }
 .presentation h2 {
     text-transform: none;
+    margin: 0;
 }
 
 #projects {
@@ -196,8 +201,9 @@ header img {
 figure {
     margin: 0 0 40px 0;
 }
-figure img {
+.project__img {
     height: 250px;
+    width: 100%;
 }
 figure .img-container {
     position: relative;
