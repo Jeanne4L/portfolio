@@ -10,6 +10,7 @@
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     
         <link rel="stylesheet" href="style.css">
+        <script src="script.js" async></script>
     </head>
     <body>
         <header>
@@ -20,6 +21,7 @@
 
                 <i class="close-cross hidden"></i>
                 <i class="menu-icon"></i>
+
 
                 <nav class="menu hidden">
                     <ul>
@@ -48,7 +50,7 @@
 
         <div class="overlay hidden"></div>
 
-        <section class="about">
+        <section class="about" id="top">
             <div class="container">
                 <img src="images/profile__photo.avif" alt="Photo de Sandra Petereau">
 
@@ -209,10 +211,18 @@
                     <label for="message">Message *</label>
                     <textarea cols="30" rows="10" id="message" name="message" aria-required="true" required></textarea> 
 
+                    <label for="check-number">3+4 ? *</label>
+                    <input type="number" id="check-number" name="check-number" aria-required="true" required> 
+                    <input type="hidden" id="check" aria-hidden="true">
+
                     <input type="submit" value="envoyer" class="btn">
                 </form>
             </div>
         </section>
+
+        <a href="#top" aria-label="retour haut de page">
+            <i class="anchor-up hidden"></i>
+        </a>
 
         <footer>
             <a href="https://github.com/Jeanne4L" target="_blank" aria-label="lien github">
