@@ -5,8 +5,10 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <title>Sandra Petereau - Leslie Fessel</title>
+        <title>Sandra Petereau - Parcours</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
@@ -19,7 +21,7 @@
                 <i class="close-cross hidden"></i>
                 <i class="menu-icon"></i>
 
-                <nav class="menu">
+                <nav class="menu hidden">
                     <ul>
                         <li>
                             <a href="#beginning">
@@ -44,24 +46,28 @@
             </div>
         </header>   
 
-        <main>
+        <div class="overlay hidden"></div>
+
+        <main class="career">
             <section>
-                <h1>Mon parcours</h1>
-                <p>
-                    Vous avez déjà eu une passion qui vous fait vous lever le matin et pour laquelle vous feriez n'importe quoi ?
-                </p>
-                <p>
-                    Moi non.
-               </p> 
-                <p>
-                    Mais ça me laisse du temps pour en chercher une et ça tombe bien j'adore ça.
-                    Continuez à lire, vous verrez par vous-même.
-                </p>
+                <div class="container">
+                    <h1>Mon parcours</h1>
+                    <p>
+                        Vous avez déjà eu une passion qui vous fait vous lever le matin et pour laquelle vous feriez n'importe quoi ?
+                    </p>
+                    <p>
+                        Moi non.
+                   </p> 
+                    <p>
+                        Mais ça me laisse du temps pour en chercher une et ça tombe bien j'adore ça.
+                        Continuez à lire, vous verrez par vous-même.
+                    </p>
+                </div>
             </section>
 
-            <section>
-                <h2>Le commencement</h2>
-                <div class="container">
+            <section id="beginning">
+                <h2>Le commencement <i class="chevron-up hidden"></i><i class="chevron-down" tabindex="0" aria-label="afficher le contenu" role="button"></i></h2>
+                <div class="container--left">
                     <p>
                         J’ai été élevée avec un principe que je résumerai en reprenant les mots d'Albert Einstein, « la connaissance s’acquiert par l’expérience ». Un principe que j’ai appliqué à tous les aspects de ma vie.
                     </p>
@@ -85,23 +91,25 @@
                 </div>
             </section>
 
-            <section>
-                <h2>Rebondissement</h2>
-                <div class="container">
+            <section id="twist">
+                <h2>Rebondissement <i class="chevron-up hidden"></i><i class="chevron-down" tabindex="0" aria-label="afficher le contenu" role="button"></i></h2>
+                <div class="container--left">
                     <p>
                         Après une filière générale et théorique, je me suis tournée vers une voie plus spécialisée et me permettant d’acquérir une expérience professionnelle.
                         <br>
                         Encore une fois, j’ai suivi mon instinct d’indécise en puissance pour choisir la filière la plus générale, le <span class="job" id="degree" tabindex="0">commerce</span>.
                     </p>
+
                     <div class="job-div degree hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="degree-modal__content" aria-describedby="degree-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="degree-modal__content">
+                        <div class="job-div__details" id="degree-modal__content">
                             <h3>Bac Pro commerce</h3>
                             <p>CFA, Blois</p>
                         </div>
-                        <p id="degree-modal__date">20<span>14</span></p>
+                        <p id="degree-modal__date" class="job-div__date">20<span>14</span></p>
                     </div>
+
                     <p>
                         C’était parti pour deux ans d’apprentissage aux <span class="job" id="super-u" tabindex="0">Services U</span> et c’était génial ! Un poste polyvalent, comme moi.
                         <br>
@@ -111,7 +119,7 @@
                     <div class="job-div super-u hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="superu-modal__content" aria-describedby="superu-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="superu-modal__content">
+                        <div class="job-div__details" id="superu-modal__content">
                             <h3>Super U</h3>
                             <p>Conseillère Services U</p>
                             <ul>
@@ -119,7 +127,7 @@
                                 <li>Location de véhicules</li>
                             </ul>
                         </div>
-                        <p id="superu-modal__date">20<span>12</span>-20<span>14</span></p>
+                        <p id="superu-modal__date" class="job-div__date">20<span>12</span>-20<span>14</span></p>
                     </div>
 
                     <p class="third-p">
@@ -131,7 +139,7 @@
                     <div class="job-div foir-fouille hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="foirfouille-modal__content" aria-describedby="foirfouille-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="foirfouille-modal__content">
+                        <div class="job-div__details" id="foirfouille-modal__content">
                             <h3>La Foir'Fouille</h3>
                             <p>Employée de vente</p>
                             <ul>
@@ -139,12 +147,12 @@
                                 <li>Encaissement</li>
                             </ul>
                         </div>
-                        <p id="foirfouille-modal__date">20<span>15</span></p>
+                        <p id="foirfouille-modal__date" class="job-div__date">20<span>15</span></p>
                     </div>
                     <div class="job-div centrakor hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="centrakor-modal__content" aria-describedby="centrakor-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="centrakor-modal__content">
+                        <div class="job-div__details" id="centrakor-modal__content">
                             <h3>Centrakor</h3>
                             <p>Employée de vente</p>
                             <ul>
@@ -152,12 +160,12 @@
                                 <li>Gestion de rayon</li>
                             </ul>
                         </div>
-                        <p id="centrakor-modal__date">2018-2019</p>
+                        <p id="centrakor-modal__date" class="job-div__date">2018-2019</p>
                     </div>
                     <div class="job-div biocoop hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="biocoop-modal__content" aria-describedby="biocoop-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="biocoop-modal__content">
+                        <div class="job-div__details" id="biocoop-modal__content">
                             <h3>Biocoop</h3>
                             <p>Employée de rayon</p>
                             <ul>
@@ -165,37 +173,39 @@
                                 <li>Réapprovisionnement</li>
                             </ul>
                         </div>
-                        <p id="biocoop-modal__date">20<span>19</span>-20<span>22</span></p>
+                        <p id="biocoop-modal__date" class="job-div__date">20<span>19</span>-20<span>22</span></p>
                     </div>
+
                     <div class="job-div center-parcs hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="centerparcs-modal__content" aria-describedby="centerparcs-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="centerparcs-modal__content">
+                        <div class="job-div__details" id="centerparcs-modal__content">
                             <h3>Center Parcs</h3>
                             <p>Agent d'entretien</p>
                             <ul>
                                 <li>Nettoyage des cottages</li>
                             </ul>
                         </div>
-                        <p id="centerparcs-modal__date">20<span>16</span></p>
+                        <p id="centerparcs-modal__date" class="job-div__date">20<span>16</span></p>
                     </div>
+
                     <div class="job-div marco-polo hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="marcopolo-modal__content" aria-describedby="marcopolo-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="marcopolo-modal__content">
+                        <div class="job-div__details" id="marcopolo-modal__content">
                             <h3>Marco Polo</h3>
                             <p>Agent de conditionnement</p>
                             <ul>
                                 <li>Conditionnement des sushis</li>
                             </ul>
                         </div>
-                        <p id="marcopolo-modal__date">20<span>16</span>-20<span>17</span></p>
+                        <p id="marcopolo-modal__date" class="job-div__date">20<span>16</span>-20<span>17</span></p>
                     </div>
-                    <div class="job-div st-michel hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="stmichel-modal__content" aria-describedby="stmichel-modal__date">
 
+                    <div class="job-div st-michel hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="stmichel-modal__content" aria-describedby="stmichel-modal__date">
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="stmichel-modal__content">
+                        <div class="job-div__details" id="stmichel-modal__content">
                             <h3>St-Michel</h3>
                             <p>Agent de conditionnement</p>
                             <ul>
@@ -203,7 +213,7 @@
                                 <li>Préparation des palettes</li>
                             </ul>
                         </div>
-                        <p id="stmichel-modal__date">20<span>15</span>-20<span>16</span></p>
+                        <p id="stmichel-modal__date" class="job-div__date">20<span>15</span>-20<span>16</span></p>
                     </div>
 
                     <p class="fourth-p">
@@ -220,9 +230,9 @@
                 </div>
             </section>
 
-            <section>
-                <h2>Nouveau départ</h2>
-                <div class="container">
+            <section id="new-start">
+                <h2>Nouveau départ <i class="chevron-up hidden"></i><i class="chevron-down" tabindex="0" aria-label="afficher le contenu" role="button"></i></h2>
+                <div class="container--left">
                     <p>
                         Eh oui, je ne suis pas une passionnée d’informatique depuis mon plus jeune âge mais aujourd'hui j'adore ça.
                         <br>
@@ -241,7 +251,7 @@
 
                         <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
 
-                        <div class="job__details" id="oc-modal__content">
+                        <div class="job-div__details" id="oc-modal__content">
                             <h3>Prép'Apprentissage</h3>
                             <p>Openclassrooms</p>
                             <ul>
@@ -251,7 +261,7 @@
                                 <li>Affichage dynamique avec JS</li>
                             </ul>
                         </div>
-                        <p id="oc-modal__date">05/<span>22</span>-09/<span>22</span></p>
+                        <p id="oc-modal__date" class="job-div__date">05/<span>22</span>-09/<span>22</span></p>
                     </div>
 
                     <p>Écrirez-vous le prochain chapitre ?</p>
@@ -267,6 +277,7 @@
                     </div>
                 </div>
             </section>
+            <h2 class="to-be-continued">À suivre ...</h2>
         </main>
         
         <a href="#top" aria-label="retour haut de page">

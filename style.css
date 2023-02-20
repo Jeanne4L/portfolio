@@ -1,23 +1,11 @@
 @font-face {
-    font-family: 'walkway_semiboldregular';
-    src: url('font/walkway/walkway_semibold-webfont.eot');
-    src: url('font/walkway/walkway_semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/walkway/walkway_semibold-webfont.woff2') format('woff2'),
-         url('font/walkway/walkway_semibold-webfont.woff') format('woff'),
-         url('font/walkway/walkway_semibold-webfont.ttf') format('truetype'),
-         url('font/walkway/walkway_semibold-webfont.svg#walkway_semiboldregular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-@font-face {
-    font-family: 'walkway_ultraboldregular';
-    src: url('font/walkway/walkway_ultrabold-webfont.eot');
-    src: url('font/walkway/walkway_ultrabold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('font/walkway/walkway_ultrabold-webfont.woff2') format('woff2'),
-         url('font/walkway/walkway_ultrabold-webfont.woff') format('woff'),
-         url('font/walkway/walkway_ultrabold-webfont.ttf') format('truetype'),
-         url('font/walkway/walkway_ultrabold-webfont.svg#walkway_ultraboldregular') format('svg');
+    font-family: 'hindlight';
+    src: url('font/hind/hind-light-webfont.eot');
+    src: url('font/hind/hind-light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('font/hind/hind-light-webfont.woff2') format('woff2'),
+         url('font/hind/hind-light-webfont.woff') format('woff'),
+         url('font/hind/hind-light-webfont.ttf') format('truetype'),
+         url('font/hind/hind-light-webfont.svg#hindlight') format('svg');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -28,14 +16,19 @@ body {
 }
 
 * {
-    font-family: 'walkway_semiboldregular', sans-serif;
+    font-family: 'hindlight', sans-serif;
+    font-weight: normal;
     color: #333333;
+    box-sizing: border-box;
 }
-h1, h3, .languages p, label, footer a {
-    font-family: 'walkway_ultraboldregular', sans-serif;
+h1, h3, .languages p, .job-div__details h3, .career span:not(.job-div span) {
+    font-weight: bold;
 }
 h2, header li a, footer a {
     text-transform: uppercase;
+}
+h1 {
+    font-size: 2rem;
 }
 h1, h2 {
     text-align: center; 
@@ -44,25 +37,25 @@ h2 {
     margin: 0 0 30px 0;
 }
 
-.languages p, label {
+.languages p, label, .career span, .job-div__details h3 {
     color: #007980;
 }
 
 a {
     text-decoration: none;
 }
-ul {
+ul:not(.job-div__details ul) {
     padding: 0;
     margin: 0;
 }
-li {
+li:not(.job-div__details li) {
     list-style-type: none;
 }
 
 section {
     padding: 50px 0;
 }
-section .container, .presentation, header .container {
+section .container, .presentation, header .container, main {
     width: 90%;
     margin: auto;
 }
@@ -139,6 +132,7 @@ header img {
 }
 
 .close-cross, .close-cross::before {
+    display: inline-block;
 	width: 17px;
 	height: 2px;
 	background-color: #333333;
@@ -156,8 +150,8 @@ header img {
     margin-top: 40px;
 }
 .btn--arrow a {
-	margin-right: 8px;
-    font-size: 1.2rem;
+	margin-right: 10px;
+    font-size: 1.1rem;
 }
 .arrow {
 	position: relative;
@@ -171,8 +165,8 @@ header img {
 	background-color: #333333;
 }
 .chevron {
-	width: 5px;
-	height: 5px;
+    width: 8px;
+    height: 8px;
 	border-right: solid 2px #333333;
 	border-top: solid 2px #333333;
 	transform: rotate(45deg);
@@ -184,7 +178,7 @@ header img {
     padding-bottom: 30px;
 }
 .presentation h1, .presentation h2 {
-    font-size: 2.2rem;
+    font-size: 2rem;
     text-align: left;
 } 
 .presentation h1 {
@@ -220,10 +214,10 @@ figure .img-container {
     text-align: center;
 }
 figure h3 {
-    margin: 0;
+    margin: 5px 0 0 0;
     font-size: 1rem;
 }
-figure h4 {
+figure p {
     margin-top: 5px;
 }
 
@@ -280,6 +274,9 @@ form p {
     color: white;
     font-size: 1.1rem;
 }
+label {
+    font-size: 0.9rem;
+}
 
 footer {
     text-align: center;
@@ -289,6 +286,100 @@ footer {
 footer a {
     margin: 0 5px;
 }
+
+.career {
+    text-align: center;
+}
+.career p:not(.job-div p) {
+    line-height: 25px;
+}
+.career h1 {
+    margin-bottom: 50px;
+}
+#beginning, #twist, #new-start {
+    padding: 0;
+}
+#beginning, #twist, #new-start, #beginning h2, #twist h2, #new-start h2, .to-be-continued {
+    text-align: left;
+}
+#beginning h2, #twist h2, #new-start h2 {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+#new-start p:last-of-type {
+    margin: 40px 0 0 0;
+}
+#new-start .btn--arrow {
+    margin-bottom: 20px;
+}
+.container--left {
+    border-left: solid 1px #333333;
+    padding: 1px 10px 1px 20px;
+}
+.to-be-continued {
+    margin: 20px 0 50px 0;
+}
+.chevron-down, .chevron-up {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-right: solid 1.5px #333333;
+    border-top: solid 1.5px #333333;
+    margin-left: 10px;
+}
+.chevron-down {
+    transform: rotate(135deg);
+}
+.chevron-up {
+    transform: rotate(-45deg);
+}
+
+.job-div {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 70%;
+    min-height: 150px;
+    padding: 15px;
+    background-color: white;
+    z-index: 6;
+    display: flex;
+    flex-direction: column;
+
+}
+.job-div .close-cross {
+    position: absolute;
+    right: 15px;
+    top: 20px;
+}
+.job-div li {
+    font-size: 0.9rem;
+}
+.job-div__date {
+    text-align: right;
+    font-size: 2.5rem;
+    margin: 0;
+    color: rgba(51,51,51, 0.6);
+}
+.job-div__details {
+    flex: 1;
+    margin-top: 20px;
+}
+.job-div__details h3 {
+    margin-bottom: 5px;
+}
+.job-div__details p {
+    margin-top: 5px;
+}
+.job-div__details h3, .job-div__details p {
+    font-size: 1.2rem;
+}
+.job-div__details ul {
+    padding-left: 25px;
+}
+
 
 .hidden, header nav {
     display: none;
