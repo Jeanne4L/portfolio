@@ -84,3 +84,56 @@ function checkInputValue() {
         };
     });
 };
+
+// get id of clicked job span and display assigned div
+let jobDetails = document.querySelectorAll('.job');
+
+for(let i=0; i<jobDetails.length; i++) {
+    let isDisplayedDiv = false;
+
+    jobDetails[i].onclick = function(e) {
+        e.stopPropagation();
+
+        let elementId = this.getAttribute('id');
+        let div = document.querySelector('.'+ elementId);
+        let closeModalBtn = div.querySelector('.close-cross');
+
+        displayJobDivDetails(isDisplayedDiv, div, closeModalBtn);
+    };
+};
+
+function displayJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
+    overlay.classList.remove('hidden');
+    div.classList.remove('hidden');
+    closeModalBtn.focus();
+    isDisplayedDiv = true;
+
+    hideJobDivDetails(isDisplayedDiv, div, closeModalBtn);
+};
+
+function hideJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
+    // keep focus into div
+    if(isDisplayedDiv) {
+        closeModalBtn.onblur = () => {
+            closeModalBtn.focus();
+        }
+        // close div with escape key, close button or click off the div
+        document.onkeydown = function(e) {
+            if (e.key == 'Escape') {
+                overlay.classList.add('hidden');
+                div.classList.add('hidden');
+                isDisplayedDiv = false;
+            }
+        };
+        document.body.addEventListener('click', ()=> {
+            overlay.classList.add('hidden');
+            div.classList.add('hidden');
+            isDisplayedDiv = false;
+        });
+        closeModalBtn.addEventListener('click', ()=> {
+            overlay.classList.add('hidden');
+            div.classList.add('hidden');
+            isDisplayedDiv = false;
+        })
+    };
+};

@@ -1,3 +1,20 @@
+@keyframes display-underline {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+    }
+}
+@keyframes hide-underline {
+    0% {
+        transform: scaleX(1);
+    }
+    100% {
+        transform: scaleX(0);
+    }
+}
+
 @font-face {
     font-family: 'hindlight';
     src: url('font/hind/hind-light-webfont.eot');
@@ -55,7 +72,7 @@ li:not(.job-div__details li) {
 section {
     padding: 50px 0;
 }
-section .container, .presentation, header .container, main {
+section .container, .presentation, header .container, main, .photos h2 {
     width: 90%;
     margin: auto;
 }
@@ -102,6 +119,22 @@ header img {
 .menu li {
     margin-bottom: 20px;
     text-align: center;
+}
+.underline {
+    margin-bottom: -2px;
+    width: 100%;
+    height: 1.5px;
+    background: rgba(0,121,128, 0.8);
+    transform-origin: right;
+    animation: hide-underline 300ms linear forwards;
+}
+.menu a:hover {
+    color: #007980;
+    margin-top: 2px;
+}
+.menu li a:hover > .underline {
+    transform-origin: left;
+    animation: display-underline 300ms linear forwards;
 }
 
 .overlay {
@@ -174,27 +207,47 @@ header img {
 	position: absolute;
 	right: 0;
 }
+.btn--arrow:hover > .arrow {
+    transform-origin: left;
+    /* animation: display-underline 300ms linear forwards; */
+}
 
 .about {
     padding-bottom: 30px;
+}
+.about img {
+    max-width: 400px;
+    max-height: 397px;
+}
+.about .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.presentation {
+    margin-top: 20px;
 }
 .presentation h1, .presentation h2 {
     font-size: 2rem;
     text-align: left;
 } 
 .presentation h1 {
-    margin: 10px 0 8px 0;
+    margin: 15px 0 8px 0;
 }
 .presentation h2 {
     text-transform: none;
     margin: 0;
 }
 
+.photos h2 {
+    margin-bottom: 30px;
+}
 #projects {
     padding-bottom: 10px;
 }
 figure {
-    margin: 0 0 40px 0;
+    margin: 0 auto 40px auto;
+    max-width: 450px;
 }
 .project__img {
     height: 250px;
@@ -249,6 +302,7 @@ form {
     max-width: 540px;
     display: flex;
     flex-direction: column;
+    margin: auto;
 }
 input, textarea {
     padding: 10px;
@@ -320,26 +374,26 @@ footer a {
 }
 
 .career {
-    text-align: center;
+    text-align: justify;
 }
 .career p:not(.job-div p) {
     line-height: 25px;
 }
 .career h1 {
-    margin-bottom: 50px;
+    margin-bottom: 70px;
+}
+.introduction .container {
+    width: 100%;
 }
 #beginning, #twist, #new-start {
     padding: 0;
-}
-#beginning, #twist, #new-start, #beginning h2, #twist h2, #new-start h2, .to-be-continued {
-    text-align: left;
 }
 #beginning h2, #twist h2, #new-start h2 {
     margin: 20px 0;
     display: flex;
     align-items: center;
 }
-#new-start p:last-of-type {
+#new-start p:last-of-type:not(.job-div p) {
     margin: 40px 0 0 0;
 }
 #new-start .btn--arrow {
@@ -373,6 +427,7 @@ footer a {
     left: 50%;
     transform: translate(-50%,-50%);
     width: 70%;
+    max-width: 460px;
     min-height: 150px;
     padding: 15px;
     background-color: white;
@@ -387,7 +442,7 @@ footer a {
     top: 20px;
 }
 .job-div li {
-    font-size: 0.9rem;
+    margin-bottom: 5px;
 }
 .job-div__date {
     text-align: right;
@@ -411,8 +466,151 @@ footer a {
 .job-div__details ul {
     padding-left: 25px;
 }
+.job:hover {
+    cursor: pointer;
+}
 
 
 .hidden, header nav {
     display: none;
+}
+
+@media (min-width: 442px) {
+    .about .container {
+        width: 90%;
+        margin: auto;
+    }
+    .presentation {
+        width: 100%;
+    }
+}
+
+@media (min-width: 500px) {
+    .about .container {
+        align-items: flex-end;
+    }
+    .about img {
+        box-shadow: 27px 27px 0px 0px #007980;
+        margin-right: 27px;
+        margin-top: 10px;
+    }
+    .profile__photo {
+        border: none;
+    }
+    .presentation {
+        margin-top: 50px;
+    }
+    h2:not(.about h2):not(.career h2) {
+        margin-bottom: 40px;
+    }
+}
+
+@media (min-width: 650px) {
+    header .close-cross, .menu-icon {
+        display: none;
+    }
+    .menu {
+        display: flex;
+        position: static;
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    .menu ul {
+        display: flex;
+        transform: none;
+    }
+    .menu li {
+        margin: 0 0 0 50px;
+    }
+    #projects .container, .photos .container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    #projects a, .photos a {
+        width: 48%;
+        display: inline-block;
+    }
+    #projects h2 {
+        width: 100%;
+    }
+    .photos a {
+        width: 49.5%;
+    }
+}
+
+@media (min-width: 800px) {
+    section:not(.about) {
+        padding: 70px 0;
+    }
+    .about {
+        padding-bottom: 50px;
+    }
+    .about .container {
+        flex-direction: row-reverse;
+        margin-top: 20px;
+    }
+    .presentation {
+        margin: 0;
+    }
+}
+
+@media (min-width: 900px) {
+    #projects a {
+        width: 33%;
+    }
+    .about img {
+        box-shadow: 40px 40px 0px 0px #007980;
+        margin-right: 40px;
+    }
+
+    .photos .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    .photos a {
+        width: 100%;
+        display: inline-flex;
+    }
+    .website-grid__first {
+        grid-column: 1/4;
+    }
+    .website-grid__second {
+        grid-row: 2/4;
+    }
+    .website-grid__second img {
+        height: 510px;
+    }
+    .kanap-grid__third, .leslie-grid__third, .leslie-grid__fourth {
+        grid-column: 2/4;
+    }
+
+    .career {
+        width: 80%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .about img {
+        box-shadow: 55px 55px 0px 0px #007980;
+        margin-right: 55px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about img {
+        box-shadow: 70px 70px 0px 0px #007980;
+        margin-right: 70px;   
+    }
+    .about {
+        padding: 70px 0 100px 0;
+    }
+    .career {
+        width: 60%;
+    }
 }
