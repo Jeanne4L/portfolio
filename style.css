@@ -14,6 +14,25 @@
         transform: scaleX(0);
     }
 }
+@keyframes change-arrow {
+    0% {
+        transform:scaleY(1) scaleX(1);
+    }
+    10% {
+        transform: scaleY(1) scaleX(0.8);
+    }
+	20% {
+				opacity:0.2;
+		    transform: scaleY(1) scaleX(0.8);
+	}
+	50% {
+				transform: scaleX( 0.8) scaleY(8);
+	}
+	100% {
+		    transform: scaleX(0.8) scaleY(8);
+		    opacity:0.2;
+	}
+}
 
 @font-face {
     font-family: 'hindlight';
@@ -207,9 +226,13 @@ header img {
 	position: absolute;
 	right: 0;
 }
-.btn--arrow:hover > .arrow {
-    transform-origin: left;
-    /* animation: display-underline 300ms linear forwards; */
+.btn--arrow:hover > .arrow .chevron {
+	transform: rotate(90deg) translate(-2.7px);
+  opacity: 0; 
+}
+.btn--arrow:hover > .arrow .line {
+	animation: change-arrow 400ms linear forwards;
+	transform-origin: bottom right;
 }
 
 .about {
