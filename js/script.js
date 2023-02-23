@@ -21,7 +21,7 @@ function displayMenu(isOpenedMenu) {
         openMenuBtn.classList.add('hidden');
         closeMenuBtn.classList.remove('hidden');
         overlay.classList.remove('hidden');
-        menu.classList.remove('hidden');
+        menu.classList.add('display');
 
         isOpenedMenu = false;
     })
@@ -31,7 +31,7 @@ function hideMenu(isOpenedMenu) {
         closeMenuBtn.classList.add('hidden');
         openMenuBtn.classList.remove('hidden');
         overlay.classList.add('hidden');
-        menu.classList.add('hidden');
+        menu.classList.remove('display');
 
         isOpenedMenu = false;
     })
@@ -39,7 +39,7 @@ function hideMenu(isOpenedMenu) {
         closeMenuBtn.classList.add('hidden');
         openMenuBtn.classList.remove('hidden');
         overlay.classList.add('hidden');
-        menu.classList.add('hidden');
+        menu.classList.remove('display');
 
         isOpenedMenu = false;
     })
