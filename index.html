@@ -9,8 +9,8 @@
         <title>Sandra Petereau - Portfolio</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     
-        <link rel="stylesheet" href="style.css">
-        <script src="js/script.js" async></script>
+        <link rel="stylesheet" href="style.min.css">
+        <script src="script.min.js" async></script>
     </head>
     <body>
         <header>
@@ -19,32 +19,35 @@
                     <img src="images/logo.webp" alt="logo avec les lettres s et p" srcset="images/logo.svg">
                 </a>
 
-                <i class="close-cross hidden"></i>
-                <i class="menu-icon"></i>
+                <i class="close-cross hidden" role="button" tabindex="0" aria-label="fermer le menu"></i>
+                <div class="menu-icon" role="button" tabindex="0" aria-label="afficher le menu">
+                    <div class="menu-line"></div>
+                </div>
 
-
-                <nav class="menu">
-                    <ul>
-                        <li>
-                            <a href="#projects">
-                                projets
-                                <div class="underline"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#contact">
-                                contact
-                                <div class="underline"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="career.html">
-                                parcours
-                                <div class="underline"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="menu" tabindex="-1" role="dialog" aria-modal="true">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#projects" class="menu-item">
+                                    projets
+                                    <div class="underline"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#contact" class="menu-item">
+                                    contact
+                                    <div class="underline"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="career.html" class="menu-item">
+                                    parcours
+                                    <div class="underline"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>   
 
@@ -59,7 +62,7 @@
                     <h2>Développeuse web</h2>
 
                     <div class="btn--arrow">
-                        <a href="#contact">
+                        <a href="#contact" role="button">
                             me contacter
                         </a>
                         <div class="arrow">
@@ -183,7 +186,7 @@
                 <h2>Envie d'en savoir plus ?</h2>
 
                 <div class="btn--arrow">
-                    <a href="career.html">
+                    <a href="career.html" role="button">
                         voir mon parcours
                     </a>
                     <div class="arrow">
@@ -213,14 +216,14 @@
 
                     <label for="check-number">3 + 4 ? *</label>
                     <input type="number" id="check-number" name="check-number" aria-required="true" required> 
-                    <input type="hidden" id="check" aria-hidden="true">
+                    <input type="hidden" id="check">
 
                     <input type="submit" value="envoyer" class="btn">
                 </form>
             </div>
         </section>
 
-        <a href="#top" aria-label="retour haut de page">
+        <a href="#top" class="anchor-link" aria-label="retour haut de page" role="button">
             <i class="anchor-up hidden"></i>
         </a>
 

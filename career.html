@@ -9,42 +9,46 @@
         <title>Sandra Petereau - Parcours</title>
         <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
-        <link rel="stylesheet" href="style.css">
-        <script src="js/script.js" async></script>
+        <link rel="stylesheet" href="style.min.css">
+        <script src="script.min.js" async></script>
     </head>
 
     <body>
         <header>
             <div class="container">
-                <a href="index.html" aria-label="recharger la page">
+                <a href="index.html" aria-label="retourner sur la page principale">
                     <img src="images/logo.webp" alt="logo avec les lettres s et p" srcset="images/logo.svg">
                 </a>
 
-                <i class="close-cross hidden"></i>
-                <i class="menu-icon"></i>
+                <i class="close-cross hidden" role="button" tabindex="0" aria-label="fermer le menu"></i>
+                <div class="menu-icon" role="button" tabindex="0" aria-label="afficher le menu">
+                    <div class="menu-line"></div>
+                </div>
 
-                <nav class="menu">
-                    <ul>
-                        <li>
-                            <a href="#beginning">
-                                commencement
-                                <div class="underline"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#twist">
-                                rebondissement
-                                <div class="underline"></div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#new-start">
-                                nouveau départ
-                                <div class="underline"></div>
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+                <div class="menu" tabindex="-1" role="dialog" aria-modal="true">
+                    <nav>
+                        <ul>
+                            <li>
+                                <a href="#beginning" class="menu-item">
+                                    commencement
+                                    <div class="underline"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#twist" class="menu-item">
+                                    rebondissement
+                                    <div class="underline"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#new-start" class="menu-item">
+                                    nouveau départ
+                                    <div class="underline"></div>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>   
 
@@ -103,7 +107,7 @@
                     </p>
 
                     <div class="job-div degree hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="degree-modal__content" aria-describedby="degree-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="degree-modal__content">
                             <h3>Bac Pro commerce</h3>
@@ -119,7 +123,7 @@
                     </p>
 
                     <div class="job-div super-u hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="superu-modal__content" aria-describedby="superu-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="superu-modal__content">
                             <h3>Super U</h3>
@@ -135,11 +139,11 @@
                     <p class="third-p">
                         La <span class="job" id="foir-fouille" tabindex="0">Foir’Fouille</span> puis <span class="job" id="centrakor" tabindex="0">Centrakor</span> et enfin <span class="job" id="biocoop" tabindex="0">Biocoop</span>. 
                         <br>
-                        Et comme il ne faut pas se limiter à se qu'on connait, j’ai testé l’entretien minutieux des cottages de <span class="job" id="center-parcs" tabindex="0">Center Parcs</span>, le froid glacial du conditionnement de sushis à <span class="job" id="marco-polo" tabindex="0">Marco Polo</span> et la chaleur sucrée des gâteaux de <span class="job" id="st-michel" tabindex="0">St-Michel</span>.
+                        Et comme il ne faut pas se limiter à se qu'on connait, j’ai testé l’entretien minutieux des cottages de <span class="job" id="center-parcs" tabindex="0">Center Parcs</span>, la chaleur sucrée des gâteaux de <span class="job" id="st-michel" tabindex="0">St-Michel</span> et le froid glacial du conditionnement de sushis à <span class="job" id="marco-polo" tabindex="0">Marco Polo</span>.
                     </p>
 
                     <div class="job-div foir-fouille hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="foirfouille-modal__content" aria-describedby="foirfouille-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="foirfouille-modal__content">
                             <h3>La Foir'Fouille</h3>
@@ -152,7 +156,7 @@
                         <p id="foirfouille-modal__date" class="job-div__date">20<span>15</span></p>
                     </div>
                     <div class="job-div centrakor hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="centrakor-modal__content" aria-describedby="centrakor-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="centrakor-modal__content">
                             <h3>Centrakor</h3>
@@ -165,7 +169,7 @@
                         <p id="centrakor-modal__date" class="job-div__date">2018-2019</p>
                     </div>
                     <div class="job-div biocoop hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="biocoop-modal__content" aria-describedby="biocoop-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="biocoop-modal__content">
                             <h3>Biocoop</h3>
@@ -179,7 +183,7 @@
                     </div>
 
                     <div class="job-div center-parcs hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="centerparcs-modal__content" aria-describedby="centerparcs-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="centerparcs-modal__content">
                             <h3>Center Parcs</h3>
@@ -191,21 +195,8 @@
                         <p id="centerparcs-modal__date" class="job-div__date">20<span>16</span></p>
                     </div>
 
-                    <div class="job-div marco-polo hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="marcopolo-modal__content" aria-describedby="marcopolo-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
-
-                        <div class="job-div__details" id="marcopolo-modal__content">
-                            <h3>Marco Polo</h3>
-                            <p>Agent de conditionnement</p>
-                            <ul>
-                                <li>Conditionnement des sushis</li>
-                            </ul>
-                        </div>
-                        <p id="marcopolo-modal__date" class="job-div__date">20<span>16</span>-20<span>17</span></p>
-                    </div>
-
                     <div class="job-div st-michel hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="stmichel-modal__content" aria-describedby="stmichel-modal__date">
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="stmichel-modal__content">
                             <h3>St-Michel</h3>
@@ -216,6 +207,19 @@
                             </ul>
                         </div>
                         <p id="stmichel-modal__date" class="job-div__date">20<span>15</span>-20<span>16</span></p>
+                    </div>
+
+                    <div class="job-div marco-polo hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="marcopolo-modal__content" aria-describedby="marcopolo-modal__date">
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
+
+                        <div class="job-div__details" id="marcopolo-modal__content">
+                            <h3>Marco Polo</h3>
+                            <p>Agent de conditionnement</p>
+                            <ul>
+                                <li>Conditionnement des sushis</li>
+                            </ul>
+                        </div>
+                        <p id="marcopolo-modal__date" class="job-div__date">20<span>16</span>-20<span>17</span></p>
                     </div>
 
                     <p class="fourth-p">
@@ -251,7 +255,7 @@
 
                     <div class="job-div oc hidden" tabindex="-1" role="dialog" aria-modal="true" aria-labelledby="oc-modal__content" aria-describedby="oc-modal__date">
 
-                        <i class="close-cross" tabindex="0" aria-label="fermer la fenêtre"></i>
+                        <i class="close-cross" tabindex="0" role="button" aria-label="fermer la fenêtre"></i>
 
                         <div class="job-div__details" id="oc-modal__content">
                             <h3>Prép'Apprentissage</h3>
@@ -269,7 +273,7 @@
                     <p>Écrirez-vous le prochain chapitre ?</p>
 
                     <div class="btn--arrow">
-                        <a href="index.html#contact">
+                        <a href="index.html#contact" role="button">
                             me contacter
                         </a>
                         <div class="arrow">
@@ -282,7 +286,7 @@
             <h2 class="to-be-continued">À suivre ...</h2>
         </main>
         
-        <a href="#top" aria-label="retour haut de page">
+        <a href="#top" class="anchor-link" aria-label="retour haut de page" role="button">
             <i class="anchor-up hidden"></i>
         </a>
 

@@ -1,49 +1,76 @@
 let menu = document.querySelector('.menu');
+let menuItems = document.querySelectorAll('.menu-item')
 let openMenuBtn = document.querySelector('.menu-icon');
 let closeMenuBtn = document.querySelector('.close-cross');
 let overlay = document.querySelector('.overlay');
-let downArrows = document.querySelectorAll('.chevron-down');
-let upArrows = document.querySelectorAll('.chevron-up');
 let anchor = document.querySelector('.anchor-up');
 
 // display and hide menu
 if(openMenuBtn) {
     let isOpenedMenu = false;
 
+    menu.classList.add('hidden');
+
     displayMenu(isOpenedMenu);
-    hideMenu(isOpenedMenu);
 };
 
 function displayMenu(isOpenedMenu) {
     openMenuBtn.addEventListener('click', (e) => {
         e.stopPropagation();
-
+        
         openMenuBtn.classList.add('hidden');
         closeMenuBtn.classList.remove('hidden');
         overlay.classList.remove('hidden');
-        menu.classList.add('display');
+        menu.classList.remove('hidden');
+        menu.setAttribute('aria-expanded', 'true');
 
-        isOpenedMenu = false;
+        // timer to display animation
+        setTimeout(()=>{
+            menu.classList.add('display')
+        },150);
+
+        isOpenedMenu = true;
+
+        hideMenu(isOpenedMenu);
     })
 };
+
 function hideMenu(isOpenedMenu) {
-    closeMenuBtn.addEventListener('click', () => {
-        closeMenuBtn.classList.add('hidden');
-        openMenuBtn.classList.remove('hidden');
-        overlay.classList.add('hidden');
-        menu.classList.remove('display');
-
-        isOpenedMenu = false;
-    })
-    document.addEventListener('click', ()=> {
-        closeMenuBtn.classList.add('hidden');
-        openMenuBtn.classList.remove('hidden');
-        overlay.classList.add('hidden');
-        menu.classList.remove('display');
-
-        isOpenedMenu = false;
-    })
+    if(isOpenedMenu) {
+        // keep focus into menu
+        for(let i=0; i<menuItems.length; i++) {
+            menuItems[menuItems.length-1].onblur = () => {
+                closeMenuBtn.focus();
+            }
+        }
+        // close menu with btn, click off the menu or escape key
+        closeMenuBtn.addEventListener('click', () => {
+            changeAttrCloseMenu();
+        })
+        document.addEventListener('click', ()=> {
+            changeAttrCloseMenu();
+        })
+        document.onkeydown = function(e) {
+            if (e.key == 'Escape') {
+                changeAttrCloseMenu();
+            }
+        };
+    }
 };
+function changeAttrCloseMenu() {
+    closeMenuBtn.classList.add('hidden');
+    openMenuBtn.classList.remove('hidden');
+    overlay.classList.add('hidden');
+    menu.classList.remove('display');
+    menu.setAttribute('aria-expanded', 'false');
+
+    // timer to display animation
+    setTimeout(()=>{
+        menu.classList.add('hidden')
+    },405);
+
+    isOpenedMenu = false;
+}
 
 // display anchor with scroll
 window.addEventListener('scroll', () => {
@@ -117,23 +144,22 @@ function hideJobDivDetails(isDisplayedDiv, div, closeModalBtn) {
         closeModalBtn.onblur = () => {
             closeModalBtn.focus();
         }
-        // close div with escape key, close button or click off the div
+        // close div with escape key, button or click off the div
         document.onkeydown = function(e) {
             if (e.key == 'Escape') {
-                overlay.classList.add('hidden');
-                div.classList.add('hidden');
-                isDisplayedDiv = false;
+                changeAttrCloseModal(div);
             }
         };
         document.body.addEventListener('click', ()=> {
-            overlay.classList.add('hidden');
-            div.classList.add('hidden');
-            isDisplayedDiv = false;
+            changeAttrCloseModal(div);
         });
         closeModalBtn.addEventListener('click', ()=> {
-            overlay.classList.add('hidden');
-            div.classList.add('hidden');
-            isDisplayedDiv = false;
+            changeAttrCloseModal(div);
         })
     };
+};
+function changeAttrCloseModal(div) {
+    overlay.classList.add('hidden');
+    div.classList.add('hidden');
+    isDisplayedDiv = false;
 };
