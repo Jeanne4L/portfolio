@@ -82,6 +82,7 @@ header, .about .container, .about img, figure img {
 
 img:not(header img) {
     object-fit: cover;
+    object-position: top;
     border: solid 1px rgba(51,51,51, 0.3);
 }
 
