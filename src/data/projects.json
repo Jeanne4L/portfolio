@@ -1,0 +1,110 @@
+[
+    {
+        "title": "Ohmyfood",
+        "date": 2022,
+        "summary": "Animation d'une page web avec CSS",
+        "description": [
+            "En suivant les maquettes fournies, j'ai intégré la page d'accueil ainsi que les pages menu du site Ohmyfood. En utilisant le préprocesseur Sass, j'ai ensuite ajouté des animations CSS.",
+            "Ce site permet aux utilisateurs de sélectionner un restaurant et de réserver leur menu à l'avance."
+        ],
+        "hard-skills": ["HTML", "CSS", "Sass"],
+        "main-picture": "./images/ohmyfood/ohmyfood_main",
+        "pictures": [
+            "./images/ohmyfood/ohmyfood_1",
+            "./images/ohmyfood/ohmyfood_2",
+            "./images/ohmyfood/ohmyfood_3"
+        ],
+        "website": "https://jeanne4l.github.io/oc-oh-my-food/",
+        "repository": "https://github.com/Jeanne4L/oc-oh-my-food"
+    },
+    {
+        "title": "Booki",
+        "date": 2023,
+        "summary": "Intégration d'une page web responsive en HTML et CSS",
+        "description": [
+            "À partir de la maquette fournie par le designer, j’ai intégré la page d’accueil du site Booki.",
+            "Il permet aux utilisateurs de sélectionner un hébergement ou une activité dans la ville de leur choix."
+        ],
+        "hard-skills": ["HTML", "CSS"],
+        "main-picture": "./images/booki/booki_main",
+        "pictures": [
+            "./images/booki/booki_1",
+            "./images/booki/booki_2",
+            "./images/booki/booki_3"
+        ],
+        "website": "https://jeanne4l.github.io/oc-new_booki/",
+        "repository": "https://github.com/Jeanne4L/oc-new_booki"
+    },
+    {
+        "title": "Portfolio de Sophie Bluel",
+        "date": 2023,
+        "summary": "Affichage dynamique des projets avec JavaScript",
+        "description": [
+            "Grâce à l'API interne, j'ai récupéré les projets enregistrés sur la base de données et les ai affiché sur la page principale, j'ai également intégré une modale permettant d'en créer d'autres.",
+            "L'utilisatrice, une fois connectée, peut ajouter ou supprimer ses projets en toute autonomie."
+        ],
+        "hard-skills": ["JavaScript"],
+        "main-picture": "./images/sophiebluel/sophiebluel_main",
+        "pictures": [
+            "./images/sophiebluel/sophiebluel_1",
+            "./images/sophiebluel/sophiebluel_2",
+            "./images/sophiebluel/sophiebluel_3"
+        ],
+        "website": null,
+        "repository": "https://github.com/Jeanne4L/oc-portfolio-sophie-bluel"
+    },
+    {
+        "title": "Portfolio de Nina Carducci",
+        "date": 2023,
+        "summary": "Optimisation du SEO et de l’accessibilité",
+        "description": [
+            "Après des audits Lighthouse et Wave, j'ai amélioré les scores de performances et d'accessibilité du site. J'ai également ajouté des données enrichies afin d'optimiser le référencement local.",
+            "Le site étant optimisé pour les navigateurs, permet à l'utilisatrice de se faire connaître grâce à un meilleur référencement."
+        ],
+        "hard-skills": ["SEO", "accessibilité"],
+        "main-picture": "./images/ninacarducci/ninacarducci_main",
+        "pictures": [
+            "./images/ninacarducci/ninacarducci_1",
+            "./images/ninacarducci/ninacarducci_2",
+            "./images/ninacarducci/ninacarducci_3"
+        ],
+        "website": "https://jeanne4l.github.io/oc-nina-carducci-portfolio/",
+        "repository": "https://github.com/Jeanne4L/oc-nina-carducci-portfolio"
+    },
+    {
+        "title": "Kasa",
+        "date": 2023,
+        "summary": "Création d’une application web avec React",
+        "description": [
+            "En utilisant create-react-app, j'ai créé une SPA grâce à des composants React.",
+            "Le site permet aux utilisateurs de sélectionner une location immobilière."
+        ],
+        "hard-skills": ["React"],
+        "main-picture": "./images/kasa/kasa_main",
+        "pictures": [
+            "./images/kasa/kasa_1",
+            "./images/kasa/kasa_2",
+            "./images/kasa/kasa_3"
+        ],
+        "website": null,
+        "repository": "https://github.com/Jeanne4L/oc-kasa"
+    },
+    {
+        "title": "Mon Vieux Grimoire",
+        "date": 2023,
+        "summary": "Création d’une API avec Node.js et Express",
+        "description": [
+            "En respectant les spécifications techniques, j'ai créé une API afin de sécuriser le serveur et l'accès à la base de données. Elle permet également de structurer les données sauvegardées sur MongoDB grâce aux schémas mongoose.",
+            "Le site permet à un utilisateur connecté de créer et de noter des livres."
+        ],
+        "hard-skills": ["Node.js", "Express"],
+        "main-picture": "./images/monvieuxgrimoire/monvieuxgrimoire_main",
+        "pictures": [
+            "./images/monvieuxgrimoire/monvieuxgrimoire_1",
+            "./images/monvieuxgrimoire/monvieuxgrimoire_2",
+            "./images/monvieuxgrimoire/monvieuxgrimoire_3"
+        ],
+        "website": null,
+        "repository": "https://github.com/Jeanne4L/oc-mon-vieux-grimoire"
+    },
+]
