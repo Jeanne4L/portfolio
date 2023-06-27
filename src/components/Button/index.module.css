@@ -1,0 +1,15 @@
+.button {
+    border: solid 3px var(--bright-color);
+    color: var(--bright-color);
+    background: transparent;
+    padding: 10px 15px;
+    font-size: 1.1rem;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.text {
+    color: var(--bright-color);
+    font-size: 1.1rem;
+    font-weight: 400;
+}
