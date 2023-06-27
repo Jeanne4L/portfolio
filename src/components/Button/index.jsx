@@ -3,7 +3,7 @@
 import Link from "next/link"
 import styles from './index.module.css'
 
-export default function Button({link, externLink, text}) {
+export default function Button({ link, externLink, text }) {
     if(link || externLink) {
         return(
             <div className={styles.button}>

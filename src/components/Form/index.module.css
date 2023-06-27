@@ -1,0 +1,11 @@
+.form {
+    width: 80%;
+    margin: auto;
+}
+.textarea {
+    width: 100%;
+    padding: 15px;
+    border: solid 1px rgba(6,27,44, 20%);
+    margin-bottom: 15px;
+    height: 90px;
+}

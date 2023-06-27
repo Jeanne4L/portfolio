@@ -1,0 +1,14 @@
+.input, .button {
+    width: 100%;
+}
+.button {
+    padding: 15px;
+}
+.input {
+    border: solid 1px rgba(6,27,44, 20%);
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.label {
+    font-size: 0.9rem;
+}
