@@ -3,12 +3,19 @@
     color: var(--bright-color);
     background: transparent;
     padding: 10px 15px;
-    font-weight: 600;
+    font-weight: 500;
     display: inline-block;
-    font-size: 0.9rem;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.text {
-    color: var(--bright-color);
-    font-weight: 600;
+.btn_icon {
+    margin: 0 0 -3px 10px;
+    stroke-width: 2.4;
+    stroke-linecap: inherit;
+    stroke-linejoin: inherit;
+    width: 1.3rem;
+    height: 1.3rem;
 }

@@ -1,29 +1,30 @@
 'use client'
 
 import Link from "next/link"
+import { FiArrowUpRight } from "react-icons/fi";
 import styles from './index.module.css'
 
-export default function Button({ link, externLink, text }) {
-    if(link || externLink) {
+export default function Button({ link, externLink, text, id }) {
+    if(link) {
         return(
-            <div className={styles.button}>
-                {link ? (
-                    <Link href={link} className={styles.text}>
-                        {text}
-                    </Link>
-                ) :
-                (
-                    <a href={externLink} className={styles.text}>
-                        {text}
-                    </a>
-                )}
-            </div>
+            <Link href={link} className={styles.button}>
+                {text}
+                <FiArrowUpRight className={styles.btn_icon}/>
+            </Link> 
+        )
+    } else if (externLink) {
+        return(
+            <a href={externLink} className={styles.button}>
+                {text}
+                <FiArrowUpRight className={styles.btn_icon}/>
+            </a>     
         )
     } else {
         return(
-            <button className={styles.button}>
+            <div className={styles.button} id={id ? id : ''}>
                 {text}
-            </button>
+                <FiArrowUpRight className={styles.btn_icon}/>
+            </div>
         )
     }
 }
