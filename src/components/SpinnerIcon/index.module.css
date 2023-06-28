@@ -1,0 +1,7 @@
+.container {
+    width: 120px;
+    height: 120px;
+    border-radius: 200px;
+    background-color: var(--bright-color);
+    text-align: center;
+}
