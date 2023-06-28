@@ -1,6 +1,8 @@
 :root {
     --bright-color: #36B4C5;
     --dark-blue: #042B38;
+
+    --white-hover: rgba(255,255,255, 0.7);
 }
 
 * {
@@ -21,6 +23,13 @@ a {
     color: inherit;
     text-decoration: none;
 }
+ul {
+    padding: 0;
+}
+li {
+    list-style-type: none;
+}
+
 ::placeholder, input, textarea {
     font-size: 1rem;
     font-weight: 400;
