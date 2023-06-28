@@ -1,4 +1,5 @@
 import { Jost } from 'next/font/google'
+import Header from '@/components/Header'
 import './globals.css'
 
 export const metadata = {
@@ -14,7 +15,10 @@ const jost = Jost({
 export default function RootLayout({ children }) {
     return (
         <html lang="fr" className={jost.className}>
-            <body>{children}</body>
+            <body>
+                <Header/> 
+                {children}
+            </body>
         </html>
     )
 }

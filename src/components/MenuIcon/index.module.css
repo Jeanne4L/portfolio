@@ -1,4 +1,8 @@
 .icon {
     width: 23px;
     height: 23px;
+    color: white;
+}
+.icon:hover {
+    color: rgba(255,255,255, 0.8);
 }

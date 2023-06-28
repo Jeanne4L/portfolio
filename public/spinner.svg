@@ -2,9 +2,9 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   width="96.999985"
-   height="84.139282"
-   viewBox="0 0 25.664581 22.26185"
+   width="97.000023"
+   height="84.139275"
+   viewBox="0 0 25.664591 22.261848"
    version="1.1"
    id="svg5"
    xml:space="preserve"
@@ -28,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="5.6568542"
-     inkscape:cx="-0.53033009"
-     inkscape:cy="72.21328"
+     inkscape:cx="88.388348"
+     inkscape:cy="74.3346"
      inkscape:window-width="1920"
      inkscape:window-height="1051"
      inkscape:window-x="-9"
@@ -42,6 +42,6 @@
        width="108.89444"
        height="145.664"
        id="rect1127" /></defs><path
-     id="path345"
+     id="path1525"
      style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-     d="m 12.804181,0.280633 c 0,0 -4.3624691,7.5931835 -4.3741335,7.6144929 L 24.306508,20.299258 Z m -7.7620494,5.9234643 0.018021,7.4863567 20.0021244,7.754281 z m 17.9994764,3.151026 -3.084024,2.2132887 c 0,0 5.250063,9.282919 5.259455,9.29776 z M 0.28259177,12.708063 0.28063301,22.08348 25.41605,22.08158 Z" /></svg>
+     d="m 12.757414,0.23386083 c 0,0 -4.3624676,7.59318027 -4.374132,7.61448957 L 24.259737,20.252479 Z M 4.9953674,6.1573222 5.013388,13.643676 25.015506,21.397955 Z M 22.994837,9.3083474 19.910814,11.521635 c 0,0 5.250061,9.282916 5.259453,9.297758 z m -22.7590174,3.3529386 -0.001959,9.375413 25.1354174,-0.0019 z" /></svg>

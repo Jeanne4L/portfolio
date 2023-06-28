@@ -1,0 +1,14 @@
+.header {
+    background-color: var(--dark-blue);
+    padding: 10px 0;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    vertical-align: middle;
+}

@@ -1,5 +1,6 @@
 :root {
     --bright-color: #36B4C5;
+    --dark-blue: #042B38;
 }
 
 * {
@@ -27,15 +28,16 @@ a {
 }
 input:focus, textarea:focus {
     outline: none;
-    border-color: #042B38;
+    border-color: var(--dark-blue);
 }
 ::placeholder {
     color: rgba(4,43,56, 40%);
 }
 
-/* .menu-icon {
-    color: white;
-} */
+.container {
+    width: 90%;
+    margin: auto;
+}
 
 
 /* @media (prefers-color-scheme: dark) {
