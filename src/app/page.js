@@ -1,11 +1,10 @@
 import styles from './page.module.css';
-import Conversation from '@/components/Conversation';
-import Message from '@/components/Message';
+import Tag from '@/components/Tag';
 
 export default function Home() {
 	return (
 		<main className={styles.main}>
-			<Conversation />
+			<Tag text={'HTML'} />
 		</main>
 	);
 }
