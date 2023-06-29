@@ -1,9 +1,26 @@
 'use client'
 
-export default function MessageHour() {
-    const now = new Date();
-    const hour = now.getHours();
-    const minutes = now.getMinutes();
+import { useState, useEffect } from 'react';
 
-    return <p>{hour}:{minutes}</p>
+export default function MessageHour() {
+    const [displayHour, setDisplayHour] = useState(null);
+
+    useEffect(() => {
+        if(!displayHour) {
+            const now = new Date();
+            const hour = now.getHours();
+            let minutes = now.getMinutes();
+
+            if(minutes < 10 ) {
+                minutes = '0'+minutes;
+            }
+
+            const currentHour = `${hour}:${minutes}`;
+            setDisplayHour(currentHour)
+        }
+    }, [displayHour]);
+
+    return (
+        displayHour && <p>{displayHour}</p>
+    )
 }
