@@ -2,7 +2,7 @@
 
 import styles from './index.module.css'
 
-export default function Input({label, type, name, id, value, style}) {
+export default function Input({label, type, name, id, value}) {
     return (
         <>
             {label && 
@@ -13,7 +13,7 @@ export default function Input({label, type, name, id, value, style}) {
                 name={name} 
                 id={id} 
                 value={value} 
-                className={`${styles.input} ${style === 'career' ? styles.careerInput : ''}`}/>
+                className={styles.input}/>
         </>
     )
 }
