@@ -14,12 +14,13 @@
 	font-weight: 300;
 }
 
-h1,
 h2 {
 	font-weight: 400;
 }
+h1,
 h3 {
 	font-weight: 900;
+	text-transform: uppercase;
 }
 
 a {

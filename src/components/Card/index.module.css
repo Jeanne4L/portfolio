@@ -1,9 +1,7 @@
 .card {
-    text-align: center;
+	text-align: center;
 }
 .img {
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 250px;
+	object-fit: cover;
+	border-radius: 500px;
 }
