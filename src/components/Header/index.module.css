@@ -1,14 +1,19 @@
 .header {
-    background-color: var(--dark-blue);
-    padding: 10px 0;
+	background-color: var(--dark-blue);
+	padding: 10px 0;
+	position: fixed;
+	z-index: 1000;
+	width: 100%;
+	top: 0;
+	left: 0;
 }
 
 .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 .logo {
-    vertical-align: middle;
+	vertical-align: middle;
 }
