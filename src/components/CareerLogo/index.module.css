@@ -1,15 +1,19 @@
 .container {
-	width: 500px;
-	height: 500px;
+	width: 200px;
+	height: 200px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 500px;
 	background-color: var(--dark-blue);
 }
-.test {
+.svg {
+	width: 120px;
+	height: 104px;
+}
+.elt {
 	fill: white;
 }
-.test:hover {
+.elt:hover {
 	fill: var(--bright-color);
 }

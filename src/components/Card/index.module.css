@@ -1,5 +1,11 @@
+.link {
+	display: flex;
+}
 .card {
 	text-align: center;
+	margin: 0 auto 70px auto;
+	color: white;
+	width: 290px;
 }
 .img {
 	object-fit: cover;

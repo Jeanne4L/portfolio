@@ -1,0 +1,45 @@
+.introduction {
+	margin-bottom: 50px;
+}
+.darkblue_bgc {
+	background-color: var(--dark-blue);
+	padding: 50px 0;
+}
+
+.title,
+.hi_p,
+.name_p {
+	margin: 0;
+}
+.hi_p {
+	font-size: 1rem;
+}
+.name_p {
+	font-size: 2rem;
+}
+
+.presentation {
+	font-size: 1.4rem;
+	margin: 15px 0 50px 0;
+}
+.flex {
+	display: flex;
+}
+
+.arrow_btn_link {
+	vertical-align: middle;
+}
+.arrow_btn {
+	margin: 0 0 -5px 10px;
+	stroke-width: 2.4;
+	stroke-linecap: inherit;
+	stroke-linejoin: inherit;
+	width: 1.5rem;
+	height: 1.5rem;
+}
+
+.h2 {
+	text-align: center;
+	font-size: 2rem;
+	margin-bottom: 70px;
+}

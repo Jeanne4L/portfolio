@@ -1,10 +1,10 @@
 import styles from './index.module.css'
 
-export default function ItemSummary({title, summary}) {
+export default function ItemSummary({title, summary, page, id}) {
     return(
-        <>
-            <h3>{title}</h3>
+        <div className={`${styles.container} ${page === 'career' ? styles.career_container : ''}`} id={id}>
+            <h3 className={styles.title}>{title}</h3>
             <p className={styles.summary}>{summary}</p>
-        </>
+        </div>
     )
 }

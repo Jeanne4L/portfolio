@@ -10,10 +10,11 @@ export default function Header() {
                 <Link href='/'>
                     <Image 
                         src='/logo--full.svg' 
-                        alt="dessin vectoriel de sommets escarpés"
+                        alt="dessin vectoriel de plusieurs triangles superposés"
                         width={87}
                         height={32}
                         className={styles.logo}
+                        priority
                     />
                 </Link>
                 <MenuIcon/>

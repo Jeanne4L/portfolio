@@ -1,3 +1,15 @@
+.container {
+	text-align: center;
+}
+.career_container {
+	width: 275px;
+	margin-bottom: 50px;
+}
+.title {
+	font-size: 1.4rem;
+	margin: 17px 0 0 0;
+}
 .summary {
-	font-size: 1.2rem;
+	font-size: 1.4rem;
+	margin: 0;
 }

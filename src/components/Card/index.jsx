@@ -5,9 +5,9 @@ import styles from './index.module.css';
 
 export default function Card({ srcImg, title, summary }) {
 	return (
-		<Link href='' className={styles.card}>
-			<div>
-				<Image src={srcImg} alt={title} className={styles.img} width={320} height={320}/>
+		<Link href='' className={styles.link}>
+			<div className={styles.card}>
+				<Image src={srcImg} alt={title} className={styles.img} width={290} height={290}/>
 				<ItemSummary title={title} summary={summary} />
 			</div>
 		</Link>
