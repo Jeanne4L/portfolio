@@ -1,10 +1,9 @@
 import Link from 'next/link';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import projects from '@/data/projects';
 import { FiArrowUpRight } from 'react-icons/fi';
 import styles from './page.module.css';
-
-import projects from '@/data/projects';
 
 export default function Home() {
 	return (
