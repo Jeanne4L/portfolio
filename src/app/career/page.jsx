@@ -1,3 +1,5 @@
+'use client'
+import { useRef } from 'react';
 import CareerLogo from '@/components/CareerLogo';
 import ItemSummary from '@/components/ItemSummary';
 import styles from './page.module.css'
@@ -8,17 +10,30 @@ export let metadata = {
 };
 
 export default function Career() {
+    const refs = {
+            commerce_peak: useRef(null),
+            prep_peak: useRef(null),
+            training_peak: useRef(null),
+            goals_peak: useRef(null),
+        };
+    
+    function handleLogoId(id) {
+        if (refs.hasOwnProperty(id)) {
+            refs[id].current.style.color = 'var(--bright-color)';
+        }
+    }
+
     return (
         <div className={`container ${styles.main}`}>
             <h1>Mon parcours</h1>
             <p className='hidden'>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</p>
             <div className={styles.logo_container}>
-                <CareerLogo/>
+                <CareerLogo logoClickedId={handleLogoId}/>
             </div>
-            <ItemSummary title={'Mon ancienne vie'} summary={'Ma carrière dans le commerce'} page={'career'} id={'commerce'}/>
-            <ItemSummary title={'Début de reconversion'} summary={'La confirmation de mon nouvel itinéraire'} page={'career'} id={'prepapp'}/>
-            <ItemSummary title={'Formation Développeur web'} summary={'Le début d\'une nouvelle vie'} page={'career'} id={'training'}/>
-            <ItemSummary title={'Mes objectifs'} summary={'Des perspectives captivantes et variées'} page={'career'} id={'goals'}/>
+            <ItemSummary title={'Mon ancienne vie'} summary={'Ma carrière dans le commerce'} page={'career'} id={'commerce'} ref={refs.commerce_peak}/>
+            <ItemSummary title={'Début de reconversion'} summary={'La confirmation de mon nouvel itinéraire'} page={'career'} id={'prep'} ref={refs.prep_peak}/>
+            <ItemSummary title={'Formation Développeur web'} summary={'Le début d\'une nouvelle vie'} page={'career'} id={'training'} ref={refs.training_peak}/>
+            <ItemSummary title={'Mes objectifs'} summary={'Des perspectives captivantes et variées'} page={'career'} id={'goals'} ref={refs.goals_peak}/>
         </div>
     )
 }
