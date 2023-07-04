@@ -13,3 +13,11 @@
 	font-size: 1.4rem;
 	margin: 0;
 }
+
+.active {
+	color: var(--bright-color);
+}
+
+.test {
+	border: solid 1px black;
+}

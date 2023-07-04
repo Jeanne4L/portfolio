@@ -1,5 +1,6 @@
 'use client'
-import { useRef } from 'react';
+
+import { useState } from 'react';
 import CareerLogo from '@/components/CareerLogo';
 import ItemSummary from '@/components/ItemSummary';
 import styles from './page.module.css'
@@ -10,17 +11,10 @@ export let metadata = {
 };
 
 export default function Career() {
-    const refs = {
-            commerce_peak: useRef(null),
-            prep_peak: useRef(null),
-            training_peak: useRef(null),
-            goals_peak: useRef(null),
-        };
-    
-    function handleLogoId(id) {
-        if (refs.hasOwnProperty(id)) {
-            refs[id].current.style.color = 'var(--bright-color)';
-        }
+    const [activeId, setActiveId] = useState(null);
+
+    function handleIdClick(id) {
+        setActiveId(id) 
     }
 
     return (
@@ -28,12 +22,36 @@ export default function Career() {
             <h1>Mon parcours</h1>
             <p className='hidden'>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</p>
             <div className={styles.logo_container}>
-                <CareerLogo logoClickedId={handleLogoId}/>
+                <CareerLogo clickedElt={handleIdClick}/>
             </div>
-            <ItemSummary title={'Mon ancienne vie'} summary={'Ma carrière dans le commerce'} page={'career'} id={'commerce'} ref={refs.commerce_peak}/>
-            <ItemSummary title={'Début de reconversion'} summary={'La confirmation de mon nouvel itinéraire'} page={'career'} id={'prep'} ref={refs.prep_peak}/>
-            <ItemSummary title={'Formation Développeur web'} summary={'Le début d\'une nouvelle vie'} page={'career'} id={'training'} ref={refs.training_peak}/>
-            <ItemSummary title={'Mes objectifs'} summary={'Des perspectives captivantes et variées'} page={'career'} id={'goals'} ref={refs.goals_peak}/>
+            <ItemSummary 
+                title={'Mon ancienne vie'} 
+                summary={'Ma carrière dans le commerce'} 
+                page={'career'} 
+                id={'commerce'}
+                activeId={activeId === 'commerce' ? activeId : null}
+            />
+            <ItemSummary 
+                title={'Début de reconversion'} 
+                summary={'La confirmation de mon nouvel itinéraire'} 
+                page={'career'} 
+                id={'prep'}
+                activeId={activeId === 'prep' ? activeId : null}
+            />
+            <ItemSummary 
+                title={'Formation Développeur web'} 
+                summary={'Le début d\'une nouvelle vie'} 
+                page={'career'} 
+                id={'training'}
+                activeId={activeId === 'training' ? activeId : null}
+            />
+            <ItemSummary 
+                title={'Mes objectifs'} 
+                summary={'Des perspectives captivantes et variées'} 
+                page={'career'} 
+                id={'goals'}
+                activeId={activeId === 'goals' ? activeId : null}
+            />
         </div>
     )
 }

@@ -14,6 +14,7 @@
 .elt {
 	fill: white;
 }
-.elt:hover {
+.elt:hover,
+.active {
 	fill: var(--bright-color);
 }
