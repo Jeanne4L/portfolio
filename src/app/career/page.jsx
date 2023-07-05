@@ -13,7 +13,7 @@ export let metadata = {
 export default function Career() {
     const [activeId, setActiveId] = useState(null);
 
-    function handleIdClick(id) {
+    function handleLogoClick(id) {
         setActiveId(id) 
     }
 
@@ -22,7 +22,7 @@ export default function Career() {
             <h1>Mon parcours</h1>
             <p className='hidden'>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</p>
             <div className={styles.logo_container}>
-                <CareerLogo clickedElt={handleIdClick}/>
+                <CareerLogo clickedElt={handleLogoClick} activeId={activeId}/>
             </div>
             <ItemSummary 
                 title={'Mon ancienne vie'} 
@@ -30,6 +30,7 @@ export default function Career() {
                 page={'career'} 
                 id={'commerce'}
                 activeId={activeId === 'commerce' ? activeId : null}
+                clickedElt={() => handleLogoClick('commerce')}
             />
             <ItemSummary 
                 title={'Début de reconversion'} 
@@ -37,6 +38,7 @@ export default function Career() {
                 page={'career'} 
                 id={'prep'}
                 activeId={activeId === 'prep' ? activeId : null}
+                clickedElt={() => handleLogoClick('prep')}
             />
             <ItemSummary 
                 title={'Formation Développeur web'} 
@@ -44,6 +46,7 @@ export default function Career() {
                 page={'career'} 
                 id={'training'}
                 activeId={activeId === 'training' ? activeId : null}
+                clickedElt={() => handleLogoClick('training')}
             />
             <ItemSummary 
                 title={'Mes objectifs'} 
@@ -51,6 +54,7 @@ export default function Career() {
                 page={'career'} 
                 id={'goals'}
                 activeId={activeId === 'goals' ? activeId : null}
+                clickedElt={() => handleLogoClick('goals')}
             />
         </div>
     )
