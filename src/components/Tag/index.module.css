@@ -4,4 +4,11 @@
 	padding: 7px 20px;
 	color: white;
 	border-radius: 20px;
+	font-size: 1.4rem;
+	margin-bottom: 10px;
+	text-align: center;
+}
+
+.career_tags {
+	width: 160px;
 }

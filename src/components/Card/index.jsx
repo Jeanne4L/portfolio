@@ -8,7 +8,7 @@ export default function Card({ srcImg, title, summary }) {
 		<Link href='' className={styles.link}>
 			<div className={styles.card}>
 				<Image src={srcImg} alt={title} className={styles.img} width={290} height={290}/>
-				<ItemSummary title={title} summary={summary} />
+				<ItemSummary title={title} summary={summary} page={'home'}/>
 			</div>
 		</Link>
 	);

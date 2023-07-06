@@ -1,8 +1,8 @@
 .icon {
-    width: 23px;
-    height: 23px;
-    color: white;
+	width: 23px;
+	height: 23px;
+	fill: white;
 }
 .icon:hover {
-    color: var(--white-hover);
+	fill: var(--white-hover);
 }

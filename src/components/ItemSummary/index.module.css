@@ -5,19 +5,18 @@
 	width: 275px;
 	margin-bottom: 50px;
 }
-.title {
-	font-size: 1.4rem;
-	margin: 17px 0 0 0;
-}
+.title,
 .summary {
 	font-size: 1.4rem;
 	margin: 0;
 }
-
-.active {
-	color: var(--bright-color);
+.title {
+	margin-top: 17px;
 }
 
-.test {
-	border: solid 1px black;
+.white_c {
+	color: white;
+}
+.active {
+	color: var(--bright-color);
 }

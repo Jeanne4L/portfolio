@@ -1,0 +1,51 @@
+.title {
+	font-weight: 400;
+	text-align: center;
+	text-transform: none;
+	margin-bottom: 50px;
+}
+.text {
+	text-align: justify;
+	font-size: 1.4rem;
+}
+
+.paragraph {
+	margin-bottom: 60px;
+}
+
+.tags,
+.margin {
+	margin-bottom: 120px;
+}
+
+.tags {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+.download {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	font-size: 1.5rem;
+}
+.icon {
+	width: 2.2rem;
+	height: 2.2rem;
+	margin-left: 10px;
+}
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: linear-gradient(
+		180deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 40%,
+		rgba(255, 255, 255, 1) 100%
+	);
+	padding: 50px 0 30px 0;
+	text-align: center;
+}

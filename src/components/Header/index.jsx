@@ -11,8 +11,8 @@ export default function Header() {
                     <Image 
                         src='/logo--full.svg' 
                         alt="dessin vectoriel de plusieurs triangles superposés"
-                        width={87}
-                        height={32}
+                        width={102}
+                        height={37.4}
                         className={styles.logo}
                         priority
                     />

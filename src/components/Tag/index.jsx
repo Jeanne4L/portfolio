@@ -1,5 +1,5 @@
 import styles from './index.module.css'
 
-export default function Tag({text}) {
-    return <div className={styles.tag}>{text}</div>
+export default function Tag({text, page}) {
+    return <div className={`${styles.tag} ${page === 'career' ? styles.career_tags : ''}`}>{text}</div>
 }

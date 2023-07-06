@@ -9,10 +9,10 @@ export default function ItemSummary({title, summary, page, id, activeId, clicked
             id={id}
             onClick={clickedElt}
         >
-            <h3 className={styles.title}>
+            <h3 className={`${styles.title} ${page === 'home' ? styles.white_c : ''}`}>
                 {title}
             </h3>
-            <p className={styles.summary}>
+            <p className={`${styles.summary} ${page === 'home' ? styles.white_c : ''}`}>
                 {summary}
             </p>
         </div>

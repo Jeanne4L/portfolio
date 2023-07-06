@@ -18,4 +18,5 @@
 	stroke-linejoin: inherit;
 	width: 1.5rem;
 	height: 1.5rem;
+	stroke: var(--bright-color);
 }

@@ -1,9 +1,12 @@
 'use client'
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 import CareerLogo from '@/components/CareerLogo';
 import ItemSummary from '@/components/ItemSummary';
-import styles from './page.module.css'
+import Tag from '@/components/Tag';
+import experiences from '@/data/career.json';
+import styles from './page.module.css';
 
 export let metadata = {
 	title: 'Sandra Petereau | Parcours',
@@ -12,9 +15,11 @@ export let metadata = {
 
 export default function Career() {
     const [activeId, setActiveId] = useState(null);
+    const router = useRouter();
 
-    function handleLogoClick(id) {
+    function handleClick(id) {
         setActiveId(id) 
+        router.push(`/career/${id}`)
     }
 
     return (
@@ -22,7 +27,7 @@ export default function Career() {
             <h1>Mon parcours</h1>
             <p className='hidden'>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</p>
             <div className={styles.logo_container}>
-                <CareerLogo clickedElt={handleLogoClick} activeId={activeId}/>
+                <CareerLogo clickedElt={handleClick} activeId={activeId}/>
             </div>
             <ItemSummary 
                 title={'Mon ancienne vie'} 
@@ -30,7 +35,7 @@ export default function Career() {
                 page={'career'} 
                 id={'commerce'}
                 activeId={activeId === 'commerce' ? activeId : null}
-                clickedElt={() => handleLogoClick('commerce')}
+                clickedElt={() => handleClick('commerce')}
             />
             <ItemSummary 
                 title={'Début de reconversion'} 
@@ -38,7 +43,7 @@ export default function Career() {
                 page={'career'} 
                 id={'prep'}
                 activeId={activeId === 'prep' ? activeId : null}
-                clickedElt={() => handleLogoClick('prep')}
+                clickedElt={() => handleClick('prep')}
             />
             <ItemSummary 
                 title={'Formation Développeur web'} 
@@ -46,7 +51,7 @@ export default function Career() {
                 page={'career'} 
                 id={'training'}
                 activeId={activeId === 'training' ? activeId : null}
-                clickedElt={() => handleLogoClick('training')}
+                clickedElt={() => handleClick('training')}
             />
             <ItemSummary 
                 title={'Mes objectifs'} 
@@ -54,7 +59,7 @@ export default function Career() {
                 page={'career'} 
                 id={'goals'}
                 activeId={activeId === 'goals' ? activeId : null}
-                clickedElt={() => handleLogoClick('goals')}
+                clickedElt={() => handleClick('goals')}
             />
         </div>
     )
