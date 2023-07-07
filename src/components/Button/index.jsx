@@ -14,7 +14,7 @@ export default function Button({ link, externLink, text, id, onClick }) {
         )
     } else if (externLink) {
         return(
-            <a href={externLink} className={styles.button}>
+            <a href={externLink} className={styles.button} target='_blank'>
                 {text}
                 <FiArrowUpRight className={styles.btn_icon}/>
             </a>     

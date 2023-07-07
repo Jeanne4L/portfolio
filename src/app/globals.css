@@ -25,7 +25,10 @@ main {
 }
 
 h1,
-h2 {
+h2,
+::placeholder,
+input,
+textarea {
 	font-weight: 400;
 }
 h2 {
@@ -50,12 +53,15 @@ ul {
 li {
 	list-style-type: none;
 }
-
+::placeholder,
+input,
+textarea,
+p {
+	font-size: 1.4rem;
+}
 ::placeholder,
 input,
 textarea {
-	font-size: 1.4rem;
-	font-weight: 400;
 	font-family: '__Jost_fe0236';
 }
 input:focus,
@@ -64,7 +70,7 @@ textarea:focus {
 	border-color: var(--dark-blue);
 }
 ::placeholder {
-	color: rgba(4, 43, 56, 40%);
+	color: rgba(4, 43, 56, 0.4);
 }
 
 .container {

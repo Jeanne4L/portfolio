@@ -25,7 +25,6 @@
 }
 
 .presentation {
-	font-size: 1.4rem;
 	margin: 15px 0 50px 0;
 }
 .flex {
@@ -36,12 +35,12 @@
 	vertical-align: middle;
 }
 .arrow_btn {
-	margin: 0 0 -5px 10px;
+	margin: 0 0 -3px 10px;
 	stroke-width: 2.4;
 	stroke-linecap: inherit;
 	stroke-linejoin: inherit;
-	width: 1.5rem;
-	height: 1.5rem;
+	width: 1.7rem;
+	height: 1.7rem;
 	stroke: var(--bright-color);
 }
 

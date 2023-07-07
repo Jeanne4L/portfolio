@@ -3,9 +3,9 @@ import Link from 'next/link';
 import ItemSummary from '../ItemSummary';
 import styles from './index.module.css';
 
-export default function Card({ srcImg, title, summary }) {
+export default function Card({ srcImg, title, summary, id }) {
 	return (
-		<Link href='' className={styles.link}>
+		<Link href={`/${id}`} className={styles.link}>
 			<div className={styles.card}>
 				<Image src={srcImg} alt={title} className={styles.img} width={290} height={290}/>
 				<ItemSummary title={title} summary={summary} page={'home'}/>

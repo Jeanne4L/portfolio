@@ -36,12 +36,12 @@ export default function Home() {
 			<div className={styles.darkblue_bgc}>
 				<div className='container'>
 					<h2 className={`white-c ${styles.h2}`}>Mes projets</h2>
-					{/* prettier-ignore */}
 					{projects.map((project) => (
 						<Card
 							srcImg={project.mainPicture}
 							title={project.title}
 							summary={project.summary}
+							id={project.id}
 							key={`${project.id}+${project.title}`}
 						/>
 					))}
