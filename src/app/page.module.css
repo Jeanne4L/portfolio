@@ -20,6 +20,8 @@
 }
 .title {
 	font-size: 2.1rem;
+	font-weight: 900;
+	text-transform: uppercase;
 }
 
 .presentation {
