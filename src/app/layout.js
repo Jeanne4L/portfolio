@@ -1,6 +1,8 @@
 import { Jost } from 'next/font/google';
+import { Suspense } from 'react';
 import Header from '@/components/Header';
 import './globals.css';
+import Loading from './loading';
 
 export let metadata = {
 	title: 'Sandra Petereau | Développeuse web',
@@ -17,7 +19,9 @@ export default function RootLayout({ children }) {
 		<html lang='fr' className={jost.className}>
 			<body>
 				<Header />
-				<main>{children}</main>
+				<main>
+					<Suspense fallback={<Loading />}>{children}</Suspense>
+				</main>
 			</body>
 		</html>
 	);
