@@ -33,7 +33,7 @@ export default function Home() {
 				<Button link={'/contact'} text={'Envoyer un message'} />
 			</div>
 
-			<div className={styles.darkblue_bgc}>
+			<div className={styles.darkblue_bgc} id='projects'>
 				<div className='container'>
 					<h2 className={`white-c ${styles.h2}`}>Mes projets</h2>
 					{projects.map((project) => (

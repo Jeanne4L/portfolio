@@ -30,6 +30,8 @@
 .icon,
 .text {
 	color: white;
+	stroke: white;
+	fill: white;
 }
 .icon:hover,
 .li:hover {
