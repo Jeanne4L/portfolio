@@ -1,18 +1,18 @@
+'use client'
+
 import styles from './index.module.css'
 
-export default function ItemSummary({title, summary, page, id, activeId, clickedElt}) {
+export default function ItemSummary({title, summary, page, selected, onClick}) {
+
     return(
         <div 
-            className={`${styles.container} 
-                ${activeId !== null && page === 'career' ? styles.active : ''} 
-                ${page === 'career' ? styles.career_container : ''}`} 
-            id={id}
-            onClick={clickedElt}
+            className={`${styles.container} ${page === 'career' ? styles.career_container : ''}`} 
+            onClick={onClick}
         >
-            <h3 className={`${styles.title} ${page === 'home' ? styles.white_c : ''}`}>
+            <h3 className={`${styles.title} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''}`}>
                 {title}
             </h3>
-            <p className={`${styles.summary} ${page === 'home' ? styles.white_c : ''}`}>
+            <p className={`${styles.summary} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''}`}>
                 {summary}
             </p>
         </div>

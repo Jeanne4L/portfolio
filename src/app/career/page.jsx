@@ -1,12 +1,13 @@
 'use client'
 
-import { useEffect, useState } from 'react';
+// import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 import CareerLogo from '@/components/CareerLogo';
 import ItemSummary from '@/components/ItemSummary';
-import Tag from '@/components/Tag';
-import experiences from '@/data/career.json';
 import styles from './page.module.css';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectXp } from '@/redux/selectors'
+import * as xpActions from '@/redux/features/xpSlice'
 
 export let metadata = {
 	title: 'Sandra Petereau | Parcours',
@@ -14,11 +15,12 @@ export let metadata = {
 };
 
 export default function Career() {
-    const [activeId, setActiveId] = useState(null);
     const router = useRouter();
+    const dispatch = useDispatch();
+    const selected = useSelector(selectXp);
 
     function handleClick(id) {
-        setActiveId(id) 
+        dispatch(xpActions.select(id))
         router.push(`/career/${id}`)
     }
 
@@ -27,39 +29,39 @@ export default function Career() {
             <h1>Mon parcours</h1>
             <p className='hidden'>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</p>
             <div className={styles.logo_container}>
-                <CareerLogo clickedElt={handleClick} activeId={activeId}/>
+                <CareerLogo/>
             </div>
             <ItemSummary 
                 title={'Mon ancienne vie'} 
                 summary={'Ma carrière dans le commerce'} 
                 page={'career'} 
                 id={'commerce'}
-                activeId={activeId === 'commerce' ? activeId : null}
-                clickedElt={() => handleClick('commerce')}
+                selected={selected === 'commerce' ? selected : ''}
+                onClick={() => handleClick('commerce')}
             />
             <ItemSummary 
                 title={'Début de reconversion'} 
                 summary={'La confirmation de mon nouvel itinéraire'} 
                 page={'career'} 
                 id={'prep'}
-                activeId={activeId === 'prep' ? activeId : null}
-                clickedElt={() => handleClick('prep')}
+                selected={selected === 'prep' ? selected : ''}
+                onClick={() => handleClick('prep')}
             />
             <ItemSummary 
                 title={'Formation Développeur web'} 
                 summary={'Le début d\'une nouvelle vie'} 
                 page={'career'} 
                 id={'training'}
-                activeId={activeId === 'training' ? activeId : null}
-                clickedElt={() => handleClick('training')}
+                selected={selected === 'training' ? selected : ''}
+                onClick={() => handleClick('training')}
             />
             <ItemSummary 
                 title={'Mes objectifs'} 
                 summary={'Des perspectives captivantes et variées'} 
                 page={'career'} 
                 id={'goals'}
-                activeId={activeId === 'goals' ? activeId : null}
-                clickedElt={() => handleClick('goals')}
+                selected={selected === 'goals' ? selected : ''}
+                onClick={() => handleClick('goals')}
             />
         </div>
     )
