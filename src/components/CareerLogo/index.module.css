@@ -17,4 +17,16 @@
 .elt:hover,
 .active {
 	fill: var(--bright-color);
+	cursor: pointer;
+}
+
+@media (min-width: 900px) {
+	.container {
+		width: 300px;
+		height: 300px;
+	}
+	.svg {
+		width: 200px;
+		height: 173.47px;
+	}
 }

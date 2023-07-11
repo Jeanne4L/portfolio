@@ -1,4 +1,4 @@
-.container {
+.overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
@@ -11,4 +11,13 @@
 	justify-content: center;
 	background-color: var(--dark-blue);
 	text-align: center;
+}
+.svg {
+	width: 92px;
+	height: 92px;
+	margin: 0 auto 20px auto;
+}
+.name {
+	width: 150px;
+	height: auto;
 }

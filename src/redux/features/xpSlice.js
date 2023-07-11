@@ -1,14 +1,26 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+const initialState = {
+	clicked: '',
+	hovered: '',
+};
+
 const xpSlice = createSlice({
 	name: 'xp',
-	initialState: '',
+	initialState,
 	reducers: {
-		select: (state, action) => {
-			return action.payload;
+		clic: (state, action) => {
+			state.clicked = action.payload;
+		},
+		hover: (state, action) => {
+			state.hovered = action.payload;
+		},
+		reset: (state) => {
+			state.clicked = initialState.clicked;
+			state.hovered = initialState.hovered;
 		},
 	},
 });
 
-export const { select } = xpSlice.actions;
+export const { clic, hover, reset } = xpSlice.actions;
 export default xpSlice.reducer;

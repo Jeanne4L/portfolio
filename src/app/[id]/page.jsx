@@ -3,7 +3,6 @@ import Tag from '@/components/Tag';
 import Button from '@/components/Button';
 import Link from 'next/link';
 import {notFound} from 'next/navigation';
-import { FiArrowLeft, FiArrowRight } from "react-icons/fi";
 import projects from '@/data/projects.json';
 import styles from './page.module.css';
 
@@ -30,7 +29,7 @@ export let metadata = {
 }
 
 export default function Project({params}) {
-    const { project, prevProject, nextProject, projectIndex } = fetchProjects(params.id);
+    const { project } = fetchProjects(params.id);
 
     if(!project) {
         notFound()
@@ -38,9 +37,9 @@ export default function Project({params}) {
         metadata.title = `Sandra Petereau | ${project.title}`;
         return (
             <div className="container">
-                <div className="introduction">
+                <div className={styles.introduction}>
                     <Image src={project.mainPicture} alt={project.title} width={350} height={350} className={styles.main_picture}/>
-                    <div>
+                    <div className={styles.presentation}>
                         <h1 className={styles.title}>{project.title}</h1>
                         <div className="tags">
                             {project.hardSkills.map((skill, index) => (
@@ -56,35 +55,16 @@ export default function Project({params}) {
                     </div>
                 </div>
                 <div className={styles.pictures}>
-                    <Link href={project.pictures[0]}>
+                    <Link href={project.pictures[0]} className={styles.grid_first}>
                         <Image src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} width={350} height={350} className={styles.picture}/>  
                     </Link>
-                    <Link href={project.pictures[1]}>
+                    <Link href={project.pictures[1]} className={styles.scd}>
                         <Image src={project.pictures[1]} alt={`Page ${project.title}`} width={350} height={350} className={styles.picture}/>
                     </Link>
-                    <Link href={project.pictures[2]}>
+                    <Link href={project.pictures[2]} className={styles.third}>
                         <Image src={project.pictures[2]} alt={`${project.title} sur mobile`} width={350} height={350} className={styles.picture}/>
                     </Link>
                 </div>
-                <nav className={styles.nav}>
-                    <Link href={`/${prevProject.id}`} className={styles.link}>
-                        <FiArrowLeft className={`${styles.arrow_icon} ${styles.left_arrow}`} />
-                        <Image className={styles.other_project} src={prevProject.mainPicture} alt={prevProject.title} width={80} height={80}/>
-                    </Link>
-                    <div className={styles.current_project}>
-                        <Image src={project.mainPicture} alt={project.title} width={80} height={80} className={styles.other_project}/>
-                        <div className={styles.overlay}></div>
-                        <div className={styles.nb}>
-                            {projectIndex +1}
-                            <div className={styles.line}></div>
-                            {projects.length}
-                        </div>
-                    </div>
-                    <Link href={`/${nextProject.id}`} className={styles.link}>
-                        <Image className={styles.other_project} src={nextProject.mainPicture} alt={nextProject.title} width={80} height={80}/>
-                        <FiArrowRight className={`${styles.arrow_icon} ${styles.right_arrow}`}/>
-                    </Link>
-                </nav>
             </div>
         )
     }

@@ -66,28 +66,30 @@ export default function Form() {
                 <p className={`${styles.success} ${styles.general}`}>Message envoyé, je vous réponds au plus vite !</p>
             : ''}
 
-            <div className={styles.inputContainer}>
-                <label htmlFor='name' className={styles.label}>Votre nom *</label>
-                <input type='text' name='name' id='name' className={styles.input} value={fieldValue.name} onChange={handleChange} required/>
-                {invalidText ? 
-                    <p className={styles.error}>Ce champ ne doit contenir que des lettres</p>
-                : ''
-                }
-            </div>
+            <div className={styles.flex_container}>
+                <div className={styles.inputContainer}>
+                    <label htmlFor='name' className={styles.label}>Votre nom *</label>
+                    <input type='text' name='name' id='name' className={styles.input} value={fieldValue.name} onChange={handleChange} required/>
+                    {invalidText ? 
+                        <p className={styles.error}>Ce champ ne doit contenir que des lettres</p>
+                    : ''
+                    }
+                </div>
 
-            <div className={styles.inputContainer}>
-                <label htmlFor='email' className={styles.label}>Votre email *</label>
-                <input type='text' name='email' id='email' className={styles.input} value={fieldValue.email} onChange={handleChange} required/>
-                {invalidEmail ? 
-                    <p className={styles.error}>Cet email est invalide</p>
-                : ''
-                }
+                <div className={styles.inputContainer}>
+                    <label htmlFor='email' className={styles.label}>Votre email *</label>
+                    <input type='text' name='email' id='email' className={styles.input} value={fieldValue.email} onChange={handleChange} required/>
+                    {invalidEmail ? 
+                        <p className={styles.error}>Cet email est invalide</p>
+                    : ''
+                    }
+                </div>
             </div>
 
             <label htmlFor='message' className={styles.label}>Votre message *</label>
             <textarea name="message" placeholder="Je cherche justement une développeuse motivée !" className={styles.textarea} value={fieldValue.message} onChange={handleChange} required/>
 
-            <Button text={'Envoyer'} id='submit' onClick={handleSubmit}/>
+            <Button text={'Envoyer'} onClick={handleSubmit} page={'contact'}/>
         </form>
     )
 }

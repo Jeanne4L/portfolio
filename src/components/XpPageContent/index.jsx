@@ -3,14 +3,22 @@
 import Tag from '../Tag';
 import { BsFillCloudArrowDownFill } from "react-icons/bs";
 import { selectTheme } from '@/redux/selectors';
-import { useSelector } from 'react-redux';
-import styles from './index.module.css'
+import { useDispatch, useSelector } from 'react-redux';
+import * as xpActions from '@/redux/features/xpSlice';
+import styles from './index.module.css';
+import { useEffect } from 'react'
 
 export default function XpPageContent({xp}) {
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(xpActions.reset());
+      }, [dispatch]);
+
     const theme = useSelector(selectTheme);
 
     return(
-        <div className='container'>
+        <div className={`container ${styles.container}`}>
             <h1 className={styles.title}>{xp.title}</h1>
             
             <div className={`${styles.paragraph} ${xp.softSkills ? '' : styles.margin}`}>

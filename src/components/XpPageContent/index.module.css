@@ -57,3 +57,12 @@
 	);
 	color: white;
 }
+
+@media (min-width: 900px) {
+	.container {
+		width: 70%;
+	}
+	.tags {
+		justify-content: space-evenly;
+	}
+}

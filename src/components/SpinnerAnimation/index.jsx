@@ -7,9 +7,11 @@ import styles from './index.module.css'
 
 export default function SpinnerAnimation() {
     return (
-        <div className={styles.container}>
-            <Lottie animationData={spinner} />;
-            <Image src={'/spinner_name.svg'} alt='Sandra Petereau' width={195} height={86}/>
+        <div className={styles.overlay}>
+            <div className={styles.container}>
+                <Lottie animationData={spinner} className={styles.svg}/>;
+                <Image src={'/spinner_name.svg'} alt='Sandra Petereau' width={195} height={86} className={styles.name}/>
+            </div>
         </div>
     )
 }

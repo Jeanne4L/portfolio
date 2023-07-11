@@ -3,7 +3,9 @@
 	flex-direction: column;
 	align-items: center;
 }
-
+.title {
+	margin-top: 0;
+}
 .logo_container {
 	position: sticky;
 	top: 52px;
@@ -14,7 +16,33 @@
 	justify-content: center;
 	background-color: white;
 }
-
+.explanations {
+	display: none;
+}
 .dark_mode {
 	background-color: var(--dark-mode-blue);
+}
+
+@media (min-width: 700px) {
+	.flex {
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+@media (min-width: 900px) {
+	.desktop_container {
+		position: relative;
+		width: 100%;
+		margin: 50px 0 70px 0;
+	}
+	.logo_container {
+		padding: 0;
+		margin: 8px 0 8px 0;
+		width: 100%;
+	}
+	.explanations {
+		display: block;
+		font-size: 1rem;
+		margin: 0;
+	}
 }

@@ -4,6 +4,7 @@ import Card from '@/components/Card';
 import projects from '@/data/projects';
 import { FiArrowUpRight } from 'react-icons/fi';
 import styles from './page.module.css';
+import SpinnerAnimation from '@/components/SpinnerAnimation';
 
 export let metadata = {
 	title: 'Sandra Petereau | Développeuse web',
@@ -19,13 +20,11 @@ export default function Home() {
 				<h1 className={styles.title}>Développeuse web junior</h1>
 
 				<div className={styles.presentation}>
-					<p>
-						J’ai commencé à coder sur mon temps libre et j’ai adoré. Maintenant,
-						j’ai hâte d’en apprendre plus !
-					</p>
+					<p>J’ai commencé à coder sur mon temps libre et j’ai adoré.</p>
+					<p>Maintenant, j’ai hâte d’en apprendre plus !</p>
 					<div>
 						<p>
-							Je vous raconte tout sur la page Mon parcours ! Allez-y jeter un
+							Je vous raconte tout sur la page Mon parcours. Allez-y jeter un
 							œil
 							<Link href='/career' className={styles.arrow_btn_link}>
 								<FiArrowUpRight className={`bright-c ${styles.arrow_btn}`} />
@@ -41,15 +40,17 @@ export default function Home() {
 			<div className={styles.darkblue_bgc} id='projects'>
 				<div className='container'>
 					<h2 className={`white-c ${styles.h2}`}>Mes projets</h2>
-					{projects.map((project) => (
-						<Card
-							srcImg={project.mainPicture}
-							title={project.title}
-							summary={project.summary}
-							id={project.id}
-							key={`${project.id}+${project.title}`}
-						/>
-					))}
+					<div className={styles.projects_container}>
+						{projects.map((project) => (
+							<Card
+								srcImg={project.mainPicture}
+								title={project.title}
+								summary={project.summary}
+								id={project.id}
+								key={`${project.id}+${project.title}`}
+							/>
+						))}
+					</div>
 				</div>
 			</div>
 		</>

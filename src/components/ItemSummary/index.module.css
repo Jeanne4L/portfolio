@@ -2,8 +2,9 @@
 	text-align: center;
 }
 .career_container {
-	width: 275px;
+	width: 250px;
 	margin-bottom: 50px;
+	margin: 0 auto 50px auto;
 }
 .summary {
 	margin: 0;
@@ -18,4 +19,49 @@
 }
 .active {
 	color: var(--bright-color);
+}
+
+@media (min-width: 900px) {
+	.title {
+		font-size: 1.2rem;
+	}
+	.career_container {
+		position: absolute;
+		width: 200px;
+		margin: 0;
+		opacity: 0;
+	}
+	.hover {
+		opacity: 1;
+	}
+	.commerce,
+	.prep {
+		bottom: 0;
+	}
+	.training,
+	.goals {
+		top: 0;
+	}
+	.prep,
+	.goals {
+		right: 2%;
+	}
+	.commerce,
+	.training {
+		left: 2%;
+	}
+}
+@media (min-width: 1100px) {
+	.home_container {
+		width: 80%;
+		margin: auto;
+	}
+	.prep,
+	.goals {
+		right: 10%;
+	}
+	.commerce,
+	.training {
+		left: 10%;
+	}
 }

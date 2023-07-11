@@ -1,9 +1,9 @@
 .introduction {
-	margin-bottom: 50px;
+	margin-bottom: 55px;
 }
 .darkblue_bgc {
 	background-color: var(--dark-blue);
-	padding: 50px 0;
+	padding: 55px 0;
 }
 
 .title,
@@ -48,4 +48,37 @@
 	text-align: center;
 	font-size: 2rem;
 	margin-bottom: 70px;
+}
+
+@media (min-width: 700px) {
+	.projects_container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-evenly;
+	}
+}
+@media (min-width: 1100px) {
+	.hi_p {
+		font-size: 1.1rem;
+		margin-bottom: 5px;
+	}
+	.name_p {
+		font-size: 2.3rem;
+		margin-bottom: 10px;
+	}
+	.title {
+		font-size: 2.5rem;
+	}
+	.introduction {
+		margin: 10px auto 90px auto;
+	}
+	.presentation p {
+		margin: 10px 0;
+	}
+	.darkblue_bgc {
+		padding: 70px 0 0 0;
+	}
+	.arrow_btn {
+		margin-bottom: -5px;
+	}
 }

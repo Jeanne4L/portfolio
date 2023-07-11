@@ -31,17 +31,19 @@
 	text-transform: uppercase;
 	text-align: center;
 	transform: translateY(-70px);
+	margin-bottom: 0;
 }
 .icon {
 	width: 40px;
 	height: 40px;
 }
 .li {
-	margin-bottom: 30px;
+	margin-top: 30px;
 }
 .icon:hover,
 .li:hover {
-	color: var(--white-hover);
+	color: var(--bright-color);
+	fill: var(--bright-color);
 }
 
 /* DARK MODE STYLES */
@@ -53,7 +55,18 @@
 	color: white;
 	fill: white;
 }
-.dark_mode .icon:hover,
-.dark_mode.li:hover {
-	color: var(--dark-blue-hover);
+
+@media (min-width: 500px) {
+	.social {
+		justify-content: center;
+	}
+	.social a {
+		margin: 0 15px;
+	}
+}
+@media (min-width: 900px) {
+	.icon {
+		width: 30px;
+		height: 30px;
+	}
 }
