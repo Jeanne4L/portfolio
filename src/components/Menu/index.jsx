@@ -1,28 +1,32 @@
 import { VscColorMode, VscChromeClose } from "react-icons/vsc";
 import { GrMail, GrLinkedinOption, GrGithub } from "react-icons/gr";
 import { useDispatch } from 'react-redux';
-import * as menuActions from '@/redux/features/menuSlice'
+import * as menuActions from '@/redux/features/menuSlice';
+import * as themeActions from '@/redux/features/themeSlice';
+import { useSelector } from 'react-redux';
+import { selectTheme } from '@/redux/selectors';
 import Link from "next/link";
 import styles from './index.module.css'
 
 export default function Menu() {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
+    const theme = useSelector(selectTheme);
     return (
-        <div className={styles.overlay}>
+        <div className={`${styles.overlay} ${theme === 'dark' ? styles.dark_mode : ''}`}>
             <div className={styles.icons}>
-                <VscColorMode className={styles.icon}/>
+                <VscColorMode className={styles.icon} onClick={() => dispatch(themeActions.toggle())}/>
                 <VscChromeClose className={styles.icon} onClick={() => dispatch(menuActions.toggle())}/> 
             </div>
             <nav className={styles.int_nav}>
                 <ul className={styles.text}>
                     <Link href={'/#projects'} onClick={() => dispatch(menuActions.toggle())}>
-                        <li className={`white-c ${styles.li}`}>Projets</li>
+                        <li className={`${styles.li}`}>Projets</li>
                     </Link>
                     <Link href={'/contact'} onClick={() => dispatch(menuActions.toggle())}>
-                        <li className={`white-c ${styles.li}`}>Contact</li>
+                        <li className={`${styles.li}`}>Contact</li>
                     </Link>
                     <Link href={'/career'} onClick={() => dispatch(menuActions.toggle())}>
-                        <li className={`white-c ${styles.li}`}>Parcours</li>
+                        <li className={`${styles.li}`}>Parcours</li>
                     </Link>
                 </ul>
             </nav>

@@ -47,3 +47,13 @@
 	padding: 50px 0 30px 0;
 	text-align: center;
 }
+
+.footer_dark {
+	background: linear-gradient(
+		180deg,
+		rgba(7, 75, 97, 0) 0%,
+		rgba(7, 75, 97, 1) 40%,
+		rgba(7, 75, 97, 1) 100%
+	);
+	color: white;
+}

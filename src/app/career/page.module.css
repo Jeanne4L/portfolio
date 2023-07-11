@@ -14,3 +14,7 @@
 	justify-content: center;
 	background-color: white;
 }
+
+.dark_mode {
+	background-color: var(--dark-mode-blue);
+}

@@ -5,18 +5,19 @@
 	--dark-mode-blue: #074b61;
 
 	--white-hover: rgba(255, 255, 255, 0.7);
+	--dark-blue-hover: rgba(4, 43, 56, 0.7);
 }
 
 * {
 	box-sizing: border-box;
 	font-weight: 300;
-	color: var(--dark-blue);
 }
 body {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
+	color: var(--dark-blue);
 }
 main {
 	flex: 1;
@@ -42,6 +43,7 @@ h3,
 
 p {
 	line-height: 2.2rem;
+	font-size: 1.4rem;
 }
 
 a {
@@ -54,16 +56,12 @@ ul {
 li {
 	list-style-type: none;
 }
-::placeholder,
-input,
-textarea,
-p {
-	font-size: 1.4rem;
-}
+
 ::placeholder,
 input,
 textarea {
 	font-family: '__Jost_fe0236';
+	font-size: 1.4rem;
 }
 input:focus,
 textarea:focus {
@@ -88,7 +86,23 @@ textarea:focus {
 .dark-bgc {
 	background-color: var(--dark-blue);
 }
+.dark_mode {
+	background-color: var(--dark-mode-blue);
+	color: white;
+}
 
+.dark_mode ::placeholder,
+.dark_mode input,
+.dark_mode textarea {
+	color: white;
+	border-color: rgba(255, 255, 255, 0.4);
+	font-weight: 300;
+}
+.dark_mode ::placeholder {
+	color: rgba(255, 255, 255, 0.4);
+}
+
+/* 404 PAGE */
 .full-container {
 	position: fixed;
 	top: 0;

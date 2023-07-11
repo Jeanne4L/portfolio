@@ -4,7 +4,6 @@
 	display: flex;
 	justify-content: space-between;
 }
-
 .overlay {
 	position: fixed;
 	z-index: 2000;
@@ -12,7 +11,7 @@
 	height: 100%;
 	top: 0;
 	left: 0;
-	background-color: var(--dark-blue);
+	background-color: white;
 	flex-direction: column;
 	padding: 30px;
 }
@@ -27,26 +26,34 @@
 	align-items: center;
 }
 
-.icon,
-.text {
-	color: white;
-	stroke: white;
-	fill: white;
-}
-.icon:hover,
-.li:hover {
-	color: var(--white-hover);
-}
-.icon {
-	width: 40px;
-	height: 40px;
-}
 .text {
 	font-size: 2.1rem;
 	text-transform: uppercase;
 	text-align: center;
 	transform: translateY(-70px);
 }
+.icon {
+	width: 40px;
+	height: 40px;
+}
 .li {
 	margin-bottom: 30px;
+}
+.icon:hover,
+.li:hover {
+	color: var(--white-hover);
+}
+
+/* DARK MODE STYLES */
+.dark_mode {
+	background-color: var(--dark-blue);
+}
+.dark_mode .icon,
+.dark_mode .text {
+	color: white;
+	fill: white;
+}
+.dark_mode .icon:hover,
+.dark_mode.li:hover {
+	color: var(--dark-blue-hover);
 }

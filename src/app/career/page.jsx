@@ -7,6 +7,7 @@ import ItemSummary from '@/components/ItemSummary';
 import styles from './page.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectXp } from '@/redux/selectors'
+import { selectTheme } from '@/redux/selectors';
 import * as xpActions from '@/redux/features/xpSlice'
 
 export let metadata = {
@@ -18,6 +19,7 @@ export default function Career() {
     const router = useRouter();
     const dispatch = useDispatch();
     const selected = useSelector(selectXp);
+    const theme = useSelector(selectTheme)
 
     function handleClick(id) {
         dispatch(xpActions.select(id))
@@ -28,7 +30,7 @@ export default function Career() {
         <div className={`container ${styles.main}`}>
             <h1>Mon parcours</h1>
             <p className='hidden'>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</p>
-            <div className={styles.logo_container}>
+            <div className={`${styles.logo_container} ${theme === 'dark' ? styles.dark_mode : ''}`}>
                 <CareerLogo/>
             </div>
             <ItemSummary 

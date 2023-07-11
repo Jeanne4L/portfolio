@@ -1,7 +1,11 @@
+'use client';
+
 import Tag from '@/components/Tag';
 import experiences from '@/data/career.json';
 import { notFound } from 'next/navigation';
 import { BsFillCloudArrowDownFill } from "react-icons/bs";
+import { selectTheme } from '@/redux/selectors';
+import { useSelector } from 'react-redux';
 import styles from './page.module.css'
 
 function fetchXP(id) {
@@ -9,6 +13,7 @@ function fetchXP(id) {
     return xp
 }
 export default function CareerXP({ params }) {
+    const theme = useSelector(selectTheme);
     const xp = fetchXP(params.id);
 
     if(!xp) {
@@ -34,7 +39,7 @@ export default function CareerXP({ params }) {
                     </div>
                 }
 
-                <div className={styles.footer}>
+                <div className={`${styles.footer} ${theme === 'dark' ? styles.footer_dark : ''}`}>
                     <a href='' download className={styles.download}>
                         Télécharger mon cv
                         <BsFillCloudArrowDownFill className={styles.icon}/>
