@@ -25,12 +25,17 @@ function fetchProjects(id) {
     return { project, prevProject, nextProject, projectIndex }
 }
 
+export let metadata = {
+    title: `Sandra Petereau | `,
+}
+
 export default function Project({params}) {
     const { project, prevProject, nextProject, projectIndex } = fetchProjects(params.id);
 
     if(!project) {
         notFound()
     } else { 
+        metadata.title = `Sandra Petereau | ${project.title}`;
         return (
             <div className="container">
                 <div className="introduction">
