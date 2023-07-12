@@ -42,6 +42,10 @@
 	width: 1.7rem;
 	height: 1.7rem;
 	stroke: var(--bright-color);
+	transition: transform 800ms;
+}
+.arrow_btn:hover {
+	transform: rotate(360deg);
 }
 
 .h2 {

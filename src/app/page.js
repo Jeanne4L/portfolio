@@ -43,7 +43,7 @@ export default function Home() {
 					<div className={styles.projects_container}>
 						{projects.map((project) => (
 							<Card
-								srcImg={project.mainPicture}
+								srcImg={project.mainImg}
 								title={project.title}
 								summary={project.summary}
 								id={project.id}

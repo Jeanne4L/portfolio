@@ -7,11 +7,9 @@ import Image from "next/image"
 import Menu from '../Menu'
 import styles from './index.module.css'
 import * as menuActions from '@/redux/features/menuSlice'
-import { useDispatch, useSelector } from 'react-redux';
-import { selectMenu } from '@/redux/selectors';
+import { useDispatch } from 'react-redux';
 
 export default function Header() {
-    const menu = useSelector(selectMenu);
     const dispatch = useDispatch();
 
     return (
@@ -38,9 +36,8 @@ export default function Header() {
                     />
                 </Link>
                 <AiOutlineMenu onClick={() => dispatch(menuActions.toggle())} className={styles.menu_icon}/>
-                {menu && 
-                    <Menu/>
-                }
+                <Menu/>
+
             </div>
             <nav className={styles.social}>
                 <a href="mailto:sandra.petereau@outlook.fr">

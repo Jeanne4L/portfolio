@@ -7,6 +7,15 @@
 .img {
 	object-fit: cover;
 	border-radius: 500px;
+	transition: transform 400ms;
+}
+.img_container {
+	overflow: hidden;
+	display: inline-block;
+	border-radius: 500px;
+}
+.img:hover {
+	transform: scale(1.05) rotate(-1deg);
 }
 
 @media (min-width: 700px) {

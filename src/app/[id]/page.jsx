@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Tag from '@/components/Tag';
 import Button from '@/components/Button';
 import Link from 'next/link';
+import ProjectImgTitle from '@/components/ProjectImgTitle';
 import {notFound} from 'next/navigation';
 import projects from '@/data/projects.json';
 import styles from './page.module.css';
@@ -38,7 +39,7 @@ export default function Project({params}) {
         return (
             <div className="container">
                 <div className={styles.introduction}>
-                    <Image src={project.mainPicture} alt={project.title} width={350} height={350} className={styles.main_picture}/>
+                    <Image src={project.mainImg} alt={project.title} width={350} height={350} className={styles.main_img}/>
                     <div className={styles.presentation}>
                         <h1 className={styles.title}>{project.title}</h1>
                         <div className="tags">
@@ -55,15 +56,24 @@ export default function Project({params}) {
                     </div>
                 </div>
                 <div className={styles.pictures}>
-                    <Link href={project.pictures[0]} className={styles.grid_first}>
-                        <Image src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} width={350} height={350} className={styles.picture}/>  
-                    </Link>
-                    <Link href={project.pictures[1]} className={styles.scd}>
-                        <Image src={project.pictures[1]} alt={`Page ${project.title}`} width={350} height={350} className={styles.picture}/>
-                    </Link>
-                    <Link href={project.pictures[2]} className={styles.third}>
-                        <Image src={project.pictures[2]} alt={`${project.title} sur mobile`} width={350} height={350} className={styles.picture}/>
-                    </Link>
+                    <div className={styles.img_container}>
+                        <ProjectImgTitle title={'Home'}/>
+                        <Link href={project.pictures[0]} className={styles.link}>
+                            <Image src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} width={350} height={350} className={styles.img}/>  
+                        </Link>
+                    </div>
+                    <div className={styles.img_container}>
+                        <ProjectImgTitle title={'Desktop'}/>
+                        <Link href={project.pictures[1]} className={styles.link}>
+                            <Image src={project.pictures[1]} alt={`Page ${project.title}`} width={350} height={350} className={styles.img}/>
+                        </Link>
+                    </div>
+                    <div className={styles.img_container}>
+                        <ProjectImgTitle title={'Mobile'}/>
+                        <Link href={project.pictures[2]} className={styles.link}>
+                            <Image src={project.pictures[2]} alt={`${project.title} sur mobile`} width={350} height={350} className={styles.img}/>
+                        </Link>
+                    </div>
                 </div>
             </div>
         )

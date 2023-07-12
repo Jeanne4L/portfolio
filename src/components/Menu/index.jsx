@@ -4,15 +4,16 @@ import { useDispatch } from 'react-redux';
 import * as menuActions from '@/redux/features/menuSlice';
 import * as themeActions from '@/redux/features/themeSlice';
 import { useSelector } from 'react-redux';
-import { selectTheme } from '@/redux/selectors';
+import { selectTheme, selectMenu } from '@/redux/selectors';
 import Link from "next/link";
 import styles from './index.module.css'
 
 export default function Menu() {
+    const menu = useSelector(selectMenu);
     const dispatch = useDispatch();
     const theme = useSelector(selectTheme);
     return (
-        <div className={`${styles.overlay} ${theme === 'dark' ? styles.dark_mode : ''}`}>
+        <div className={`${styles.overlay} ${theme === 'dark' ? styles.dark_mode : ''} ${menu ? styles.displayed_overlay : ''}`}>
             <div className={styles.icons}>
                 <VscColorMode className={styles.icon} onClick={() => dispatch(themeActions.toggle())}/>
                 <VscChromeClose className={styles.icon} onClick={() => dispatch(menuActions.toggle())}/> 

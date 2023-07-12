@@ -103,6 +103,10 @@ textarea:focus {
 .dark_mode ::placeholder {
 	color: rgba(255, 255, 255, 0.4);
 }
+.dark_mode input:focus,
+.dark_mode textarea:focus {
+	border-color: white;
+}
 
 /* 404 PAGE */
 .full-container {

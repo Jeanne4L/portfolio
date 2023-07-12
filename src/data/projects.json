@@ -9,7 +9,7 @@
 			"Ce site permet aux utilisateurs de sélectionner un restaurant et de réserver leur menu à l'avance."
 		],
 		"hardSkills": ["HTML", "CSS", "Sass"],
-		"mainPicture": "/images/ohmyfood/ohmyfood_main.jpg",
+		"mainImg": "/images/ohmyfood/ohmyfood_main.jpg",
 		"pictures": [
 			"/images/ohmyfood/ohmyfood_1.png",
 			"/images/ohmyfood/ohmyfood_2.png",
@@ -28,7 +28,7 @@
 			"Il permet aux utilisateurs de sélectionner un hébergement ou une activité dans la ville de leur choix."
 		],
 		"hardSkills": ["HTML", "CSS"],
-		"mainPicture": "/images/booki/booki_main.jpg",
+		"mainImg": "/images/booki/booki_main.jpg",
 		"pictures": [
 			"/images/booki/booki_1.png",
 			"/images/booki/booki_2.png",
@@ -47,7 +47,7 @@
 			"L'utilisatrice, une fois connectée, peut ajouter ou supprimer ses projets en toute autonomie."
 		],
 		"hardSkills": ["JavaScript"],
-		"mainPicture": "/images/sophiebluel/sophiebluel_main.png",
+		"mainImg": "/images/sophiebluel/sophiebluel_main.png",
 		"pictures": [
 			"/images/sophiebluel/sophiebluel_1.png",
 			"/images/sophiebluel/sophiebluel_2.png",
@@ -66,7 +66,7 @@
 			"Le site étant optimisé pour les navigateurs, permet à l'utilisatrice de se faire connaître grâce à un meilleur référencement."
 		],
 		"hardSkills": ["SEO", "accessibilité"],
-		"mainPicture": "/images/ninacarducci/ninacarducci_main.png",
+		"mainImg": "/images/ninacarducci/ninacarducci_main.png",
 		"pictures": [
 			"/images/ninacarducci/ninacarducci_1.png",
 			"/images/ninacarducci/ninacarducci_2.png",
@@ -85,7 +85,7 @@
 			"Le site permet aux utilisateurs de sélectionner une location immobilière."
 		],
 		"hardSkills": ["React"],
-		"mainPicture": "/images/kasa/kasa_main.jpg",
+		"mainImg": "/images/kasa/kasa_main.jpg",
 		"pictures": [
 			"/images/kasa/kasa_1.png",
 			"/images/kasa/kasa_2.png",
@@ -104,7 +104,7 @@
 			"Le site permet à un utilisateur connecté de créer et de noter des livres."
 		],
 		"hardSkills": ["Node.js", "Express"],
-		"mainPicture": "/images/monvieuxgrimoire/monvieuxgrimoire_main.png",
+		"mainImg": "/images/monvieuxgrimoire/monvieuxgrimoire_main.png",
 		"pictures": [
 			"/images/monvieuxgrimoire/monvieuxgrimoire_1.png",
 			"/images/monvieuxgrimoire/monvieuxgrimoire_2.png",
