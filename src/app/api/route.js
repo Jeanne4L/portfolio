@@ -1,0 +1,44 @@
+import { NextResponse } from 'next/server';
+import nodemailer from 'nodemailer';
+
+export async function POST(req) {
+	const request = await req.json();
+
+	// CONNECTION TO SEND EMAIL
+	const transporter = nodemailer.createTransport({
+		service: 'gmail',
+		auth: {
+			user: process.env.NEXT_PUBLIC_CONNECTION_EMAIL,
+			pass: process.env.NEXT_PUBLIC_CONNECTION_PASSWORD,
+		},
+	});
+
+	// EMAIL CONFIG
+	const mailOptions = {
+		from: request.email,
+		to: process.env.NEXT_PUBLIC_EMAIL,
+		replyTo: request.email,
+		subject: 'Portfolio - Demande de contact',
+		text: request.message,
+		html: `<div>
+                <p>${request.message}</p>
+                <span>${request.name}</span>
+            </div>`,
+	};
+
+	// SEND EMAIL
+	return await transporter
+		.sendMail(mailOptions)
+		.then((response) => {
+			return NextResponse.json(
+				{ error: false, emailSent: true, errors: [], response },
+				{ status: 200 }
+			);
+		})
+		.catch((error) => {
+			return NextResponse.json(
+				{ error: true, emailSent: false, errors: [error] },
+				{ status: 500 }
+			);
+		});
+}

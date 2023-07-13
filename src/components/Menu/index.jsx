@@ -32,7 +32,7 @@ export default function Menu() {
                 </ul>
             </nav>
             <nav className={styles.social}>
-                <a href="mailto:sandra.petereau@outlook.fr">
+                <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
                     <GrMail className={styles.icon}/>
                 </a>
                 <a href="https://github.com/Jeanne4L" target="_blank">

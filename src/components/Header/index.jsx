@@ -5,9 +5,10 @@ import { AiOutlineMenu } from 'react-icons/ai'
 import Link from "next/link"
 import Image from "next/image"
 import Menu from '../Menu'
-import styles from './index.module.css'
 import * as menuActions from '@/redux/features/menuSlice'
 import { useDispatch } from 'react-redux';
+import styles from './index.module.css'
+
 
 export default function Header() {
     const dispatch = useDispatch();
@@ -40,7 +41,7 @@ export default function Header() {
 
             </div>
             <nav className={styles.social}>
-                <a href="mailto:sandra.petereau@outlook.fr">
+                <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
                     <GrMail className={styles.icon}/>
                 </a>
                 <a href="https://github.com/Jeanne4L" target="_blank">
