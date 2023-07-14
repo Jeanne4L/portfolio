@@ -91,13 +91,15 @@
 	}
 	.img {
 		border: none;
+		margin-bottom: 0;
 	}
 	.img_container {
 		margin-top: 70px;
-		height: 540px;
+		height: 530px;
 		position: relative;
 	}
 	.link {
+		display: inline-flex;
 		position: absolute;
 		transform: translateX(-50%);
 		bottom: 0;

@@ -1,6 +1,6 @@
 .btn {
-	border: solid 3px var(--bright-color);
-	color: var(--bright-color);
+	border: solid 3px var(--light-mode-bright-color);
+	color: var(--light-mode-bright-color);
 	background: transparent;
 	padding: 10px 15px;
 	font-weight: 500;
@@ -15,19 +15,31 @@
 	background: rgba(54, 180, 197, 0.2);
 	border-color: transparent;
 }
-.btn:hover > .btn_icon {
+.btn:hover > .icon,
+.arrow_btn:hover > .icon {
 	transform: rotate(360deg);
 }
-
-.btn_icon {
+.arrow_btn {
+	vertical-align: middle;
+}
+.icon {
 	margin: 0 0 -3px 10px;
 	stroke-width: 2.4;
 	stroke-linecap: inherit;
 	stroke-linejoin: inherit;
 	width: 1.7rem;
 	height: 1.7rem;
-	stroke: var(--bright-color);
+	stroke: var(--light-mode-bright-color);
 	transition: transform 800ms;
+}
+
+.dark_mode_btn {
+	border-color: var(--dark-mode-bright-color);
+	color: var(--dark-mode-bright-color);
+}
+.dark_mode_btn > .icon,
+.dark_mode_icon {
+	stroke: var(--dark-mode-bright-color);
 }
 
 @media (min-width: 600px) {

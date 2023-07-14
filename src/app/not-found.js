@@ -11,7 +11,7 @@ export default function NotFound() {
 				<br />
 				n'existe pas !
 			</p>
-			<Button link={'/'} text={"Revenir à la page d'accueil"} />
+			<Button link={'/'} text={"Revenir à la page d'accueil"} page={'404'} />
 		</div>
 	);
 }

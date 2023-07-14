@@ -1,11 +1,10 @@
 :root {
-	--bright-color: #36b4c5;
-	--dark-blue: #042b38;
+	--light-mode-bright-color: #008294;
+	--dark-color: #042b38;
 
-	--dark-mode-blue: #074b61;
-
-	--white-hover: rgba(255, 255, 255, 0.7);
-	--dark-blue-hover: rgba(4, 43, 56, 0.7);
+	/* DARK MODE */
+	--dark-mode-bright-color: #33c3cf;
+	--dark-mode-bgc: #074b61;
 }
 
 * {
@@ -17,7 +16,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	color: var(--dark-blue);
+	color: var(--dark-color);
 }
 main {
 	flex: 1;
@@ -66,7 +65,7 @@ textarea {
 input:focus,
 textarea:focus {
 	outline: none;
-	border-color: var(--dark-blue);
+	border: solid 1.5px var(--light-mode-bright-color);
 }
 ::placeholder {
 	color: rgba(4, 43, 56, 0.4);
@@ -82,15 +81,15 @@ textarea:focus {
 	color: white;
 }
 .bright-c {
-	color: var(--bright-color);
+	color: var(--dark-mode-bright-color);
 }
 .dark-bgc {
-	background-color: var(--dark-blue);
+	background-color: var(--dark-color);
 }
 
 /* DARK MODE */
 .dark_mode {
-	background-color: var(--dark-mode-blue);
+	background-color: var(--dark-mode-bgc);
 	color: white;
 }
 .dark_mode ::placeholder,
@@ -105,7 +104,7 @@ textarea:focus {
 }
 .dark_mode input:focus,
 .dark_mode textarea:focus {
-	border-color: white;
+	border: solid 1.5px var(--dark-mode-bright-color);
 }
 
 /* 404 PAGE */

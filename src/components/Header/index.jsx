@@ -16,7 +16,7 @@ export default function Header() {
     return (
         <header className={styles.header}>
             <div className={`container ${styles.container}`}>
-                <Link href='/'>
+                <Link href='/' aria-label='Revenir à la page principale'>
                     <Image 
                         src='/logo--full.svg' 
                         alt="dessin vectoriel de plusieurs triangles superposés"
@@ -26,7 +26,7 @@ export default function Header() {
                         priority
                     />
                 </Link>
-                <Link href='/'>
+                <Link href='/' aria-label='Revenir à la page principale'>
                     <Image 
                         src='/logo--simple.svg' 
                         alt="dessin vectoriel de plusieurs triangles superposés"
@@ -41,13 +41,13 @@ export default function Header() {
 
             </div>
             <nav className={styles.social}>
-                <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+                <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} aria-label='Envoyer un email'>
                     <GrMail className={styles.icon}/>
                 </a>
-                <a href="https://github.com/Jeanne4L" target="_blank">
+                <a href="https://github.com/Jeanne4L" target="_blank" aria-label='Aller sur mon Github'>
                     <GrGithub className={styles.icon}/>
                 </a>
-                <a href="https://www.linkedin.com/in/sandra-petereau/" target="_blank">
+                <a href="https://www.linkedin.com/in/sandra-petereau/" target="_blank" aria-label='Aller sur mon LinkedIn'>
                     <GrLinkedinOption className={styles.icon}/>
                 </a>
             </nav>

@@ -4,11 +4,12 @@ import styles from './index.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import * as xpActions from '@/redux/features/xpSlice';
-import { selectClickedXp } from '@/redux/selectors';
+import { selectClickedXp, selectTheme } from '@/redux/selectors';
 
 export default function CareerLogo() {
     const router = useRouter();
     const dispatch = useDispatch();
+    const theme = useSelector(selectTheme)
     const selected = useSelector(selectClickedXp);
 
     function changeId(id) {
@@ -56,28 +57,28 @@ export default function CareerLogo() {
                     style={{fillOpacity: 1, fillRule: 'evenodd', stroke: 'none', strokeWidth: 0.2, strokeLinecap: 'round', strokeMiterlimit: 0, strokeDasharray: 'none', strokeOpacity: 1, paintOrder: 'fill markers stroke' }}
                     d="m 0.6214251,42.353219 -0.005908,31.580344 84.66666559,-0.0064 z"
                     id="commerce_peak" 
-                    className={selected === 'commerce' ? styles.active : styles.elt} 
+                    className={`${selected === 'commerce' ? styles.active : styles.elt} ${selected === 'commerce' && theme === 'dark' ? styles.dark_mode_active : styles.elt}`}
                     onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)}
                 />
                 <path
                     style={{fillOpacity: 1, fillRule: 'evenodd', stroke: 'none', strokeWidth: 0.2, strokeLinecap: 'round', strokeMiterlimit: 0, strokeDasharray: 'none', strokeOpacity: 1, paintOrder: 'fill markers stroke' }}
                     d="m 77.283365,31.05911 -10.388274,7.455287 c 0,0 17.684412,31.268772 17.716038,31.318762 z"
                     id="prep_peak"
-                    className={selected === 'prep' ? styles.active : styles.elt} 
+                    className={`${selected === 'prep' ? styles.active : styles.elt} ${selected === 'prep' && theme === 'dark' ? styles.dark_mode_active : styles.elt}`}
                     onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)}
                 />
                 <path
                     style={{fillOpacity: 1, fillRule: 'evenodd', stroke: 'none', strokeWidth: 0.2, strokeLinecap: 'round', strokeMiterlimit: 0, strokeDasharray: 'none', strokeOpacity: 1, paintOrder: 'fill markers stroke' }}
                     d="m 16.653593,20.44513 0.06046,25.217194 67.37555,26.119678 z"
                     id="training_peak"
-                    className={selected === 'training' ? styles.active : styles.elt}  
+                    className={`${selected === 'training' ? styles.active : styles.elt} ${selected === 'training' && theme === 'dark' ? styles.dark_mode_active : styles.elt}`}
                     onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)}
                 />
                 <path
                     style={{fillOpacity: 1, fillRule: 'evenodd', stroke: 'none', strokeWidth: 0.2, strokeLinecap: 'round', strokeMiterlimit: 0, strokeDasharray: 'none', strokeOpacity: 1, paintOrder: 'fill markers stroke' }}
                     d="m 42.799405,0.49241393 c 0,0 -14.694617,25.57703407 -14.733913,25.64881107 l 53.478599,41.782331 z"
                     id="goals_peak" 
-                    className={selected === 'goals' ? styles.active : styles.elt} 
+                    className={`${selected === 'goals' ? styles.active : styles.elt} ${selected === 'goals' && theme === 'dark' ? styles.dark_mode_active : styles.elt}`}
                     onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)}
                 />
             </svg>

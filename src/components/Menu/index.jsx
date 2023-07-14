@@ -13,7 +13,7 @@ export default function Menu() {
     const dispatch = useDispatch();
     const theme = useSelector(selectTheme);
     return (
-        <div className={`${styles.overlay} ${theme === 'dark' ? styles.dark_mode : ''} ${menu ? styles.displayed_overlay : ''}`}>
+        <div className={`${styles.overlay} ${theme === 'dark' ? styles.dark_mode : ''} ${menu ? styles.display_menu : ''}`}>
             <div className={styles.icons}>
                 <VscColorMode className={styles.icon} onClick={() => dispatch(themeActions.toggle())}/>
                 <VscChromeClose className={styles.icon} onClick={() => dispatch(menuActions.toggle())}/> 
@@ -32,13 +32,13 @@ export default function Menu() {
                 </ul>
             </nav>
             <nav className={styles.social}>
-                <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}>
+                <a href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} aria-label='Envoyer un email'>
                     <GrMail className={styles.icon}/>
                 </a>
-                <a href="https://github.com/Jeanne4L" target="_blank">
+                <a href="https://github.com/Jeanne4L" target="_blank" aria-label='Aller sur mon Github'>
                     <GrGithub className={styles.icon}/>
                 </a>
-                <a href="https://www.linkedin.com/in/sandra-petereau/" target="_blank">
+                <a href="https://www.linkedin.com/in/sandra-petereau/" target="_blank" aria-label='Aller sur mon LinkedIn'>
                     <GrLinkedinOption className={styles.icon}/>
                 </a>
             </nav>

@@ -1,8 +1,11 @@
 'use client'
 
+import { useSelector } from 'react-redux';
+import { selectTheme } from '@/redux/selectors';
 import styles from './index.module.css'
 
 export default function ItemSummary({title, summary, page, selected, hovered, id, onClick}) {
+    const theme = useSelector(selectTheme)
     let className;
 
     if(id === 'commerce') {
@@ -19,10 +22,10 @@ export default function ItemSummary({title, summary, page, selected, hovered, id
             className={`${styles.container} ${page === 'career' ? styles.career_container : styles.home_container} ${className} ${hovered ? styles.hover : ''}`} 
             onClick={onClick}
         >
-            <h3 className={`${styles.title} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''}`}>
+            <h3 className={`${styles.title} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''} ${selected && page === 'career' && theme === 'dark' ? styles.dark_mode_active : ''}`}>
                 {title}
             </h3>
-            <p className={`${styles.summary} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''}`}>
+            <p className={`${styles.summary} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''} ${selected && page === 'career' && theme === 'dark' ? styles.dark_mode_active : ''}`}>
                 {summary}
             </p>
         </div>

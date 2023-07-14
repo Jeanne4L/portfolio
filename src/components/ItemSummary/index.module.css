@@ -18,9 +18,11 @@
 	color: white;
 }
 .active {
-	color: var(--bright-color);
+	color: var(--light-mode-bright-color);
 }
-
+.dark_mode_active {
+	color: var(--dark-mode-bright-color);
+}
 @media (min-width: 900px) {
 	.title {
 		font-size: 1.2rem;

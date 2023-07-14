@@ -20,7 +20,7 @@
 	display: none;
 }
 .dark_mode {
-	background-color: var(--dark-mode-blue);
+	background-color: var(--dark-mode-bgc);
 }
 
 @media (min-width: 700px) {

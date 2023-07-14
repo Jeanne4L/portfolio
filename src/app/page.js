@@ -1,10 +1,8 @@
-import Link from 'next/link';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import Hi from '@/components/Hi';
 import projects from '@/data/projects';
-import { FiArrowUpRight } from 'react-icons/fi';
 import styles from './page.module.css';
-import SpinnerAnimation from '@/components/SpinnerAnimation';
 
 export let metadata = {
 	title: 'Sandra Petereau | Développeuse web',
@@ -15,7 +13,7 @@ export default function Home() {
 	return (
 		<>
 			<div className={`container ${styles.introduction}`}>
-				<p className={`bright-c ${styles.hi_p}`}>Bonjour, je suis</p>
+				<Hi />
 				<p className={styles.name_p}>Sandra Petereau</p>
 				<h1 className={styles.title}>Développeuse web junior</h1>
 
@@ -26,9 +24,7 @@ export default function Home() {
 						<p>
 							Je vous raconte tout sur la page Mon parcours. Allez-y jeter un
 							œil
-							<Link href='/career' className={styles.arrow_btn_link}>
-								<FiArrowUpRight className={`bright-c ${styles.arrow_btn}`} />
-							</Link>
+							<Button link={'/career'} />
 						</p>
 
 						<p>Sinon contactez-moi, nous pourrons en discuter !</p>
