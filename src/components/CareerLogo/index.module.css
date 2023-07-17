@@ -15,8 +15,10 @@
 	fill: white;
 }
 .elt:hover,
-.active {
+.active,
+.elt:focus {
 	fill: var(--light-mode-bright-color);
+	outline: none;
 }
 .elt:hover,
 .active,

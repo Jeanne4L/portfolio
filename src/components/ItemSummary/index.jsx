@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import { selectTheme } from '@/redux/selectors';
 import styles from './index.module.css'
 
-export default function ItemSummary({title, summary, page, selected, hovered, id, onClick}) {
+export default function ItemSummary({title, summary, page, selected, hovered, id, onClick, onFocus}) {
     const theme = useSelector(selectTheme)
     let className;
 
@@ -18,16 +18,17 @@ export default function ItemSummary({title, summary, page, selected, hovered, id
         className = styles.goals
     }
     return(
-        <div 
+        <section 
             className={`${styles.container} ${page === 'career' ? styles.career_container : styles.home_container} ${className} ${hovered ? styles.hover : ''}`} 
-            onClick={onClick}
+            onClick={onClick} onFocus={onFocus}
+            tabIndex={0}
         >
             <h3 className={`${styles.title} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''} ${selected && page === 'career' && theme === 'dark' ? styles.dark_mode_active : ''}`}>
                 {title}
             </h3>
-            <p className={`${styles.summary} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''} ${selected && page === 'career' && theme === 'dark' ? styles.dark_mode_active : ''}`}>
+            <h4 className={`${styles.summary} ${page === 'home' ? styles.white_c : ''} ${selected && page === 'career' ? styles.active : ''} ${selected && page === 'career' && theme === 'dark' ? styles.dark_mode_active : ''}`}>
                 {summary}
-            </p>
-        </div>
+            </h4>
+        </section>
     )
 };

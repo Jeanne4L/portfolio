@@ -38,7 +38,7 @@ export default function XpPageContent({xp}) {
             }
 
             <div className={`${styles.footer} ${theme === 'dark' ? styles.footer_dark : ''}`}>
-                <a href='/CV_Petereau_Sandra.pdf' download className={styles.download}>
+                <a href='/CV_Petereau_Sandra.pdf' download className={styles.download} aria-label='Télécharger le cv au format pdf'>
                     Télécharger mon cv
                     <BsFillCloudArrowDownFill className={styles.icon}/>
                 </a>

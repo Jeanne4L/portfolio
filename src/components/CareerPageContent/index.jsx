@@ -20,11 +20,14 @@ export default function CareerPageContent() {
         dispatch(xpActions.clic(id))
         router.push(`/career/${id}`)
     }
+    function handleFocus(id) {
+        dispatch(xpActions.hover(id))
+    }
 
     return (
         <div className={`container ${styles.main}`}>
             <h1 className={styles.title}>Mon parcours</h1>
-            <p className={styles.explanations}>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</p>
+            <h2 className={styles.explanations}>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</h2>
             <div className={styles.desktop_container}>
                 <div className={`${styles.logo_container} ${theme === 'dark' ? styles.dark_mode : ''}`}>
                     <CareerLogo/>
@@ -37,7 +40,7 @@ export default function CareerPageContent() {
                         id={'commerce'}
                         hovered={hovered === 'commerce' ? hovered : ''}
                         selected={selected === 'commerce' ? selected : ''}
-                        onClick={() => handleClick('commerce')}
+                        onClick={() => handleClick('commerce')} onFocus={() => handleFocus('commerce')}
                     />
                     <ItemSummary 
                         title={'Début de reconversion'} 
@@ -46,7 +49,7 @@ export default function CareerPageContent() {
                         id={'prep'}
                         hovered={hovered === 'prep' ? hovered : ''}
                         selected={selected === 'prep' ? selected : ''}
-                        onClick={() => handleClick('prep')}
+                        onClick={() => handleClick('prep')} onFocus={() => handleFocus('prep')}
                     />
                     <ItemSummary 
                         title={'Formation Développeur web'} 
@@ -55,7 +58,7 @@ export default function CareerPageContent() {
                         id={'training'}
                         hovered={hovered === 'training' ? hovered : ''}
                         selected={selected === 'training' ? selected : ''}
-                        onClick={() => handleClick('training')}
+                        onClick={() => handleClick('training')} onFonFocus={() => handleFocus('training')}
                     />
                     <ItemSummary 
                         title={'Mes objectifs'} 
@@ -64,7 +67,7 @@ export default function CareerPageContent() {
                         id={'goals'}
                         hovered={hovered === 'goals' ? hovered : ''}
                         selected={selected === 'goals' ? selected : ''}
-                        onClick={() => handleClick('goals')}
+                        onClick={() => handleClick('goals')} onFocus={() => handleFocus('goals')}
                     />
                 </div>
             </div>
