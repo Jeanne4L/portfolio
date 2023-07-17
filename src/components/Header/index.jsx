@@ -36,7 +36,7 @@ export default function Header() {
                         priority
                     />
                 </Link>
-                <AiOutlineMenu onClick={() => dispatch(menuActions.toggle())} className={styles.menu_icon}/>
+                <AiOutlineMenu onClick={() => dispatch(menuActions.toggle())} className={styles.menu_icon}  role='button' aria-label='Afficher le menu' aria-haspopup="true" aria-expanded="false" aria-controls='menu' tabIndex={0}/>
                 <Menu/>
 
             </div>

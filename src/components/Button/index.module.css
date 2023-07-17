@@ -18,11 +18,11 @@
 }
 .btn:hover > .icon,
 .btn:focus > .icon,
-.arrow_btn:hover > .icon .arrow_btn:focus > .icon {
+.arrow_btn:hover > .icon,
+.arrow_btn:focus > .icon {
 	transform: rotate(360deg);
 }
-.btn:focus-visible,
-.arrow_btn:focus-visible {
+.btn:focus-visible {
 	outline: none;
 }
 .arrow_btn {

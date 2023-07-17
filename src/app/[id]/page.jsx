@@ -58,19 +58,19 @@ export default function Project({params}) {
                 <div className={styles.pictures}>
                     <div className={styles.img_container}>
                         <ProjectImgTitle title={'Home'}/>
-                        <Link href={project.pictures[0]} className={styles.link}>
+                        <Link href={project.pictures[0]} className={styles.link} aria-label="Afficher l'image de la page principale" >
                             <Image src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} width={350} height={350} className={styles.img}/>  
                         </Link>
                     </div>
                     <div className={styles.img_container}>
                         <ProjectImgTitle title={'Desktop'}/>
-                        <Link href={project.pictures[1]} className={styles.link}>
+                        <Link href={project.pictures[1]} className={styles.link} aria-label="Afficher l'image du site sur ordinateur">
                             <Image src={project.pictures[1]} alt={`Page ${project.title}`} width={350} height={350} className={styles.img}/>
                         </Link>
                     </div>
                     <div className={styles.img_container}>
                         <ProjectImgTitle title={'Mobile'}/>
-                        <Link href={project.pictures[2]} className={styles.link}>
+                        <Link href={project.pictures[2]} className={styles.link} aria-label="Afficher l'image du site sur mobile">
                             <Image src={project.pictures[2]} alt={`${project.title} sur mobile`} width={350} height={350} className={styles.img}/>
                         </Link>
                     </div>

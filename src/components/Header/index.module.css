@@ -25,6 +25,10 @@
 	height: 30px;
 	fill: white;
 }
+.menu_icon:focus,
+.menu_icon:focus-visible {
+	border: solid 2px white;
+}
 .icon {
 	fill: white;
 	width: 20px;
