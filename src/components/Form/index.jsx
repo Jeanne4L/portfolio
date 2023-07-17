@@ -83,35 +83,58 @@ export default function Form() {
     return(
         <form className={styles.form} onSubmit={handleSubmit}>
             {incompleteForm ? 
-                <p className={`${styles.error} ${styles.general}`}>Merci de remplir tous les champs</p>
+                <p className={`${styles.error} ${styles.general}`}
+                    role='alert' aria-live='assertive'
+                >
+                    Merci de remplir tous les champs
+                </p>
             : ''}
 
             {submit.success ?
-                <p className={`${styles.success} ${styles.general}`}>{submit.message}</p>
-            : <p className={`${styles.error} ${styles.general}`}>{submit.message}</p>}
+                <p className={`${styles.success} ${styles.general}`} 
+                    role='alert' aria-live='assertive'>
+                    {submit.message}
+                </p>
+            : <p className={`${styles.error} ${styles.general}`}
+                role='alert' aria-live='assertive'
+            >
+                {submit.message}
+            </p>}
 
             <div className={styles.flex_container}>
                 <div className={styles.inputContainer}>
                     <label htmlFor='name' className={styles.label}>Votre nom *</label>
-                    <input type='text' name='name' id='name' className={styles.input} value={value.name} onChange={handleChange} required/>
+                    <input type='text' name='name' id='name' 
+                        className={styles.input} value={value.name} 
+                        onChange={handleChange} 
+                        autoComplete='name' required autoFocus
+                    />
                     {invalidText ? 
-                        <p className={styles.error}>Ce champ ne doit contenir que des lettres</p>
+                        <p className={styles.error} role='alert' aria-live='assertive'>
+                            Ce champ ne doit contenir que des lettres
+                        </p>
                     : ''
                     }
                 </div>
 
                 <div className={styles.inputContainer}>
                     <label htmlFor='email' className={styles.label}>Votre email *</label>
-                    <input type='text' name='email' id='email' className={styles.input} value={value.email} onChange={handleChange} required/>
+                    <input type='email' name='email' id='email' 
+                        className={styles.input} value={value.email} 
+                        onChange={handleChange} 
+                        autoComplete='email' required
+                    />
                     {invalidEmail ? 
-                        <p className={styles.error}>Cet email est invalide</p>
+                        <p className={styles.error} role='alert' aria-live='assertive'>
+                            Cet email est invalide
+                        </p>
                     : ''
                     }
                 </div>
             </div>
 
             <label htmlFor='message' className={styles.label}>Votre message *</label>
-            <textarea name="message" placeholder="Je cherche justement une développeuse motivée !" className={styles.textarea} value={value.message} onChange={handleChange} required/>
+            <textarea name="message" id='message' placeholder="Je cherche justement une développeuse motivée !" className={styles.textarea} value={value.message} onChange={handleChange} required/>
 
             <Button text={'Envoyer'} onClick={handleSubmit} page={'contact'}/>
         </form>

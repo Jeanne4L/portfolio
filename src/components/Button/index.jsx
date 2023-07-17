@@ -37,7 +37,8 @@ export default function Button({ link, externLink, text, onClick, page }) {
         )
     } else {
         return(
-            <div className={`${styles.btn} ${page === 'contact' ? styles.large_btn : ''} ${className}`} onClick={onClick}>
+            <div className={`${styles.btn} ${page === 'contact' ? styles.large_btn : ''} ${className}`} 
+                onClick={onClick} role='button' tabIndex={0}>
                 {text}
                 <FiArrowUpRight className={styles.icon}/>
             </div>
