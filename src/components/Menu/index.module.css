@@ -32,6 +32,9 @@
 .social {
 	align-items: center;
 }
+.social a {
+	display: inline-flex;
+}
 
 .text {
 	font-size: 2.1rem;
@@ -47,10 +50,25 @@
 .li {
 	margin-top: 30px;
 }
+
 .icon:hover,
-.li:hover {
-	color: var(--light-mode-bright-color);
+.social a:hover > .icon,
+.social a:focus > .icon,
+.icon:focus {
 	fill: var(--light-mode-bright-color);
+	cursor: pointer;
+}
+.link:hover > .li,
+.link:focus > .li {
+	background-image: repeating-radial-gradient(
+			circle at 0 0,
+			transparent 0,
+			#008294 6px
+		),
+		repeating-linear-gradient(#33c3cf, #074b61);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 
 /* DARK MODE STYLES */
@@ -63,7 +81,8 @@
 	fill: white;
 }
 .dark_mode .icon:hover,
-.dark_mode .li:hover {
+.dark_mode .icon:focus,
+.dark_mode .social a:focus > .icon {
 	color: var(--dark-mode-bright-color);
 	fill: var(--dark-mode-bright-color);
 }
