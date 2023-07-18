@@ -47,7 +47,7 @@ export default function Project({params}) {
         return (
             <div className="container">
                 <div className={styles.introduction}>
-                    <Image src={project.mainImg} alt={project.title} width={350} height={350} className={styles.main_img}/>
+                    <Image src={project.mainImg} alt={project.title} width={350} height={350} className={styles.main_img} priority/>
                     <div className={styles.presentation}>
                         <h1 className={styles.title}>{project.title}</h1>
                         <div className="tags">
@@ -67,19 +67,31 @@ export default function Project({params}) {
                     <div className={styles.img_container}>
                         <ProjectImgTitle title={'Home'}/>
                         <Link href={project.pictures[0]} className={styles.link} aria-label="Afficher l'image de la page principale" >
-                            <Image src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} width={350} height={350} className={styles.img}/>  
+                            <Image 
+                                src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} 
+                                fill sizes='(max-width: 500px) 100vw, 600px' quality={100}
+                                className={styles.img} priority
+                            />  
                         </Link>
                     </div>
                     <div className={styles.img_container}>
                         <ProjectImgTitle title={'Desktop'}/>
                         <Link href={project.pictures[1]} className={styles.link} aria-label="Afficher l'image du site sur ordinateur">
-                            <Image src={project.pictures[1]} alt={`Page ${project.title}`} width={350} height={350} className={styles.img}/>
+                            <Image 
+                                src={project.pictures[1]} alt={`Page ${project.title}`} 
+                                fill sizes='(max-width: 500px) 100vw, 600px' quality={100}
+                                className={styles.img} priority
+                            />
                         </Link>
                     </div>
                     <div className={styles.img_container}>
                         <ProjectImgTitle title={'Mobile'}/>
                         <Link href={project.pictures[2]} className={styles.link} aria-label="Afficher l'image du site sur mobile">
-                            <Image src={project.pictures[2]} alt={`${project.title} sur mobile`} width={350} height={350} className={styles.img}/>
+                            <Image 
+                                src={project.pictures[2]} alt={`${project.title} sur mobile`} 
+                                fill sizes='(max-width: 500px) 100vw, 500px' quality={100}
+                                className={styles.img} priority
+                            />
                         </Link>
                     </div>
                 </div>

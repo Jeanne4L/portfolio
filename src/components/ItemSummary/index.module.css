@@ -6,6 +6,9 @@
 	margin-bottom: 50px;
 	margin: 0 auto 50px auto;
 }
+.career_container:hover {
+	cursor: pointer;
+}
 .summary {
 	margin: 0;
 	line-height: 2.2rem;
@@ -35,6 +38,7 @@
 		margin: 0;
 		opacity: 0;
 	}
+	.career_container:hover,
 	.hover {
 		opacity: 1;
 	}

@@ -55,12 +55,15 @@
 	overflow: hidden;
 	width: 100%;
 	max-width: 450px;
+	display: inline-block;
+	position: relative;
+	height: 350px;
 }
 .img {
 	object-position: top;
 	border: solid 2px rgba(4, 43, 56, 0.15);
 	margin-bottom: 10px;
-	width: 100%;
+	position: absolute;
 	transition: transform 350ms;
 }
 .img:hover {

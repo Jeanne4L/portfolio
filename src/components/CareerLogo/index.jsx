@@ -24,7 +24,6 @@ export default function CareerLogo() {
             return 'goals';
         }
     }
-
     function handleClick(e) {
         let id = e.target.id
         id = changeId(id);
@@ -32,7 +31,6 @@ export default function CareerLogo() {
         dispatch(xpActions.clic(id))
         router.push(`/career/${id}`)
     }
-
     function handleHover(e) {
         if(e === null) {
             dispatch(xpActions.hover(null))
@@ -40,6 +38,11 @@ export default function CareerLogo() {
             let id = e.target.id
             id = changeId(id);
             dispatch(xpActions.hover(id))
+        }
+    }
+    function handleKey(e) {
+        if (e.keyCode === 13 || e.key === "Enter") {
+            handleClick(e)
         }
     }
 
@@ -62,7 +65,8 @@ export default function CareerLogo() {
                         ${selected === 'commerce' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                         ${hovered === 'commerce' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                     `}
-                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} onFocus={handleHover}
+                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} 
+                    onFocus={handleHover} onKeyDown={handleKey}
                     aria-label='Mon ancienne vie' tabIndex={0}
                 />
                 <path
@@ -73,7 +77,8 @@ export default function CareerLogo() {
                         ${selected === 'prep' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                         ${hovered === 'prep' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                     `}
-                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} onFocus={handleHover}
+                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} 
+                    onFocus={handleHover} onKeyDown={handleKey}
                     aria-label='Début de reconversion' tabIndex={0}
                 />
                 <path
@@ -84,7 +89,8 @@ export default function CareerLogo() {
                         ${selected === 'training' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                         ${hovered === 'training' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                     `}
-                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} onFocus={handleHover}
+                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} 
+                    onFocus={handleHover} onKeyDown={handleKey}
                     aria-label='Formation développeur web' tabIndex={0}
                 />
                 <path
@@ -95,7 +101,8 @@ export default function CareerLogo() {
                         ${selected === 'goals' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                         ${hovered === 'goals' && theme === 'dark' ? styles.dark_mode_active : styles.elt}
                     `}
-                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} onFocus={handleHover}
+                    onClick={handleClick} onMouseOver={handleHover} onMouseOut={() => handleHover(null)} 
+                    onFocus={handleHover} onKeyDown={handleKey}
                     aria-label='Mes objectifs' tabIndex={0}
                 />
             </svg>

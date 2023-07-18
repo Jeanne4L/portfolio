@@ -23,6 +23,13 @@ export default function CareerPageContent() {
     function handleFocus(id) {
         dispatch(xpActions.hover(id))
     }
+    function handleHover(id) {
+        if(id === null) {
+            dispatch(xpActions.hover(null))
+        } else {
+            dispatch(xpActions.hover(id))
+        }
+    }
 
     return (
         <div className={`container ${styles.main}`}>
@@ -41,6 +48,7 @@ export default function CareerPageContent() {
                         hovered={hovered === 'commerce' ? hovered : ''}
                         selected={selected === 'commerce' ? selected : ''}
                         onClick={() => handleClick('commerce')} onFocus={() => handleFocus('commerce')}
+                        onMouseOver={() => handleHover('commerce')} onMouseOut={() => handleHover(null)}
                     />
                     <ItemSummary 
                         title={'Début de reconversion'} 
@@ -50,6 +58,7 @@ export default function CareerPageContent() {
                         hovered={hovered === 'prep' ? hovered : ''}
                         selected={selected === 'prep' ? selected : ''}
                         onClick={() => handleClick('prep')} onFocus={() => handleFocus('prep')}
+                        onMouseOver={() => handleHover('prep')} onMouseOut={() => handleHover(null)}
                     />
                     <ItemSummary 
                         title={'Formation Développeur web'} 
@@ -59,6 +68,7 @@ export default function CareerPageContent() {
                         hovered={hovered === 'training' ? hovered : ''}
                         selected={selected === 'training' ? selected : ''}
                         onClick={() => handleClick('training')} onFonFocus={() => handleFocus('training')}
+                        onMouseOver={() => handleHover('training')} onMouseOut={() => handleHover(null)}
                     />
                     <ItemSummary 
                         title={'Mes objectifs'} 
@@ -68,6 +78,7 @@ export default function CareerPageContent() {
                         hovered={hovered === 'goals' ? hovered : ''}
                         selected={selected === 'goals' ? selected : ''}
                         onClick={() => handleClick('goals')} onFocus={() => handleFocus('goals')}
+                        onMouseOver={() => handleHover('goals')} onMouseOut={() => handleHover(null)}
                     />
                 </div>
             </div>

@@ -33,6 +33,10 @@
 	height: 2.2rem;
 	margin-left: 10px;
 }
+.download:hover,
+.download:hover > .icon {
+	color: var(--light-mode-bright-color);
+}
 .footer {
 	position: fixed;
 	bottom: 0;

@@ -25,10 +25,6 @@
 	height: 30px;
 	fill: white;
 }
-.menu_icon:focus,
-.menu_icon:focus-visible {
-	border: solid 2px white;
-}
 .icon {
 	fill: white;
 	width: 20px;
@@ -36,7 +32,9 @@
 	margin-top: 20px;
 }
 .menu_icon:hover,
-.icon:hover {
+.social a:hover > .icon,
+.menu_icon:focus,
+.social a:focus > .icon {
 	fill: var(--dark-mode-bright-color);
 	cursor: pointer;
 }
