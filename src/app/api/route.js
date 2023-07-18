@@ -1,11 +1,11 @@
 import { NextResponse } from 'next/server';
-import nodemailer from 'nodemailer';
+import { createTransport } from 'nodemailer';
 
 export async function POST(req) {
 	const request = await req.json();
 
 	// CONNECTION TO SEND EMAIL
-	const transporter = nodemailer.createTransport({
+	const transporter = createTransport({
 		service: 'gmail',
 		auth: {
 			user: process.env.NEXT_PUBLIC_CONNECTION_EMAIL,

@@ -5,8 +5,7 @@ import CareerLogo from '../CareerLogo';
 import ItemSummary from '../ItemSummary';
 import styles from './index.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectClickedXp, selectHoveredXp } from '@/redux/selectors';
-import { selectTheme } from '@/redux/selectors';
+import { selectClickedXp, selectHoveredXp, selectTheme } from '@/redux/selectors';
 import * as xpActions from '@/redux/features/xpSlice'
 
 export default function CareerPageContent() {
@@ -16,19 +15,21 @@ export default function CareerPageContent() {
     const hovered = useSelector(selectHoveredXp);
     const theme = useSelector(selectTheme)
 
+    function createHandlers(id) {
+        return {
+            onClick: () => handleClick(id),
+            onFocus: () => handleFocusHover(id),
+            onMouseOver: () => handleFocusHover(id),
+            onMouseOut: () => handleFocusHover(null),
+        };
+    }
+
     function handleClick(id) {
         dispatch(xpActions.clic(id))
         router.push(`/career/${id}`)
     }
-    function handleFocus(id) {
+    function handleFocusHover(id) {
         dispatch(xpActions.hover(id))
-    }
-    function handleHover(id) {
-        if(id === null) {
-            dispatch(xpActions.hover(null))
-        } else {
-            dispatch(xpActions.hover(id))
-        }
     }
 
     return (
@@ -47,8 +48,7 @@ export default function CareerPageContent() {
                         id={'commerce'}
                         hovered={hovered === 'commerce' ? hovered : ''}
                         selected={selected === 'commerce' ? selected : ''}
-                        onClick={() => handleClick('commerce')} onFocus={() => handleFocus('commerce')}
-                        onMouseOver={() => handleHover('commerce')} onMouseOut={() => handleHover(null)}
+                        {...createHandlers('commerce')}
                     />
                     <ItemSummary 
                         title={'Début de reconversion'} 
@@ -57,8 +57,7 @@ export default function CareerPageContent() {
                         id={'prep'}
                         hovered={hovered === 'prep' ? hovered : ''}
                         selected={selected === 'prep' ? selected : ''}
-                        onClick={() => handleClick('prep')} onFocus={() => handleFocus('prep')}
-                        onMouseOver={() => handleHover('prep')} onMouseOut={() => handleHover(null)}
+                        {...createHandlers('prep')}
                     />
                     <ItemSummary 
                         title={'Formation Développeur web'} 
@@ -67,8 +66,7 @@ export default function CareerPageContent() {
                         id={'training'}
                         hovered={hovered === 'training' ? hovered : ''}
                         selected={selected === 'training' ? selected : ''}
-                        onClick={() => handleClick('training')} onFonFocus={() => handleFocus('training')}
-                        onMouseOver={() => handleHover('training')} onMouseOut={() => handleHover(null)}
+                        {...createHandlers('training')}
                     />
                     <ItemSummary 
                         title={'Mes objectifs'} 
@@ -77,8 +75,7 @@ export default function CareerPageContent() {
                         id={'goals'}
                         hovered={hovered === 'goals' ? hovered : ''}
                         selected={selected === 'goals' ? selected : ''}
-                        onClick={() => handleClick('goals')} onFocus={() => handleFocus('goals')}
-                        onMouseOver={() => handleHover('goals')} onMouseOut={() => handleHover(null)}
+                        {...createHandlers('goals')}
                     />
                 </div>
             </div>

@@ -24,9 +24,6 @@
 .dark_mode_active {
 	cursor: pointer;
 }
-.dark_mode_active {
-	fill: var(--dark-mode-bright-color);
-}
 
 @media (min-width: 900px) {
 	.container {

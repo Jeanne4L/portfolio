@@ -2,9 +2,10 @@
 
 import { GrMail, GrLinkedinOption, GrGithub } from "react-icons/gr";
 import { AiOutlineMenu } from 'react-icons/ai'
-import Link from "next/link"
-import Image from "next/image"
-import Menu from '../Menu'
+import dynamic from 'next/dynamic';
+const Menu = dynamic(() => import('../Menu'))
+import Link from 'next/link'
+import Image from 'next/image'
 import * as menuActions from '@/redux/features/menuSlice'
 import { useDispatch } from 'react-redux';
 import styles from './index.module.css'
