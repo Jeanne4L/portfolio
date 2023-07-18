@@ -55,6 +55,9 @@ ul {
 li {
 	list-style-type: none;
 }
+:focus {
+	outline: none;
+}
 
 ::placeholder,
 input,
@@ -64,7 +67,6 @@ textarea {
 }
 input:focus,
 textarea:focus {
-	outline: none;
 	border: solid 1.5px var(--light-mode-bright-color);
 }
 ::placeholder {

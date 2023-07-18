@@ -7,7 +7,32 @@ import styles from './page.module.css';
 export let metadata = {
 	title: 'Sandra Petereau | Développeuse web',
 	description:
-		"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse, contactez-moi!",
+		"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Sandra Petereau | Développeuse web',
+		description:
+			"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
+		images: ['/profile.jpg'],
+	},
+	openGraph: {
+		title: 'Sandra Petereau | Développeuse web',
+		description:
+			"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
+		url: '',
+		images: [{ url: '/profile.jpg' }],
+		locale: 'fr_FR',
+		type: 'website',
+	},
+	themeColor: [
+		{ media: '(prefers-color-scheme: light)', color: 'white' },
+		{ media: '(prefers-color-scheme: dark)', color: '#074b61' },
+	],
+	robots: {
+		index: true,
+		follow: true,
+		nocache: false,
+	},
 };
 
 export default function Home() {

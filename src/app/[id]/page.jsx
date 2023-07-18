@@ -27,6 +27,12 @@ function fetchProjects(id) {
 
 export let metadata = {
     title: `Sandra Petereau | `,
+    description: '',
+    robots: {
+		index: true,
+		follow: false,
+		nocache: false,
+	},
 }
 
 export default function Project({params}) {
@@ -36,6 +42,8 @@ export default function Project({params}) {
         notFound()
     } else { 
         metadata.title = `Sandra Petereau | ${project.title}`;
+        metadata.description = `Voici le projet ${project.title} réalisé lors de ma formation chez Openclassrooms. J'y ai appris: ${project.hardSkills.map((skill) => skill)}`;
+
         return (
             <div className="container">
                 <div className={styles.introduction}>

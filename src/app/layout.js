@@ -25,6 +25,16 @@ export default function RootLayout({ children }) {
 function App({ children }) {
 	const theme = useSelector(selectTheme);
 
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Person',
+		image: '/profile.jpg',
+		name: 'Sandra Petereau',
+		jobTitle: 'Développeuse web',
+		alumniOf: 'Openclassrooms',
+		email: process.env.NEXT_PUBLIC_EMAIL,
+	};
+
 	return (
 		<html lang='fr' className={jost.className}>
 			<body>
@@ -32,6 +42,10 @@ function App({ children }) {
 				<main className={theme === 'dark' ? 'dark_mode' : 'light_mode'}>
 					<Suspense fallback={<Loading />}>{children}</Suspense>
 				</main>
+				<script
+					type='application/ld+json'
+					dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				/>
 			</body>
 		</html>
 	);
