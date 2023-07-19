@@ -3,6 +3,8 @@
 	color: var(--light-mode-bright-color);
 	margin: 0;
 }
+
+/* DARK MODE */
 .dark_p {
 	color: var(--dark-mode-bright-color);
 }

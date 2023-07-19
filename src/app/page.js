@@ -4,6 +4,7 @@ import Hi from '@/components/Hi';
 import projects from '@/data/projects';
 import styles from './page.module.css';
 
+// METADATA
 export let metadata = {
 	title: 'Sandra Petereau | Développeuse web',
 	description:

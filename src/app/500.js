@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 
+// ERROR 500 PAGE
 export default function ServerError() {
 	return (
 		<div className='dark-bgc full-container'>

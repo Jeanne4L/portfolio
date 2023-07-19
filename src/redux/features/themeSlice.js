@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// THE THEME PART OF THE STORE
 const themeSlice = createSlice({
 	name: 'theme',
 	initialState: localStorage.getItem('theme') || 'light',

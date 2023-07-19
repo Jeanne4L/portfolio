@@ -2,20 +2,20 @@
 
 import Tag from '../Tag';
 import { BsFillCloudArrowDownFill } from "react-icons/bs";
-import { selectTheme } from '@/redux/selectors';
+import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { selectTheme } from '@/redux/selectors';
 import * as xpActions from '@/redux/features/xpSlice';
 import styles from './index.module.css';
-import { useEffect } from 'react'
 
 export default function XpPageContent({xp}) {
+    const theme = useSelector(selectTheme);
     const dispatch = useDispatch();
 
+    // RESET GLOBAL STATE THAT COLORS LOGO AND XP SUMMARY ON CAREER PAGE
     useEffect(() => {
         dispatch(xpActions.reset());
-      }, [dispatch]);
-
-    const theme = useSelector(selectTheme);
+    }, [dispatch]);
 
     return(
         <div className={`container ${styles.container}`}>

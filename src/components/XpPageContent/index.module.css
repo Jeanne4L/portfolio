@@ -15,12 +15,13 @@
 .margin {
 	margin-bottom: 120px;
 }
-
 .tags {
 	display: flex;
 	justify-content: space-between;
 	flex-wrap: wrap;
 }
+
+/* DOWNLOAD BUTTON */
 .download {
 	display: flex;
 	justify-content: center;
@@ -37,6 +38,7 @@
 .download:hover > .icon {
 	color: var(--light-mode-bright-color);
 }
+
 .footer {
 	position: fixed;
 	bottom: 0;
@@ -52,6 +54,7 @@
 	text-align: center;
 }
 
+/* DARK MODE */
 .footer_dark {
 	background: linear-gradient(
 		180deg,
@@ -62,6 +65,7 @@
 	color: white;
 }
 
+/* MEDIA QUERIES */
 @media (min-width: 900px) {
 	.container {
 		width: 70%;

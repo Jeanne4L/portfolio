@@ -4,16 +4,37 @@ import styles from './index.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import * as xpActions from '@/redux/features/xpSlice';
-import { selectClickedXp, selectHoveredXp, selectTheme } from '@/redux/selectors';
+import { selectClickedXp, selectHoveredXp } from '@/redux/selectors';
+import { useMemo } from 'react';
 
+// CLICKABLE SVG LOGO
 export default function CareerLogo() {
     const router = useRouter();
     const dispatch = useDispatch();
     const selected = useSelector(selectClickedXp);
     const hovered = useSelector(selectHoveredXp)
 
+    // CHANGE CLIC GLOBAL STATE TO COLOR LOGO PART AND TEXT AND REDIRECT TO XP PAGE
+    function handleClick(e) {
+        const id = idMap[e.target.id]
+
+        dispatch(xpActions.clic(id))
+        router.push(`/career/${id}`)
+    }
+    // CHANGE CLIC GLOBAL STATE TO COLOR LOGO PART AND TEXT
+    const handleHover = (e) => {
+        const id = e ? idMap[e.target.id] : null;
+        dispatch(xpActions.hover(id));
+    }
+    // CHANGE THE ENTER KEY TO CLIC
+    function handleKey(e) {
+        if (e.keyCode === 13 || e.key === "Enter") {
+            handleClick(e)
+        }
+    }
+
     // CONVERT ID
-    const idMap = {
+    const idMap = useMemo(() => ({
         'commerce_peak': 'commerce',
         'commerce': 'commerce',
         'prep_peak': 'prep',
@@ -22,34 +43,13 @@ export default function CareerLogo() {
         'training': 'training',
         'goals_peak': 'goals',
         'goals': 'goals'
-    }
-
-    // CLIC EVENT
-    function handleClick(e) {
-        const id = idMap[e.target.id]
-
-        dispatch(xpActions.clic(id))
-        router.push(`/career/${id}`)
-    }
-    // HOVER AND FOCUS EVENT
-    const handleHover = (e) => {
-        const id = e ? idMap[e.target.id] : null;
-        dispatch(xpActions.hover(id));
-    }
-    // ENTER KEYBOARD EVENT
-    function handleKey(e) {
-        if (e.keyCode === 13 || e.key === "Enter") {
-            handleClick(e)
-        }
-    }
-
+    }), [])
     // GENERATE CLASS WITH STATE AND ID
     function generateClass(selected, hovered, id) {
         const isActive = selected === id || hovered === id;
-      
+        
         return `${isActive ? styles.active : styles.elt}`;
     }
-    
     const commerceClass = generateClass(selected, hovered, 'commerce');
     const prepClass = generateClass(selected, hovered, 'prep');
     const trainingClass = generateClass(selected, hovered, 'training');

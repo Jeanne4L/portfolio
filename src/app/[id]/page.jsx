@@ -7,24 +7,7 @@ import {notFound} from 'next/navigation';
 import projects from '@/data/projects.json';
 import styles from './page.module.css';
 
-function fetchProjects(id) {
-    const project = projects.find((project) => project.id === id);
-
-    const projectIndex = projects.findIndex(project => project.id === id);
-    let nextIndex = -1;
-    let prevIndex= -1;
-
-    if (projectIndex !== -1) {
-        nextIndex = (projectIndex + 1) % projects.length;
-        prevIndex = (projectIndex === 0) ? projects.length - 1 : projectIndex - 1;
-    }
-
-    const prevProject = projects.find((project) => project === projects[prevIndex]);
-    const nextProject = projects.find((project) => project === projects[nextIndex]);
-
-    return { project, prevProject, nextProject, projectIndex }
-}
-
+// METADATA
 export let metadata = {
     title: `Sandra Petereau | `,
     description: '',
@@ -36,7 +19,8 @@ export let metadata = {
 }
 
 export default function Project({params}) {
-    const { project } = fetchProjects(params.id);
+    // FIND PROJECT CORRESPONDING TO PARAMS ID
+    const project = projects.find((project) => project.id === params.id);
 
     if(!project) {
         notFound()

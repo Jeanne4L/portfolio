@@ -1,6 +1,8 @@
+/* eslint-disable react/no-unescaped-entities */
 import Form from '@/components/Form';
 import styles from './page.module.css';
 
+// METADATA
 export const metadata = {
 	title: 'Sandra Petereau | Contact',
     desciption: 'À la recherche d\'une développeuse web junior ? Contactez-moi!',

@@ -1,5 +1,6 @@
 import Button from '@/components/Button';
 
+// ERROR 404 PAGE
 export default function NotFound() {
 	return (
 		<div className='dark-bgc full-container'>

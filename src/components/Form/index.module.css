@@ -1,9 +1,12 @@
+/* CONTAINER */
 .form {
 	margin-bottom: 55px;
 }
 .flex_container {
 	margin-top: 30px;
 }
+
+/* ELEMENTS */
 .input,
 .textarea {
 	width: 100%;
@@ -22,6 +25,7 @@
 	font-size: 1.2rem;
 }
 
+/* MESSAGES */
 .error,
 .success {
 	margin: 0;
@@ -39,12 +43,14 @@
 	text-align: center;
 }
 
+/* MEDIA QUERIES */
 @media (min-width: 700px) {
 	.form {
 		width: 80%;
 		margin: 0 auto 70px auto;
 	}
 }
+/* LAPTOP */
 @media (min-width: 900px) {
 	.flex_container {
 		display: flex;
@@ -58,6 +64,7 @@
 		padding: 10px;
 	}
 }
+/* DESKTOP */
 @media (min-width: 1100px) {
 	.form {
 		width: 60%;

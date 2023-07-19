@@ -10,6 +10,20 @@
 	justify-content: center;
 	align-items: center;
 }
+.arrow_btn {
+	vertical-align: middle;
+}
+.icon {
+	margin: 0 0 -3px 10px;
+	stroke-width: 2.4;
+	stroke-linecap: inherit;
+	stroke-linejoin: inherit;
+	width: 1.7rem;
+	height: 1.7rem;
+	stroke: var(--light-mode-bright-color);
+	transition: transform 800ms;
+}
+/* HOVER */
 .btn:hover,
 .btn:focus {
 	cursor: pointer;
@@ -25,20 +39,8 @@
 .btn:focus-visible {
 	outline: none;
 }
-.arrow_btn {
-	vertical-align: middle;
-}
-.icon {
-	margin: 0 0 -3px 10px;
-	stroke-width: 2.4;
-	stroke-linecap: inherit;
-	stroke-linejoin: inherit;
-	width: 1.7rem;
-	height: 1.7rem;
-	stroke: var(--light-mode-bright-color);
-	transition: transform 800ms;
-}
 
+/* DARK MODE */
 .dark_mode_btn {
 	border-color: var(--dark-mode-bright-color);
 	color: var(--dark-mode-bright-color);
@@ -48,6 +50,7 @@
 	stroke: var(--dark-mode-bright-color);
 }
 
+/* MEDIA QUERIES */
 @media (min-width: 600px) {
 	.btn {
 		display: inline-flex;

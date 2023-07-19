@@ -5,6 +5,7 @@ const initialState = {
 	hovered: '',
 };
 
+// THE EXPERIENCE PART OF THE STORE
 const xpSlice = createSlice({
 	name: 'xp',
 	initialState,

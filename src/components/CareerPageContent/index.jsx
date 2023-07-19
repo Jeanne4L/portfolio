@@ -15,6 +15,7 @@ export default function CareerPageContent() {
     const hovered = useSelector(selectHoveredXp);
     const theme = useSelector(selectTheme)
 
+    // ALL EVENTS
     function createHandlers(id) {
         return {
             onClick: () => handleClick(id),
@@ -23,11 +24,12 @@ export default function CareerPageContent() {
             onMouseOut: () => handleFocusHover(null),
         };
     }
-
+    // CHANGE CLIC GLOBAL STATE TO COLOR LOGO PART AND TEXT AND REDIRECT TO XP PAGE
     function handleClick(id) {
         dispatch(xpActions.clic(id))
         router.push(`/career/${id}`)
     }
+    // CHANGE HOVER GLOBAL STATE TO COLOR LOGO PART AND TEXT
     function handleFocusHover(id) {
         dispatch(xpActions.hover(id))
     }
@@ -48,6 +50,7 @@ export default function CareerPageContent() {
                         id={'commerce'}
                         hovered={hovered === 'commerce' ? hovered : ''}
                         selected={selected === 'commerce' ? selected : ''}
+                        // ADD THE OBJECTS EVENTS WITH THE ID
                         {...createHandlers('commerce')}
                     />
                     <ItemSummary 

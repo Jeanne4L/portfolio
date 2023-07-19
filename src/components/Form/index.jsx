@@ -8,8 +8,7 @@ import sendEmail from '@/lib/sendEmail';
 export default function Form() {
     const [invalidText, setInvalidText] = useState(false);
     const [invalidEmail, setInvalidEmail] = useState(false);
-    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-    
+    const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;    
     const [incompleteForm, setIncompleteForm] = useState(false);
     const [submit, setSubmit] = useState({
         success: false,
@@ -90,6 +89,7 @@ export default function Form() {
                 </p>
             : ''}
 
+            {/* SUCCESS OR ERROR MESSAGE */}
             {submit.success ?
                 <p className={`${styles.success} ${styles.general}`} 
                     role='alert' aria-live='assertive'>

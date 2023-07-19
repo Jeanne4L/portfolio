@@ -19,10 +19,13 @@
 .explanations {
 	display: none;
 }
+
+/* DARK MODE */
 .dark_mode {
 	background-color: var(--dark-mode-bgc);
 }
 
+/* MEDIA QUERIES */
 @media (min-width: 700px) {
 	.flex {
 		display: flex;

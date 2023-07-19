@@ -25,12 +25,17 @@
 	height: 30px;
 	fill: white;
 }
+.social {
+	display: none;
+}
 .icon {
 	fill: white;
 	width: 20px;
 	height: 20px;
 	margin-top: 20px;
 }
+
+/* HOVER */
 .menu_icon:hover,
 .social a:hover > .icon,
 .menu_icon:focus,
@@ -38,10 +43,8 @@
 	fill: var(--dark-mode-bright-color);
 	cursor: pointer;
 }
-.social {
-	display: none;
-}
 
+/* MEDIA QUERIES */
 @media (min-width: 1100px) {
 	.logo_full {
 		display: none;

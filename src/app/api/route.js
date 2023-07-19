@@ -1,10 +1,11 @@
 import { NextResponse } from 'next/server';
 import { createTransport } from 'nodemailer';
 
+// GET SEND EMAIL REQUEST
 export async function POST(req) {
 	const request = await req.json();
 
-	// CONNECTION TO SEND EMAIL
+	// CONNECTION TO SMTP SERVER
 	const transporter = createTransport({
 		service: 'gmail',
 		auth: {

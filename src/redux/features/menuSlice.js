@@ -1,5 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// THE MENU PART OF THE STORE
 const menuSlice = createSlice({
 	name: 'menu',
 	initialState: false,

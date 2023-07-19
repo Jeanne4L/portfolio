@@ -9,6 +9,7 @@
 .career_container:hover {
 	cursor: pointer;
 }
+
 .summary {
 	margin: 0;
 	line-height: 2.2rem;
@@ -25,9 +26,13 @@
 .active {
 	color: var(--light-mode-bright-color);
 }
+
+/* DARK MODE */
 .dark_mode_active {
 	color: var(--dark-mode-bright-color);
 }
+
+/* MEDIA QUERIES */
 @media (min-width: 900px) {
 	.title {
 		font-size: 1.2rem;
@@ -59,6 +64,7 @@
 		left: 2%;
 	}
 }
+/* DESKTOP */
 @media (min-width: 1100px) {
 	.home_container {
 		width: 80%;

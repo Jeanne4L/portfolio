@@ -2,8 +2,7 @@
 
 import { VscColorMode, VscChromeClose } from "react-icons/vsc";
 import { GrMail, GrLinkedinOption, GrGithub } from "react-icons/gr";
-import { useDispatch } from 'react-redux';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { selectTheme, selectMenu } from '@/redux/selectors';
 import * as menuActions from '@/redux/features/menuSlice';
 import * as themeActions from '@/redux/features/themeSlice';

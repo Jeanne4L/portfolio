@@ -9,12 +9,14 @@ import styles from './index.module.css'
 export default function Button({ link, externLink, text, onClick, page }) {
     const theme = useSelector(selectTheme);
     let className;
+
     if(theme === 'dark' || page === '404') {
         className= styles.dark_mode_btn
     } else {
         className= ''
     }
 
+    // BUTTON WITH LINK INSIDE THE SITE
     if(link && text) {
         return(
             <Link href={link} className={`${styles.btn} ${className}`}>
@@ -22,6 +24,7 @@ export default function Button({ link, externLink, text, onClick, page }) {
                 <FiArrowUpRight className={styles.icon}/>
             </Link> 
         )
+    // BUTTON WITH LINK OUTSIDE THE SITE
     } else if (externLink) {
         return(
             <a href={externLink} className={`${styles.btn} ${className}`} target='_blank'>
@@ -29,12 +32,14 @@ export default function Button({ link, externLink, text, onClick, page }) {
                 <FiArrowUpRight className={styles.icon}/>
             </a>     
         )
+    // BUTTON WITH JUST ICON
     } else if(!text) {
         return (
             <Link href={link} className={styles.arrow_btn} aria-label='Aller sur la page Parcours'>
                 <FiArrowUpRight className={`${styles.icon} ${theme === 'dark' ? styles.dark_mode_icon : ''}`} />
             </Link>
         )
+    // SUBMIT BUTTON
     } else {
         return(
             <div className={`${styles.btn} ${page === 'contact' ? styles.large_btn : ''} ${className}`} 

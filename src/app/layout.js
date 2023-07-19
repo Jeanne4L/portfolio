@@ -9,11 +9,13 @@ import { useSelector, Provider } from 'react-redux';
 import store from '@/redux/store';
 import './globals.css';
 
+// FONTS
 const jost = Jost({
 	subsets: ['latin'],
 	display: 'swap',
 });
 
+// GIVE ACCESS TO THE REDUX STORE
 export default function RootLayout({ children }) {
 	return (
 		<Provider store={store}>
@@ -22,9 +24,11 @@ export default function RootLayout({ children }) {
 	);
 }
 
+// APP
 function App({ children }) {
 	const theme = useSelector(selectTheme);
 
+	// STRUCTURED DATA
 	const jsonLd = {
 		'@context': 'https://schema.org',
 		'@type': 'Person',

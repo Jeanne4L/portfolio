@@ -3,6 +3,7 @@ import Link from 'next/link';
 import ItemSummary from '../ItemSummary';
 import styles from './index.module.css';
 
+// PROJECT PREVIEW
 export default function Card({ srcImg, title, summary, id }) {
 	return (
 		<Link href={`/${id}`} className={styles.link}>

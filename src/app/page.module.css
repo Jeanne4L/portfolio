@@ -1,9 +1,12 @@
+/* CONTAINER */
 .introduction {
 	margin-bottom: 55px;
 }
-.darkblue_bgc {
-	background-color: var(--dark-color);
-	padding: 55px 0;
+.presentation {
+	margin: 15px 0 50px 0;
+}
+.flex {
+	display: flex;
 }
 
 .title,
@@ -19,20 +22,19 @@
 	font-weight: 900;
 	text-transform: uppercase;
 }
-
-.presentation {
-	margin: 15px 0 50px 0;
-}
-.flex {
-	display: flex;
-}
-
 .h2 {
 	text-align: center;
 	font-size: 2rem;
 	margin-bottom: 70px;
 }
 
+/* DARK MODE */
+.darkblue_bgc {
+	background-color: var(--dark-color);
+	padding: 55px 0;
+}
+
+/* MEDIA QUERIES */
 @media (min-width: 700px) {
 	.projects_container {
 		display: flex;
@@ -40,6 +42,7 @@
 		justify-content: space-evenly;
 	}
 }
+/* DESKTOP */
 @media (min-width: 1100px) {
 	.name_p {
 		font-size: 2.3rem;
