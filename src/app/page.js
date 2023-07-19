@@ -49,7 +49,7 @@ export default function Home() {
 					<p>Maintenant, j’ai hâte d’en apprendre plus !</p>
 					<div>
 						<p>
-							Je vous raconte tout sur la page Mon parcours. Allez-y jeter un
+							Je vous raconte tout sur la page Mon parcours. Allez y jeter un
 							œil
 							<Button link={'/career'} />
 						</p>
