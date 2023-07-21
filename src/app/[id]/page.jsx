@@ -2,7 +2,6 @@ import Image from 'next/image';
 import Tag from '@/components/Tag';
 import Button from '@/components/Button';
 import Link from 'next/link';
-import ProjectImgTitle from '@/components/ProjectImgTitle';
 import {notFound} from 'next/navigation';
 import projects from '@/data/projects.json';
 import styles from './page.module.css';
@@ -49,7 +48,7 @@ export default function Project({params}) {
                 </div>
                 <div className={styles.pictures}>
                     <div className={styles.img_container}>
-                        <ProjectImgTitle title={'Home'}/>
+                    <h2 className={styles.img_title}>Home</h2>
                         <Link href={project.pictures[0]} className={styles.link} aria-label="Afficher l'image de la page principale" >
                             <Image 
                                 src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} 
@@ -59,7 +58,7 @@ export default function Project({params}) {
                         </Link>
                     </div>
                     <div className={styles.img_container}>
-                        <ProjectImgTitle title={'Desktop'}/>
+                        <h2 className={styles.img_title}>Desktop</h2>
                         <Link href={project.pictures[1]} className={styles.link} aria-label="Afficher l'image du site sur ordinateur">
                             <Image 
                                 src={project.pictures[1]} alt={`Page ${project.title}`} 
@@ -69,7 +68,7 @@ export default function Project({params}) {
                         </Link>
                     </div>
                     <div className={styles.img_container}>
-                        <ProjectImgTitle title={'Mobile'}/>
+                        <h2 className={styles.img_title}>Mobile</h2>
                         <Link href={project.pictures[2]} className={styles.link} aria-label="Afficher l'image du site sur mobile">
                             <Image 
                                 src={project.pictures[2]} alt={`${project.title} sur mobile`} 

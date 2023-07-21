@@ -11,12 +11,15 @@
 	box-sizing: border-box;
 	font-weight: 300;
 }
+html[data-theme='light'] {
+	background-color: white;
+	color: var(--dark-color);
+}
 body {
 	margin: 0;
 	display: flex;
 	flex-direction: column;
 	height: 100vh;
-	color: var(--dark-color);
 }
 main {
 	flex: 1;
@@ -64,6 +67,11 @@ input,
 textarea {
 	font-family: '__Jost_fe0236';
 	font-size: 1.4rem;
+	background-color: transparent;
+}
+input,
+textarea {
+	border: solid 1px rgba(4, 43, 56, 0.4);
 }
 input:focus,
 textarea:focus {
@@ -89,26 +97,6 @@ textarea:focus {
 	background-color: var(--dark-color);
 }
 
-/* DARK MODE */
-.dark_mode {
-	background-color: var(--dark-mode-bgc);
-	color: white;
-}
-.dark_mode ::placeholder,
-.dark_mode input,
-.dark_mode textarea {
-	color: white;
-	border-color: rgba(255, 255, 255, 0.4);
-	font-weight: 300;
-}
-.dark_mode ::placeholder {
-	color: rgba(255, 255, 255, 0.4);
-}
-.dark_mode input:focus,
-.dark_mode textarea:focus {
-	border: solid 1.5px var(--dark-mode-bright-color);
-}
-
 /* 404 PAGE */
 .full-container {
 	position: fixed;
@@ -132,6 +120,39 @@ textarea:focus {
 	font-size: 1.7rem;
 	margin: 10px 0 100px 0;
 	line-height: 2.6rem;
+}
+
+/* DARK MODE */
+html[data-theme='dark'] {
+	background-color: var(--dark-mode-bgc);
+	color: white;
+}
+
+html[data-theme='dark'] input,
+html[data-theme='dark'] textarea {
+	color: white;
+	border-color: rgba(255, 255, 255, 0.4);
+	font-weight: 300;
+}
+html[data-theme='dark'] ::placeholder {
+	color: rgba(255, 255, 255, 0.4);
+	font-weight: 300;
+}
+html[data-theme='dark'] input:focus,
+html[data-theme='dark'] textarea:focus {
+	border: solid 1.5px var(--dark-mode-bright-color);
+}
+@media (prefers-color-scheme: dark) {
+	html[data-theme='dark'] {
+		background-color: var(--dark-mode-bgc);
+		color: white;
+	}
+}
+@media (prefers-color-scheme: light) {
+	html[data-theme='light'] {
+		background-color: white;
+		color: var(--dark-color);
+	}
 }
 
 /* MEDIA QUERIES */

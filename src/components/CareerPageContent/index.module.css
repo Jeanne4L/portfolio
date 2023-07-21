@@ -21,7 +21,7 @@
 }
 
 /* DARK MODE */
-.dark_mode {
+html[data-theme='dark'] .logo_container {
 	background-color: var(--dark-mode-bgc);
 }
 

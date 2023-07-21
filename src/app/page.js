@@ -1,6 +1,5 @@
 import Button from '@/components/Button';
 import Card from '@/components/Card';
-import Hi from '@/components/Hi';
 import projects from '@/data/projects';
 import styles from './page.module.css';
 
@@ -40,7 +39,7 @@ export default function Home() {
 	return (
 		<>
 			<div className={`container ${styles.introduction}`}>
-				<Hi />
+				<p className={styles.hi_p}>Bonjour, je suis</p>
 				<p className={styles.name_p}>Sandra Petereau</p>
 				<h1 className={styles.title}>Développeuse web junior</h1>
 

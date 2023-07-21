@@ -55,7 +55,7 @@
 }
 
 /* DARK MODE */
-.footer_dark {
+html[data-theme='dark'] .footer {
 	background: linear-gradient(
 		180deg,
 		rgba(7, 75, 97, 0) 0%,

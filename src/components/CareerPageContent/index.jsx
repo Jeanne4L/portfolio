@@ -5,7 +5,7 @@ import CareerLogo from '../CareerLogo';
 import ItemSummary from '../ItemSummary';
 import styles from './index.module.css';
 import { useDispatch, useSelector } from 'react-redux';
-import { selectClickedXp, selectHoveredXp, selectTheme } from '@/redux/selectors';
+import { selectClickedXp, selectHoveredXp } from '@/redux/selectors';
 import * as xpActions from '@/redux/features/xpSlice'
 
 export default function CareerPageContent() {
@@ -13,7 +13,6 @@ export default function CareerPageContent() {
     const dispatch = useDispatch();
     const selected = useSelector(selectClickedXp);
     const hovered = useSelector(selectHoveredXp);
-    const theme = useSelector(selectTheme)
 
     // ALL EVENTS
     function createHandlers(id) {
@@ -39,7 +38,7 @@ export default function CareerPageContent() {
             <h1 className={styles.title}>Mon parcours</h1>
             <h2 className={styles.explanations}>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</h2>
             <div className={styles.desktop_container}>
-                <div className={`${styles.logo_container} ${theme === 'dark' ? styles.dark_mode : ''}`}>
+                <div className={styles.logo_container}>
                     <CareerLogo/>
                 </div>
                 <div className={styles.flex}>

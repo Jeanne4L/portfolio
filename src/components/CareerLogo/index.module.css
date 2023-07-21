@@ -22,8 +22,7 @@
 	fill: var(--light-mode-bright-color);
 }
 .elt:hover,
-.active,
-.dark_mode_active {
+.active {
 	cursor: pointer;
 }
 

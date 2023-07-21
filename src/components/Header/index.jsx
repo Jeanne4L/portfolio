@@ -1,9 +1,9 @@
 'use client';
 
 import { GrMail, GrLinkedinOption, GrGithub } from "react-icons/gr";
-import { AiOutlineMenu } from 'react-icons/ai'
+import { AiOutlineMenu } from 'react-icons/ai';
 import dynamic from 'next/dynamic';
-const Menu = dynamic(() => import('../Menu'))
+const Menu = dynamic(() => import('../Menu'), { ssr: false });
 import Link from 'next/link'
 import Image from 'next/image'
 import * as menuActions from '@/redux/features/menuSlice'

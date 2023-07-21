@@ -1,12 +1,9 @@
 'use client'
 
-import { useSelector } from 'react-redux';
-import { selectTheme } from '@/redux/selectors';
 import styles from './index.module.css'
 import { useMemo } from 'react';
 
 export default function ItemSummary({title, summary, page, selected, hovered, id, onClick, onFocus, onMouseOver, onMouseOut}) {
-    const theme = useSelector(selectTheme)
 
     // CLASSNAME WITH ID 
     const classMap = useMemo(() => ({
@@ -21,11 +18,9 @@ export default function ItemSummary({title, summary, page, selected, hovered, id
                             ${page === 'career' ? styles.career_container : styles.home_container} 
                             ${className} ${hovered ? styles.hover : ''}`;
     const titleClass = `${styles.title} ${page === 'home' ? styles.white_c : ''} 
-                        ${selected && page === 'career' ? styles.active : ''} 
-                        ${selected && page === 'career' && theme === 'dark' ? styles.dark_mode_active : ''}`;
+                        ${selected && page === 'career' ? styles.active : ''} `;
     const summaryClass = `${styles.summary} ${page === 'home' ? styles.white_c : ''} 
-                        ${selected && page === 'career' ? styles.active : ''} 
-                        ${selected && page === 'career' && theme === 'dark' ? styles.dark_mode_active : ''}`
+                        ${selected && page === 'career' ? styles.active : ''} `
 
     return(
         <section 

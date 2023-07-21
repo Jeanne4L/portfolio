@@ -3,13 +3,11 @@
 import Tag from '../Tag';
 import { BsFillCloudArrowDownFill } from "react-icons/bs";
 import { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { selectTheme } from '@/redux/selectors';
+import { useDispatch } from 'react-redux';
 import * as xpActions from '@/redux/features/xpSlice';
 import styles from './index.module.css';
 
 export default function XpPageContent({xp}) {
-    const theme = useSelector(selectTheme);
     const dispatch = useDispatch();
 
     // RESET GLOBAL STATE THAT COLORS LOGO AND XP SUMMARY ON CAREER PAGE
@@ -37,7 +35,7 @@ export default function XpPageContent({xp}) {
                 </div>
             }
 
-            <div className={`${styles.footer} ${theme === 'dark' ? styles.footer_dark : ''}`}>
+            <div className={styles.footer}>
                 <a href='/CV_Petereau_Sandra.pdf' download className={styles.download} aria-label='Télécharger le cv au format pdf'>
                     Télécharger mon cv
                     <BsFillCloudArrowDownFill className={styles.icon}/>

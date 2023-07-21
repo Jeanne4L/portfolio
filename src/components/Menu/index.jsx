@@ -3,16 +3,21 @@
 import { VscColorMode, VscChromeClose } from "react-icons/vsc";
 import { GrMail, GrLinkedinOption, GrGithub } from "react-icons/gr";
 import { useDispatch, useSelector } from 'react-redux';
-import { selectTheme, selectMenu } from '@/redux/selectors';
+import { selectMenu } from '@/redux/selectors';
 import * as menuActions from '@/redux/features/menuSlice';
-import * as themeActions from '@/redux/features/themeSlice';
 import Link from "next/link";
+import { useTheme } from 'next-themes';
 import styles from './index.module.css'
 
 export default function Menu() {
     const menu = useSelector(selectMenu);
     const dispatch = useDispatch();
-    const theme = useSelector(selectTheme);
+
+    const { theme, setTheme } = useTheme()
+
+    function handleClick() {
+        setTheme(theme === 'dark' ? 'light' : 'dark')
+    }
 
     return (
         <div
@@ -20,12 +25,12 @@ export default function Menu() {
             role='menu'
             aria-hidden={menu ? 'false' : 'true'}
             id='menu'
-            className={`${styles.overlay} ${theme === 'dark' ? styles.dark_mode : ''} ${menu ? styles.display_menu : ''}`}
+            className={`${styles.overlay} ${menu ? styles.display_menu : ''}`}
         >
             <div className={styles.icons}>
                 <VscColorMode 
                     className={styles.icon} 
-                    onClick={() => dispatch(themeActions.toggle())} 
+                    onClick={handleClick} 
                     role='button' aria-label={`Passer au mode ${theme === 'dark' ? 'light' : 'dark'}`} tabIndex={menu ? 0 : -1} 
                 />
                 <VscChromeClose className={styles.icon} 

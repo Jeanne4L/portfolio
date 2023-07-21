@@ -10,9 +10,7 @@
 .input,
 .textarea {
 	width: 100%;
-	border: solid 1px rgba(4, 43, 56, 0.4);
 	padding: 15px;
-	background-color: transparent;
 }
 .inputContainer,
 .textarea {
@@ -41,6 +39,19 @@
 .general {
 	font-size: 1.2rem;
 	text-align: center;
+}
+
+/* DARK MODE */
+html[data-theme='dark'] .error,
+html[data-theme='dark'] .success,
+html[data-theme='dark'] .general {
+	font-weight: 300;
+}
+html[data-theme='dark'] .error {
+	color: #ff984c;
+}
+html[data-theme='dark'] .success {
+	color: var(--dark-mode-bright-color);
 }
 
 /* MEDIA QUERIES */

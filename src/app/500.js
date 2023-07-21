@@ -4,7 +4,7 @@ import Button from '@/components/Button';
 export default function ServerError() {
 	return (
 		<div className='dark-bgc full-container'>
-			<h1 className='bright-c notfound-h1'>404</h1>
+			<h1 className='bright-c notfound-h1'>500</h1>
 			<p className='bright-c notfound-p'>
 				Hum...
 				<br />

@@ -28,7 +28,7 @@
 }
 
 /* DARK MODE */
-.dark_mode_active {
+[data-theme='dark'] .active {
 	color: var(--dark-mode-bright-color);
 }
 

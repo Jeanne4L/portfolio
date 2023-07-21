@@ -41,13 +41,16 @@
 }
 
 /* DARK MODE */
-.dark_mode_btn {
+html[data-theme='dark'] .btn {
 	border-color: var(--dark-mode-bright-color);
 	color: var(--dark-mode-bright-color);
 }
-.dark_mode_btn > .icon,
-.dark_mode_icon {
+html[data-theme='dark'] .btn > .icon,
+html[data-theme='dark'] .icon {
 	stroke: var(--dark-mode-bright-color);
+}
+html[data-theme='dark'] .btn:hover {
+	border-color: transparent;
 }
 
 /* MEDIA QUERIES */

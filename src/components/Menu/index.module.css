@@ -77,17 +77,17 @@
 }
 
 /* DARK MODE STYLES */
-.dark_mode {
+html[data-theme='dark'] .overlay {
 	background-color: var(--dark-color);
 }
-.dark_mode .icon,
-.dark_mode .text {
+html[data-theme='dark'] .icon,
+html[data-theme='dark'] .text {
 	color: white;
 	fill: white;
 }
-.dark_mode .icon:hover,
-.dark_mode .icon:focus,
-.dark_mode .social a:focus > .icon {
+html[data-theme='dark'] .icon:hover,
+html[data-theme='dark'] .icon:focus,
+html[data-theme='dark'] .social a:focus > .icon {
 	color: var(--dark-mode-bright-color);
 	fill: var(--dark-mode-bright-color);
 }

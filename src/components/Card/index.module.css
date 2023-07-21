@@ -16,10 +16,8 @@
 }
 
 /* HOVER */
-.link:focus > .card > .img_container > .img {
-	transform: scale(1.05) rotate(-1deg);
-}
-.img:hover {
+.link:focus > .card > .img_container > .img,
+.link:hover > .card > .img_container > .img {
 	transform: scale(1.05) rotate(-1deg);
 }
 
