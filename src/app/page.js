@@ -19,7 +19,7 @@ export let metadata = {
 		title: 'Sandra Petereau | Développeuse web',
 		description:
 			"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
-		url: '',
+		url: process.env.NEXT_PUBLIC_URL,
 		images: [{ url: '/profile.jpg' }],
 		locale: 'fr_FR',
 		type: 'website',
