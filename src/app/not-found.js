@@ -10,7 +10,7 @@ export default function NotFound() {
 				<br />
 				Il semblerait que cette page
 				<br />
-				n'existe pas !
+				n&apos;existe pas !
 			</p>
 			<Button link={'/'} text={"Revenir à la page d'accueil"} page={'404'} />
 		</div>
