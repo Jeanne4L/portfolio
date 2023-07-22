@@ -5,7 +5,7 @@ export let metadata = {
 	title: 'Sandra Petereau | Parcours',
 	description: 'Anciennement vendeuse, aujourd\'hui développeuse. Je vous présente mon parcours jusqu\'à la programmation informatique.',
     robots: {
-        index: true,
+        index: false,
         follow: true,
         nocache: false
     }
