@@ -8,7 +8,7 @@ This portfolio presents the projects carried out during my training with Opencla
 
 ## Website
 
-To see it, visit the link : https://portfolio-jeanne4l.vercel.app/
+To see it, visit the link : https://spetereau-dev.com/
 
 ## Installation
 
@@ -25,6 +25,7 @@ Change the .env.dist file to .env and add:
 - your email
 - your gmail email for the contact form
 - your gmail email password
+- the website url
 
 ## Projects tech
 
@@ -72,4 +73,4 @@ Repo: https://github.com/Jeanne4L/oc-mon-vieux-grimoire
 
 ## Contact
 
-If you are looking for a work-study React developer (or other, I love to learn), contact me with: sandra.petereau@outlook.fr or on LinkedIn : https://www.linkedin.com/in/sandra-petereau/
+If you are looking for a work-study React developer (or other language, I love to learn), contact me with: sandra.petereau@outlook.fr or on LinkedIn : https://www.linkedin.com/in/sandra-petereau/
