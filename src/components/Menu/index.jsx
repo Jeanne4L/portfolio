@@ -13,8 +13,8 @@ export default function Menu() {
     const menu = useSelector(selectMenu);
     const dispatch = useDispatch();
 
+    // TOGGLE THE THEME
     const { theme, setTheme } = useTheme()
-
     function handleClick() {
         setTheme(theme === 'dark' ? 'light' : 'dark')
     }

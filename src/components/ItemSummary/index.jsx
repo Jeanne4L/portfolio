@@ -26,7 +26,6 @@ export default function ItemSummary({title, summary, page, selected, hovered, id
         <section 
             className={containerClass} 
             onClick={onClick} onFocus={onFocus} onMouseOver={onMouseOver} onMouseOut={onMouseOut}
-            tabIndex={0}
         >
             <h3 className={titleClass}>{title}</h3>
             <h4 className={summaryClass}>{summary}</h4>

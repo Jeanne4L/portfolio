@@ -20,9 +20,16 @@
 	display: none;
 }
 
+.xp_summary:focus {
+	color: var(--light-mode-bright-color);
+}
+
 /* DARK MODE */
 html[data-theme='dark'] .logo_container {
 	background-color: var(--dark-mode-bgc);
+}
+html[data-theme='dark'] .xp_summary:focus {
+	color: var(--dark-mode-bright-color);
 }
 
 /* MEDIA QUERIES */
