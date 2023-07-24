@@ -15,7 +15,6 @@ const jost = Jost({
 	display: 'swap',
 });
 
-// GIVE ACCESS TO THE REDUX STORE
 export default function RootLayout({ children }) {
 	// STRUCTURED DATA
 	const jsonLd = {
