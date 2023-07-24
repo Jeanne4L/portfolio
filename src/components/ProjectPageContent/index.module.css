@@ -131,6 +131,11 @@ html[data-theme='dark'] .img_title {
 		bottom: 0;
 		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
 	}
+	.full_img {
+		max-width: 90%;
+		max-height: 90%;
+		margin: auto;
+	}
 }
 /* DESKTOP */
 @media (min-width: 1100px) {
