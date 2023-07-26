@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import Form from '@/components/Form';
 import styles from './page.module.css';
 
@@ -16,7 +15,7 @@ export const metadata = {
 export default function Contact() {
     return(
         <div className='container'>
-            <h1 className={styles.title}>Besoin d'une développeuse web ?</h1>
+            <h1 className={styles.title}>Besoin d&apos;une développeuse web ?</h1>
             <Form/>
         </div>
     )

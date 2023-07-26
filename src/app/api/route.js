@@ -21,9 +21,10 @@ export async function POST(req) {
 		replyTo: request.email,
 		subject: 'Portfolio - Demande de contact',
 		text: request.message,
-		html: `<div>
+		html: `
+            <div>
                 <p>${request.message}</p>
-                <span>${request.name}</span>
+                <span style="font-weight: 600;">${request.name}</span>
             </div>`,
 	};
 
