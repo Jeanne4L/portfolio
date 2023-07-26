@@ -2,11 +2,11 @@
 
 import { Jost } from 'next/font/google';
 import { Suspense } from 'react';
-import Header from '@/components/Header';
 import Loading from './loading';
 import { Provider } from 'react-redux';
 import store from '@/redux/store';
 import { ThemeProvider } from 'next-themes';
+import Header from '@/components/Header';
 import projects from '@/data/projects';
 import './globals.css';
 
@@ -16,6 +16,7 @@ const jost = Jost({
 	display: 'swap',
 });
 
+// GET PROJECTS DATA FOR STRUCTURED DATA
 const jsonLdProjects = projects.map((project, index) => ({
 	'@type': 'ListItem',
 	position: index + 1,
@@ -25,7 +26,6 @@ const jsonLdProjects = projects.map((project, index) => ({
 		description: project.summary,
 	},
 }));
-console.log(jsonLdProjects);
 
 export default function RootLayout({ children }) {
 	// STRUCTURED DATA
