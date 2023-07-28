@@ -1,6 +1,7 @@
 'use client';
 
 import Tag from '../Tag';
+import AnimatedTitle from '../AnimatedTitle';
 import { BsFillCloudArrowDownFill } from "react-icons/bs";
 import { useEffect } from 'react'
 import { useDispatch } from 'react-redux';
@@ -17,7 +18,7 @@ export default function XpPageContent({xp}) {
 
     return(
         <div className={`container ${styles.container}`}>
-            <h1 className={styles.title}>{xp.title}</h1>
+            <AnimatedTitle h1Text={xp.title} style={'center'}/>
             
             <div className={`${styles.paragraph} ${xp.softSkills ? '' : styles.margin}`}>
                 {xp.content.map((paragraph, index) => (

@@ -22,20 +22,9 @@
 	color: var(--light-mode-bright-color);
 	margin: 0;
 }
-
 .name_p {
 	font-size: 2rem;
 	margin-bottom: 5px;
-}
-.title {
-	font-size: 2.1rem;
-	font-weight: 900;
-	text-transform: uppercase;
-}
-.h2 {
-	text-align: center;
-	font-size: 2rem;
-	margin-bottom: 70px;
 }
 
 /* DARK MODE */
@@ -60,9 +49,6 @@ html[data-theme='dark'] .hi_p {
 	.name_p {
 		font-size: 2.3rem;
 		margin-bottom: 10px;
-	}
-	.title {
-		font-size: 2.5rem;
 	}
 	.introduction {
 		margin: 10px auto 90px auto;

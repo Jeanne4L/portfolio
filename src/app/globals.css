@@ -87,9 +87,6 @@ textarea:focus {
 	max-width: 1200px;
 }
 
-.white-c {
-	color: white;
-}
 .bright-c {
 	color: var(--dark-mode-bright-color);
 }

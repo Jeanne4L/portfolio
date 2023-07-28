@@ -1,3 +1,4 @@
+import AnimatedTitle from '@/components/AnimatedTitle';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import projects from '@/data/projects';
@@ -41,7 +42,11 @@ export default function Home() {
 			<div className={`container ${styles.introduction}`}>
 				<p className={styles.hi_p}>Bonjour, je suis</p>
 				<p className={styles.name_p}>Sandra Petereau</p>
-				<h1 className={styles.title}>Développeuse web junior</h1>
+				<AnimatedTitle
+					h1Text={'Développeuse web'}
+					pText={'junior'}
+					style={'bold'}
+				/>
 
 				<div className={styles.presentation}>
 					<p>J’ai commencé à coder sur mon temps libre et j’ai adoré.</p>
@@ -61,7 +66,7 @@ export default function Home() {
 
 			<div className={styles.darkblue_bgc} id='projects'>
 				<div className='container'>
-					<h2 className={`white-c ${styles.h2}`}>Mes projets</h2>
+					<AnimatedTitle h2Text={'Mes projets'} />
 					<div className={styles.projects_container}>
 						{projects.map((project) => (
 							<Card
