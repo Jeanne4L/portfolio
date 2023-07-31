@@ -3,7 +3,6 @@
 import CareerLogo from '../CareerLogo';
 import ItemSummary from '../ItemSummary';
 import Link from 'next/link';
-import AnimatedTitle from '../AnimatedTitle';
 import styles from './index.module.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectClickedXp, selectHoveredXp } from '@/redux/selectors';
@@ -34,7 +33,7 @@ export default function CareerPageContent() {
 
     return (
         <div className={`container ${styles.main}`}>
-            <AnimatedTitle h1Text={'Mon parcours'} style={'center'}/>
+            <h1 className={styles.h1}>Mon parcours</h1>
             <h2 className={styles.explanations}>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</h2>
             <div className={styles.desktop_container}>
                 <div className={styles.logo_container}>

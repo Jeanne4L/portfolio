@@ -1,5 +1,5 @@
 import Form from '@/components/Form';
-import AnimatedTitle from '@/components/AnimatedTitle';
+import styles from './page.module.css'
 
 // METADATA
 export const metadata = {
@@ -15,11 +15,12 @@ export const metadata = {
 export default function Contact() {
     return(
         <div className='container'>
-            <AnimatedTitle
-					h1Text={'Besoin d\'une'}
-					pText={'développeuse web ?'}
-					style={'center'}
-				/>
+            <h1 className={styles.h1}>
+                Besoin d&apos;une
+                <br/>
+                développeuse web ?
+            </h1>
+
             <Form/>
         </div>
     )

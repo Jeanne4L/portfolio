@@ -1,9 +1,25 @@
 .text {
 	text-align: justify;
 }
-
 .paragraph {
 	margin: 50px 0 60px 0;
+}
+
+.h1 {
+	margin: 0;
+	text-align: center;
+}
+.hightlight {
+	background-image: repeating-radial-gradient(
+			circle at 0 0,
+			transparent 0,
+			#008294 6px
+		),
+		repeating-linear-gradient(#33c3cf, #074b61);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 500;
 }
 
 .tags,
@@ -12,7 +28,7 @@
 }
 .tags {
 	display: flex;
-	justify-content: space-between;
+	justify-content: space-evenly;
 	flex-wrap: wrap;
 }
 
@@ -64,8 +80,5 @@ html[data-theme='dark'] .footer {
 @media (min-width: 900px) {
 	.container {
 		width: 70%;
-	}
-	.tags {
-		justify-content: space-evenly;
 	}
 }

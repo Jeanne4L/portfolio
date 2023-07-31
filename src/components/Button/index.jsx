@@ -4,7 +4,7 @@ import Link from "next/link"
 import { FiArrowUpRight } from "react-icons/fi";
 import styles from './index.module.css'
 
-export default function Button({ link, externLink, text, onClick, page }) {
+export default function Button({ link, externLink, text, onClick, page, ariaLabel }) {
     // BUTTON WITH LINK INSIDE THE SITE
     if(link && text) {
         return(
@@ -14,7 +14,7 @@ export default function Button({ link, externLink, text, onClick, page }) {
             </Link> 
         )
     // BUTTON WITH LINK OUTSIDE THE SITE
-    } else if (externLink) {
+    } else if (externLink && text) {
         return(
             <a href={externLink} className={styles.btn} target='_blank'>
                 {text}
@@ -23,11 +23,21 @@ export default function Button({ link, externLink, text, onClick, page }) {
         )
     // BUTTON WITH JUST ICON
     } else if(!text) {
-        return (
-            <Link href={link} className={styles.arrow_btn} aria-label='Aller sur la page Parcours'>
-                <FiArrowUpRight className={styles.icon} />
-            </Link>
-        )
+        if(link) {
+            return (
+                <Link href={link} className={styles.arrow_btn} aria-label='Aller sur la page Parcours'>
+                    <FiArrowUpRight className={styles.icon} />
+                </Link>
+            )
+        }
+        if(externLink) {
+            return (
+                <a href={externLink} className={styles.arrow_btn} aria-label={ariaLabel} target='_blank'>
+                    <FiArrowUpRight className={styles.icon}/>
+                </a>
+            )
+        }
+
     // SUBMIT BUTTON
     } else {
         return(

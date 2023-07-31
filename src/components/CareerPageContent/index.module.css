@@ -17,6 +17,10 @@
 	display: none;
 }
 
+.h1 {
+	margin: 0;
+}
+
 .xp_summary:focus {
 	color: var(--light-mode-bright-color);
 }
