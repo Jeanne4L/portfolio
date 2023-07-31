@@ -1,4 +1,3 @@
-import AnimatedTitle from '@/components/AnimatedTitle';
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import projects from '@/data/projects';
@@ -40,33 +39,50 @@ export default function Home() {
 	return (
 		<>
 			<div className={`container ${styles.introduction}`}>
-				<p className={styles.hi_p}>Bonjour, je suis</p>
-				<p className={styles.name_p}>Sandra Petereau</p>
-				<AnimatedTitle
-					h1Text={'Développeuse web'}
-					pText={'junior'}
-					style={'bold'}
-				/>
+				<p className={`${styles.hi_p} ${styles.anim} ${styles.anim1}`}>
+					Bonjour, je suis
+				</p>
+				<p className={`${styles.name_p} ${styles.anim} ${styles.anim2}`}>
+					Sandra Petereau
+				</p>
+				<div className={styles.title_container}>
+					<h1 className={`${styles.h1} ${styles.anim} ${styles.anim3}`}>
+						Développeuse web
+					</h1>
+					<p
+						className={`${styles.h1} ${styles.p} ${styles.anim} ${styles.anim3}`}
+					>
+						junior
+					</p>
+				</div>
 
 				<div className={styles.presentation}>
-					<p>J’ai commencé à coder sur mon temps libre et j’ai adoré.</p>
-					<p>Maintenant, j’ai hâte d’en apprendre plus !</p>
+					<p className={`${styles.anim} ${styles.anim4}`}>
+						J’ai commencé à coder sur mon temps libre et j’ai adoré.
+					</p>
+					<p className={`${styles.anim} ${styles.anim5}`}>
+						Maintenant, j’ai hâte d’en apprendre plus !
+					</p>
 					<div>
-						<p>
+						<p className={`${styles.anim} ${styles.anim6}`}>
 							Je vous raconte tout sur la page Mon parcours. Allez y jeter un
 							œil
 							<Button link={'/career'} />
 						</p>
 
-						<p>Sinon contactez-moi, nous pourrons en discuter !</p>
+						<p className={`${styles.anim} ${styles.anim7}`}>
+							Sinon contactez-moi, nous pourrons en discuter !
+						</p>
 					</div>
 				</div>
-				<Button link={'/contact'} text={'Envoyer un message'} />
+				<div className={`${styles.anim} ${styles.anim8}`}>
+					<Button link={'/contact'} text={'Envoyer un message'} />
+				</div>
 			</div>
 
 			<div className={styles.darkblue_bgc} id='projects'>
 				<div className='container'>
-					<AnimatedTitle h2Text={'Mes projets'} />
+					<h2 className={styles.h2}>Mes projets</h2>
 					<div className={styles.projects_container}>
 						{projects.map((project) => (
 							<Card
