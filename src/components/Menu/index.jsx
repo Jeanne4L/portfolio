@@ -48,13 +48,6 @@ export default function Menu() {
                     >
                         <li className={styles.li}>Projets</li>
                     </Link>
-                    <Link href={'/contact'} 
-                        className={styles.link}
-                        onClick={() => dispatch(menuActions.toggle())}
-                        tabIndex={menu ? 0 : -1}
-                    >
-                        <li className={styles.li}>Contact</li>
-                    </Link>
                     <Link 
                         className={styles.link}
                         href={'/career'} 
@@ -62,6 +55,13 @@ export default function Menu() {
                         tabIndex={menu ? 0 : -1}
                     >
                         <li className={styles.li}>Parcours</li>
+                    </Link>
+                    <Link href={'/contact'} 
+                        className={styles.link}
+                        onClick={() => dispatch(menuActions.toggle())}
+                        tabIndex={menu ? 0 : -1}
+                    >
+                        <li className={styles.li}>Contact</li>
                     </Link>
                 </ul>
             </nav>

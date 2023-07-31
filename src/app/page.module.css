@@ -14,7 +14,7 @@
 
 /* CONTAINER */
 .introduction {
-	margin-bottom: 55px;
+	margin-bottom: 65px;
 }
 .presentation {
 	margin: 15px 0 50px 0;
@@ -24,11 +24,10 @@
 }
 .darkblue_bgc {
 	background-color: var(--dark-color);
-	padding: 55px 0;
+	padding-bottom: 55px;
 }
 
 .h1 {
-	margin: 0;
 	font-size: 2rem;
 	font-weight: 400;
 	line-height: inherit;
@@ -36,10 +35,7 @@
 	font-weight: 900;
 	text-transform: uppercase;
 }
-.h1.p {
-	padding-left: 5px;
-}
-.title,
+.h1,
 .name_p {
 	margin: 0;
 }
@@ -55,8 +51,64 @@
 .h2 {
 	text-align: center;
 	font-size: 2rem;
-	margin-bottom: 70px;
+	margin: 50px 0 70px 0;
 	color: white;
+}
+
+.download {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: 400;
+	font-size: 1.4rem;
+	margin-top: 40px;
+}
+.download .icon {
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-left: 10px;
+}
+.download:hover,
+.download:hover > .icon {
+	color: var(--light-mode-bright-color);
+}
+
+.banner {
+	overflow: hidden;
+}
+.scroll_banner {
+	display: inline-flex;
+	animation: scrollBanner 30s linear infinite;
+	padding: 10px 0;
+}
+.banner ul {
+	flex: 1;
+	display: inline-flex;
+	margin: 0;
+}
+.scroll_banner li {
+	margin: 0 20px;
+	text-transform: uppercase;
+	background-image: repeating-radial-gradient(
+			circle at 0 0,
+			transparent 0,
+			#008294 6px
+		),
+		repeating-linear-gradient(#33c3cf, #074b61);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+@keyframes scrollBanner {
+	0% {
+		transform: translateX(-50%);
+	}
+	100% {
+		transform: translateX(0);
+	}
 }
 
 /* ANIMATION */
@@ -95,13 +147,11 @@ html[data-theme='dark'] .hi_p {
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 650px) {
-	.title_container {
-		display: flex;
-		align-items: center;
-	}
-	.h1.p {
-		padding-left: 10px;
+@media (min-width: 600px) {
+	.download {
+		display: inline-flex;
+		margin: 0 0 0 30px;
+		font-size: 1.2rem;
 	}
 }
 
@@ -110,6 +160,15 @@ html[data-theme='dark'] .hi_p {
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
+	}
+	.scroll_banner li {
+		margin: 0 25px;
+	}
+}
+
+@media (min-width: 900px) {
+	.scroll_banner li {
+		margin: 0 30px;
 	}
 }
 /* DESKTOP */
@@ -129,7 +188,10 @@ html[data-theme='dark'] .hi_p {
 		margin: 10px 0;
 	}
 	.darkblue_bgc {
-		padding: 70px 0 0 0;
+		padding-bottom: 70px;
+	}
+	.scroll_banner li {
+		margin: 0 30px;
 	}
 	.arrow_btn {
 		margin-bottom: -5px;

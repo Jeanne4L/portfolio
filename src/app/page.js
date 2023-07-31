@@ -1,6 +1,7 @@
 import Button from '@/components/Button';
 import Card from '@/components/Card';
 import projects from '@/data/projects';
+import { BsFillCloudArrowDownFill } from 'react-icons/bs';
 import styles from './page.module.css';
 
 // METADATA
@@ -45,16 +46,9 @@ export default function Home() {
 				<p className={`${styles.name_p} ${styles.anim} ${styles.anim2}`}>
 					Sandra Petereau
 				</p>
-				<div className={styles.title_container}>
-					<h1 className={`${styles.h1} ${styles.anim} ${styles.anim3}`}>
-						Développeuse web
-					</h1>
-					<p
-						className={`${styles.h1} ${styles.p} ${styles.anim} ${styles.anim3}`}
-					>
-						junior
-					</p>
-				</div>
+				<h1 className={`${styles.h1} ${styles.anim} ${styles.anim3}`}>
+					Développeuse web junior
+				</h1>
 
 				<div className={styles.presentation}>
 					<p className={`${styles.anim} ${styles.anim4}`}>
@@ -77,10 +71,63 @@ export default function Home() {
 				</div>
 				<div className={`${styles.anim} ${styles.anim8}`}>
 					<Button link={'/contact'} text={'Envoyer un message'} />
+					<a
+						href='/CV_Petereau_Sandra.pdf'
+						download
+						className={styles.download}
+						aria-label='Télécharger le cv au format pdf'
+					>
+						Télécharger mon cv
+						<BsFillCloudArrowDownFill className={styles.icon} />
+					</a>
 				</div>
 			</div>
 
 			<div className={styles.darkblue_bgc} id='projects'>
+				<div className={styles.banner}>
+					<div className={styles.scroll_banner}>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Sass</li>
+							<li>JavaScript</li>
+							<li>React</li>
+							<li>Node.js</li>
+							<li>Express</li>
+							<li>Next.js</li>
+						</ul>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Sass</li>
+							<li>JavaScript</li>
+							<li>React</li>
+							<li>Node.js</li>
+							<li>Express</li>
+							<li>Next.js</li>
+						</ul>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Sass</li>
+							<li>JavaScript</li>
+							<li>React</li>
+							<li>Node.js</li>
+							<li>Express</li>
+							<li>Next.js</li>
+						</ul>
+						<ul>
+							<li>HTML</li>
+							<li>CSS</li>
+							<li>Sass</li>
+							<li>JavaScript</li>
+							<li>React</li>
+							<li>Node.js</li>
+							<li>Express</li>
+							<li>Next.js</li>
+						</ul>
+					</div>
+				</div>
 				<div className='container'>
 					<h2 className={styles.h2}>Mes projets</h2>
 					<div className={styles.projects_container}>
