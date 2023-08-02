@@ -1,5 +1,10 @@
 .header {
-	background-color: var(--dark-color);
+	background: linear-gradient(
+		180deg,
+		rgba(4, 43, 56, 1) 0%,
+		rgba(4, 43, 56, 0.5) 100%
+	);
+	backdrop-filter: blur(5px);
 	padding: 10px 0;
 	position: fixed;
 	z-index: 1000;
@@ -21,8 +26,8 @@
 }
 
 .menu_icon {
-	width: 30px;
-	height: 30px;
+	width: 35px;
+	height: 35px;
 	fill: white;
 }
 .social {
@@ -40,7 +45,7 @@
 .social a:hover > .icon,
 .menu_icon:focus,
 .social a:focus > .icon {
-	fill: var(--dark-mode-bright-color);
+	fill: var(--bright-color);
 	cursor: pointer;
 }
 

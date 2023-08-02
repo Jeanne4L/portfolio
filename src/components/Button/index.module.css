@@ -1,12 +1,12 @@
 .btn {
-	border: solid 3px var(--light-mode-bright-color);
-	color: var(--light-mode-bright-color);
+	border: solid 1px var(--bright-color);
+	color: var(--bright-color);
 	background: transparent;
 	padding: 10px 15px;
-	font-weight: 500;
-	display: inline-block;
+	font-weight: 300;
 	font-size: 1.4rem;
-	display: flex;
+	width: 100%;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -20,7 +20,7 @@
 	stroke-linejoin: inherit;
 	width: 1.7rem;
 	height: 1.7rem;
-	stroke: var(--light-mode-bright-color);
+	stroke: var(--bright-color);
 	transition: transform 800ms;
 }
 /* HOVER */
@@ -38,19 +38,6 @@
 }
 .btn:focus-visible {
 	outline: none;
-}
-
-/* DARK MODE */
-html[data-theme='dark'] .btn {
-	border-color: var(--dark-mode-bright-color);
-	color: var(--dark-mode-bright-color);
-}
-html[data-theme='dark'] .btn > .icon,
-html[data-theme='dark'] .icon {
-	stroke: var(--dark-mode-bright-color);
-}
-html[data-theme='dark'] .btn:hover {
-	border-color: transparent;
 }
 
 /* MEDIA QUERIES */

@@ -3,13 +3,12 @@
 		"id": "Ohmyfood",
 		"title": "Ohmyfood",
 		"date": 2022,
-		"summary": "Animation d'une page web avec CSS",
+		"summary": "Intégration et animation d’une page web",
 		"description": [
 			"En suivant les maquettes fournies, j'ai intégré la page d'accueil ainsi que les pages menu du site Ohmyfood. En utilisant le préprocesseur Sass, j'ai ensuite ajouté des animations CSS.",
 			"Ce site permet aux utilisateurs de sélectionner un restaurant et de réserver leur menu à l'avance."
 		],
 		"hardSkills": ["HTML", "CSS", "Sass"],
-		"mainImg": "/images/ohmyfood/ohmyfood_main.jpg",
 		"pictures": [
 			"/images/ohmyfood/ohmyfood_1.png",
 			"/images/ohmyfood/ohmyfood_2.png",
@@ -22,13 +21,12 @@
 		"id": "Booki",
 		"title": "Booki",
 		"date": 2023,
-		"summary": "Intégration d'une page web responsive en HTML et CSS",
+		"summary": "Intégration d’un site responsive à partir d’une maquette",
 		"description": [
 			"À partir de la maquette fournie par le designer, j’ai intégré la page d’accueil du site Booki.",
 			"Il permet aux utilisateurs de sélectionner un hébergement ou une activité dans la ville de leur choix."
 		],
 		"hardSkills": ["HTML", "CSS"],
-		"mainImg": "/images/booki/booki_main.jpg",
 		"pictures": [
 			"/images/booki/booki_1.png",
 			"/images/booki/booki_2.png",
@@ -41,13 +39,12 @@
 		"id": "Sophie_Bluel",
 		"title": "Portfolio de Sophie Bluel",
 		"date": 2023,
-		"summary": "Affichage dynamique des projets avec JavaScript",
+		"summary": "Affichage dynamique des projets du portfolio",
 		"description": [
 			"Grâce à l'API interne, j'ai récupéré les projets enregistrés sur la base de données et les ai affiché sur la page principale, j'ai également intégré une modale permettant d'en créer d'autres.",
 			"L'utilisatrice, une fois connectée, peut ajouter ou supprimer ses projets en toute autonomie."
 		],
 		"hardSkills": ["JavaScript"],
-		"mainImg": "/images/sophiebluel/sophiebluel_main.png",
 		"pictures": [
 			"/images/sophiebluel/sophiebluel_1.png",
 			"/images/sophiebluel/sophiebluel_2.png",
@@ -66,7 +63,6 @@
 			"Le site étant optimisé pour les navigateurs, permet à l'utilisatrice de se faire connaître grâce à un meilleur référencement."
 		],
 		"hardSkills": ["SEO", "accessibilité"],
-		"mainImg": "/images/ninacarducci/ninacarducci_main.png",
 		"pictures": [
 			"/images/ninacarducci/ninacarducci_1.png",
 			"/images/ninacarducci/ninacarducci_2.png",
@@ -79,13 +75,12 @@
 		"id": "Kasa",
 		"title": "Kasa",
 		"date": 2023,
-		"summary": "Création d’une application web avec React",
+		"summary": "Création d’une application web avec des composants React",
 		"description": [
 			"En utilisant create-react-app, j'ai créé une SPA grâce à des composants React.",
 			"Le site permet aux utilisateurs de sélectionner une location immobilière."
 		],
 		"hardSkills": ["React"],
-		"mainImg": "/images/kasa/kasa_main.jpg",
 		"pictures": [
 			"/images/kasa/kasa_1.png",
 			"/images/kasa/kasa_2.png",
@@ -98,13 +93,12 @@
 		"id": "Mon_Vieux_Grimoire",
 		"title": "Mon Vieux Grimoire",
 		"date": 2023,
-		"summary": "Création d’une API avec Node.js et Express",
+		"summary": "Création d’une API et gestion de la base de données",
 		"description": [
 			"En respectant les spécifications techniques, j'ai créé une API afin de sécuriser le serveur et l'accès à la base de données. Elle permet également de structurer les données sauvegardées sur MongoDB grâce aux schémas mongoose.",
 			"Le site permet à un utilisateur connecté de créer et de noter des livres."
 		],
 		"hardSkills": ["Node.js", "Express"],
-		"mainImg": "/images/monvieuxgrimoire/monvieuxgrimoire_main.png",
 		"pictures": [
 			"/images/monvieuxgrimoire/monvieuxgrimoire_1.png",
 			"/images/monvieuxgrimoire/monvieuxgrimoire_2.png",

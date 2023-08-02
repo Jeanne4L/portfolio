@@ -1,10 +1,8 @@
-.container {
-	text-align: center;
-}
 .career_container {
 	width: 250px;
 	margin-bottom: 50px;
 	margin: 0 auto 50px auto;
+	text-align: center;
 }
 .career_container:hover {
 	cursor: pointer;
@@ -16,7 +14,7 @@
 	font-size: 1.4rem;
 }
 .title {
-	margin: 17px 0 0 0;
+	margin: 0;
 	font-size: 1.4rem;
 }
 
@@ -24,12 +22,7 @@
 	color: white;
 }
 .active {
-	color: var(--light-mode-bright-color);
-}
-
-/* DARK MODE */
-[data-theme='dark'] .active {
-	color: var(--dark-mode-bright-color);
+	color: var(--bright-color);
 }
 
 /* MEDIA QUERIES */

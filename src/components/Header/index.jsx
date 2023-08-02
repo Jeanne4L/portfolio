@@ -1,7 +1,7 @@
 'use client';
 
 import { GrMail, GrLinkedinOption, GrGithub } from "react-icons/gr";
-import { AiOutlineMenu } from 'react-icons/ai';
+import { BiMenuAltLeft } from "react-icons/bi";
 import dynamic from 'next/dynamic';
 const Menu = dynamic(() => import('../Menu'), { ssr: false });
 import Link from 'next/link'
@@ -26,8 +26,6 @@ export default function Header() {
                         className={`${styles.logo} ${styles.logo_full}`}
                         priority
                     />
-                </Link>
-                <Link href='/' aria-label='Revenir à la page principale'>
                     <Image 
                         src='/logo--simple.svg' 
                         alt="dessin vectoriel de plusieurs triangles superposés"
@@ -37,7 +35,7 @@ export default function Header() {
                         priority
                     />
                 </Link>
-                <AiOutlineMenu onClick={() => dispatch(menuActions.toggle())} className={styles.menu_icon}  role='button' aria-label='Afficher le menu' aria-haspopup="true" aria-expanded="false" aria-controls='menu' tabIndex={0}/>
+                <BiMenuAltLeft onClick={() => dispatch(menuActions.toggle())} className={styles.menu_icon}  role='button' aria-label='Afficher le menu' aria-haspopup="true" aria-expanded="false" aria-controls='menu' tabIndex={0}/>
                 <Menu/>
 
             </div>

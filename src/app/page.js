@@ -1,7 +1,19 @@
 import Button from '@/components/Button';
 import Card from '@/components/Card';
+import SkillTag from '@/components/SkillTag';
+import GradientTtitle from '@/components/GradientTitle';
+import Footer from '@/components/Footer';
 import projects from '@/data/projects';
-import { BsFillCloudArrowDownFill } from 'react-icons/bs';
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import {
+	FaHtml5,
+	FaCss3Alt,
+	FaJs,
+	FaSass,
+	FaReact,
+	FaNodeJs,
+} from 'react-icons/fa';
+import { SiNextdotjs, SiExpress } from 'react-icons/si';
 import styles from './page.module.css';
 
 // METADATA
@@ -39,109 +51,97 @@ export let metadata = {
 export default function Home() {
 	return (
 		<>
-			<div className={`container ${styles.introduction}`}>
-				<p className={`${styles.hi_p} ${styles.anim} ${styles.anim1}`}>
-					Bonjour, je suis
-				</p>
-				<p className={`${styles.name_p} ${styles.anim} ${styles.anim2}`}>
-					Sandra Petereau
-				</p>
-				<h1 className={`${styles.h1} ${styles.anim} ${styles.anim3}`}>
-					Développeuse web junior
-				</h1>
-
-				<div className={styles.presentation}>
-					<p className={`${styles.anim} ${styles.anim4}`}>
-						J’ai commencé à coder sur mon temps libre et j’ai adoré.
+			<div className='container'>
+				<div className={styles.introduction}>
+					<p className={`${styles.hi_p} ${styles.anim} ${styles.anim1}`}>
+						Bonjour, je suis
 					</p>
-					<p className={`${styles.anim} ${styles.anim5}`}>
-						Maintenant, j’ai hâte d’en apprendre plus !
+					<p className={`${styles.name_p} ${styles.anim} ${styles.anim2}`}>
+						Sandra Petereau
 					</p>
-					<div>
-						<p className={`${styles.anim} ${styles.anim6}`}>
-							Je vous raconte tout sur la page Mon parcours. Allez y jeter un
-							œil
-							<Button link={'/career'} />
-						</p>
+					<h1 className={`${styles.h1} ${styles.anim} ${styles.anim3}`}>
+						Développeuse web junior
+					</h1>
 
-						<p className={`${styles.anim} ${styles.anim7}`}>
-							Sinon contactez-moi, nous pourrons en discuter !
+					<div className={styles.presentation}>
+						<p className={`${styles.anim} ${styles.anim4}`}>
+							J’ai commencé à coder sur mon temps libre et j’ai adoré.
 						</p>
+						<p className={`${styles.anim} ${styles.anim5}`}>
+							Maintenant, j’ai hâte d’en apprendre plus !
+						</p>
+						<div>
+							<p className={`${styles.anim} ${styles.anim6}`}>
+								Je vous raconte tout sur la page Mon parcours. Allez y jeter un
+								œil
+								<Button link={'/career'} />
+							</p>
+
+							<p className={`${styles.anim} ${styles.anim7}`}>
+								Sinon contactez-moi, nous pourrons en discuter !
+							</p>
+						</div>
+					</div>
+					<div className={`${styles.anim} ${styles.anim8}`}>
+						<Button link={'/contact'} text={'Envoyer un message'} />
+						<a
+							href='/CV_Petereau_Sandra.pdf'
+							download
+							className={styles.download}
+							aria-label='Télécharger le cv au format pdf'
+						>
+							Télécharger mon cv
+							<BsFillArrowDownCircleFill className={styles.icon} />
+						</a>
 					</div>
 				</div>
-				<div className={`${styles.anim} ${styles.anim8}`}>
-					<Button link={'/contact'} text={'Envoyer un message'} />
-					<a
-						href='/CV_Petereau_Sandra.pdf'
-						download
-						className={styles.download}
-						aria-label='Télécharger le cv au format pdf'
-					>
-						Télécharger mon cv
-						<BsFillCloudArrowDownFill className={styles.icon} />
-					</a>
-				</div>
-			</div>
 
-			<div className={styles.darkblue_bgc} id='projects'>
-				<div className={styles.banner}>
-					<div className={styles.scroll_banner}>
-						<ul>
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Sass</li>
-							<li>JavaScript</li>
-							<li>React</li>
-							<li>Node.js</li>
-							<li>Express</li>
-							<li>Next.js</li>
-						</ul>
-						<ul>
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Sass</li>
-							<li>JavaScript</li>
-							<li>React</li>
-							<li>Node.js</li>
-							<li>Express</li>
-							<li>Next.js</li>
-						</ul>
-						<ul>
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Sass</li>
-							<li>JavaScript</li>
-							<li>React</li>
-							<li>Node.js</li>
-							<li>Express</li>
-							<li>Next.js</li>
-						</ul>
-						<ul>
-							<li>HTML</li>
-							<li>CSS</li>
-							<li>Sass</li>
-							<li>JavaScript</li>
-							<li>React</li>
-							<li>Node.js</li>
-							<li>Express</li>
-							<li>Next.js</li>
-						</ul>
+				<section id='skills' className={styles.skills}>
+					<GradientTtitle text={'Skills'} />
+					<div className={styles.skills_container}>
+						<SkillTag text={'HTML'}>
+							<FaHtml5 className={styles.skill_icon} />
+						</SkillTag>
+						<SkillTag text={'CSS'}>
+							<FaCss3Alt className={styles.skill_icon} />
+						</SkillTag>
+						<SkillTag text={'JavaScript'}>
+							<FaJs className={styles.skill_icon} />
+						</SkillTag>
+						<SkillTag text={'Sass'}>
+							<FaSass className={styles.skill_icon} />
+						</SkillTag>
+						<SkillTag text={'React'}>
+							<FaReact className={styles.skill_icon} />
+						</SkillTag>
+						<SkillTag text={'Next.js'}>
+							<SiNextdotjs className={styles.skill_icon} />
+						</SkillTag>
+						<SkillTag text={'Node.js'}>
+							<FaNodeJs className={styles.skill_icon} />
+						</SkillTag>
+						<SkillTag text={'Express'}>
+							<SiExpress className={styles.skill_icon} />
+						</SkillTag>
 					</div>
-				</div>
-				<div className='container'>
-					<h2 className={styles.h2}>Mes projets</h2>
+				</section>
+
+				<section id='projects'>
+					<GradientTtitle text={'Projects'} />
 					<div className={styles.projects_container}>
 						{projects.map((project) => (
 							<Card
-								srcImg={project.mainImg}
+								srcImg={project.pictures[0]}
 								title={project.title}
 								summary={project.summary}
+								hardSkills={project.hardSkills}
 								id={project.id}
 								key={`${project.id}+${project.title}`}
 							/>
 						))}
 					</div>
-				</div>
+				</section>
+				<Footer />
 			</div>
 		</>
 	);

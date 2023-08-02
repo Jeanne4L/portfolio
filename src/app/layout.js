@@ -5,7 +5,6 @@ import { Suspense } from 'react';
 import Loading from './loading';
 import { Provider } from 'react-redux';
 import store from '@/redux/store';
-import { ThemeProvider } from 'next-themes';
 import Header from '@/components/Header';
 import projects from '@/data/projects';
 import './globals.css';
@@ -85,16 +84,14 @@ export default function RootLayout({ children }) {
 		<html lang='fr' className={jost.className} suppressHydrationWarning={true}>
 			<body>
 				<Provider store={store}>
-					<ThemeProvider>
-						<Header />
-						<main>
-							<Suspense fallback={<Loading />}>{children}</Suspense>
-						</main>
-						<script
-							type='application/ld+json'
-							dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-						/>
-					</ThemeProvider>
+					<Header />
+					<main>
+						<Suspense fallback={<Loading />}>{children}</Suspense>
+					</main>
+					<script
+						type='application/ld+json'
+						dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+					/>
 				</Provider>
 			</body>
 		</html>

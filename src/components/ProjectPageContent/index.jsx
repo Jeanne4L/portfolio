@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Tag from '../Tag';
 import Button from '../Button';
+import GradientTtitle from '../GradientTitle';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer'
 import styles from './index.module.css'
@@ -59,7 +60,7 @@ export default function ProjectPageContent({project}) {
             </div>
             <div className={styles.pictures}>
                 <div className={styles.picture_container}>
-                <h2 className={styles.img_title}>Home</h2>
+                    <GradientTtitle text={'Home'}/>
                     <div href={project.pictures[0]} className={`${styles.img_container} ${imgDisplayed[0] ? styles.display_container : ''}`} ref={ref1} aria-label="Afficher l'image de la page principale" >
                         <Image 
                             src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} 
@@ -74,7 +75,7 @@ export default function ProjectPageContent({project}) {
                     </div>
                 </div>
                 <div className={styles.picture_container}>
-                    <h2 className={styles.img_title}>Desktop</h2>
+                    <GradientTtitle text={'Desktop'}/>
                     <div href={project.pictures[1]} className={`${styles.img_container} ${imgDisplayed[1] ? styles.display_container : ''}`} ref={ref2} aria-label="Afficher l'image du site sur ordinateur">
                         <Image 
                             src={project.pictures[1]} alt={`Page ${project.title}`} 
@@ -89,7 +90,7 @@ export default function ProjectPageContent({project}) {
                     </div>
                 </div>
                 <div className={styles.picture_container}>
-                    <h2 className={styles.img_title}>Mobile</h2>
+                    <GradientTtitle text={'Mobile'}/>
                     <div href={project.pictures[2]} className={`${styles.img_container} ${imgDisplayed[2] ? styles.display_container : ''}`} ref={ref3} aria-label="Afficher l'image du site sur mobile">
                         <Image 
                             src={project.pictures[2]} alt={`${project.title} sur mobile`} 
