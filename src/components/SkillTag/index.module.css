@@ -19,3 +19,15 @@
 	color: var(--bright-color);
 	margin: 0;
 }
+
+@media (min-width: 600px) {
+	.container {
+		width: 33%;
+	}
+}
+@media (min-width: 800px) {
+	.container {
+		width: 25%;
+		margin: 20px 0;
+	}
+}

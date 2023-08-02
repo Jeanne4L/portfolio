@@ -82,7 +82,7 @@ export default function Home() {
 							</p>
 						</div>
 					</div>
-					<div className={`${styles.anim} ${styles.anim8}`}>
+					<div className={`${styles.anim} ${styles.anim8} ${styles.buttons}`}>
 						<Button link={'/contact'} text={'Envoyer un message'} />
 						<a
 							href='/CV_Petereau_Sandra.pdf'
@@ -97,7 +97,7 @@ export default function Home() {
 				</div>
 
 				<section id='skills' className={styles.skills}>
-					<GradientTtitle text={'Skills'} />
+					<GradientTtitle text={'Skills'} page={'home'} />
 					<div className={styles.skills_container}>
 						<SkillTag text={'HTML'}>
 							<FaHtml5 className={styles.skill_icon} />
@@ -127,7 +127,7 @@ export default function Home() {
 				</section>
 
 				<section id='projects'>
-					<GradientTtitle text={'Projects'} />
+					<GradientTtitle text={'Projects'} page={'home'} />
 					<div className={styles.projects_container}>
 						{projects.map((project) => (
 							<Card

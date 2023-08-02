@@ -59,10 +59,6 @@
 }
 /* DESKTOP */
 @media (min-width: 1100px) {
-	.home_container {
-		width: 80%;
-		margin: auto;
-	}
 	.prep,
 	.goals {
 		right: 10%;

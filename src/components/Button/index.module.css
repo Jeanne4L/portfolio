@@ -5,10 +5,9 @@
 	padding: 10px 15px;
 	font-weight: 300;
 	font-size: 1.4rem;
+	display: inline-block;
+	text-align: center;
 	width: 100%;
-	display: inline-flex;
-	justify-content: center;
-	align-items: center;
 }
 .arrow_btn {
 	vertical-align: sub;
@@ -41,10 +40,9 @@
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 600px) {
+@media (min-width: 500px) {
 	.btn {
-		display: inline-flex;
-		font-size: 1.2rem;
+		width: auto;
 	}
 	.large_btn {
 		width: 100%;
