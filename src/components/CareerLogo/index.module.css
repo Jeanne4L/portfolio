@@ -5,7 +5,7 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 500px;
-	background-color: var(--dark-color);
+	background-color: var(--dark-bgc);
 }
 .svg {
 	width: 120px;
@@ -19,7 +19,7 @@
 .elt:hover,
 .active,
 .elt:focus {
-	fill: var(--light-mode-bright-color);
+	fill: var(--bright-color);
 }
 .elt:hover,
 .active {

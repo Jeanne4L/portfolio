@@ -10,7 +10,6 @@ export default function Button({ link, externLink, text, onClick, page, ariaLabe
         return(
             <Link href={link} className={styles.btn}>
                 {text}
-                <FiArrowUpRight className={styles.icon}/>
             </Link> 
         )
     // BUTTON WITH LINK OUTSIDE THE SITE
@@ -18,10 +17,9 @@ export default function Button({ link, externLink, text, onClick, page, ariaLabe
         return(
             <a href={externLink} className={styles.btn} target='_blank'>
                 {text}
-                <FiArrowUpRight className={styles.icon}/>
             </a>     
         )
-    // BUTTON WITH JUST ICON
+    // BUTTON ICON
     } else if(!text) {
         if(link) {
             return (
@@ -44,7 +42,6 @@ export default function Button({ link, externLink, text, onClick, page, ariaLabe
             <div className={`${styles.btn} ${page === 'contact' ? styles.large_btn : ''}`} 
                 onClick={onClick} role='button' tabIndex={0}>
                 {text}
-                <FiArrowUpRight className={styles.icon}/>
             </div>
         )
     }

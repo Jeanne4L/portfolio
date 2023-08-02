@@ -2,39 +2,20 @@
 	{
 		"id": "commerce",
 		"title": "Mon ancienne vie",
-		"content": [
-			"Après des débuts chaotiques en filière ES, j'ai choisi de me tourner vers une voie professionnelle: le commerce. La polyvalence étant le maître-mot durant ces deux années d'alternance à Super U, mon côté couteau suisse s'est pleinement épanoui à travers la préparation de commandes, la vente de gaz ou encore la location de véhicules.",
-			"Puis, une fois mon bac en poche, j'ai continué sur ce chemin tout tracé jusqu'à La Foir'Fouille, Centrakor puis Biocoop. J'ai également fait quelques escales chez St-Michel, Marco Polo, et Center Parcs pour lesquels j'ai monté quelques cartons et nettoyé quelques cottages.",
-			"Ces expériences m'ont permis de grandir (dans la tête uniquement!) et d'apprendre afin de façonner ce projet professionnel encore flou à l'époque de mes études."
-		],
 		"softSkills": ["collaboration", "proactivité", "réactivité", "polyvalence"]
 	},
 	{
 		"id": "prep",
 		"title": "Début de reconversion",
-		"content": [
-			"Plus jeune je n'aimais pas apprendre, je trouvais les cours inutiles et rébarbatifs. J'ai bien changé depuis! Maintenant je ne fais plus que ça, j'ai une liste de sujets à explorer si longue qu'il me faudra plus d'une vie pour la parcourir. Sur cette liste se trouvait encore, il y a quelques temps, la programmation informatique. Je n'aurais jamais cru accrocher autant. Et pourtant, de nombreux langages, librairies et frameworks sont venus l'allonger un peu plus.",
-			"J'ai donc commencé à apprendre le code toute seule, en suivant des cours ici et là, sur internet. Puis une occasion s'est présentée à moi via le site d'Openclassrooms. Un programme de 4 mois me permettant d'apprendre les bases en les appliquant sur des projets concrets. J'y ai réalisé 4 projets, dont Ohmyfood (les autres ne sont pas sur le portfolio car le code me semble aujourd'hui bien moins bon qu'à l'époque. Ils sont, toutefois, visibles sur mon Github). Cette formation m'a apporté la confimation que je ne m'étais pas trompée en entamant cette reconversion."
-		],
 		"softSkills": ["autonomie", "introspection", "rigueur", "initiative"]
 	},
 	{
 		"id": "training",
 		"title": "Formation Développeur web",
-		"content": [
-			"Consciente qu'une reconversion dans l'informatique sans expérience et sans diplôme n'était pas envisageable, j'ai intégré une formation continue dont l'issue me délivrerait un titre RNCP de niveau 5 (Bac+2). Au cours de ces 4 mois, j'ai réalisé 7 projets dont l'un d'eux est le portfolio sur lequel vous êtes actuellement.",
-			"Ces projets m'ont permis de consolider mes bases (HTML, CSS, JS) et d'acquérir de nouvelles connaissances. Parmi celles-ci, les méthodes agiles dont SCRUM et les tableaux kanban que j'ai appliqués sur le projet MenuMaker. Celui-ci consistait à la planification des étapes nécessaires à la  création d'un site. J'ai également appris à utiliser des librairies et frameworks tels que React, Next.js, Redux ou Express.js.",
-			"Mais avez-vous déjà remarqué que, à mesure que l'on découvre un sujet, on prend également conscience de l'étendue de notre ignorance? Comme l'a dit Socrate \"Je sais que je ne sais rien\". Je me suis ainsi rendue compte au cours de cette formation qu'elle ne serait pas suffisante. Bien que j'aurais pu la terminer plus tôt, j'ai donc choisi d'en retarder l'issue afin d'en apprendre plus de mon mentor. Nous avons ainsi pu explorer l'environnement Linux, Docker et la planification d'un projet sur GitHub."
-		],
 		"softSkills": ["détermination", "curiosité", "organisation", "adaptabilité"]
 	},
 	{
 		"id": "goals",
-		"title": "Mes objectifs",
-		"content": [
-			"Il est difficile d'avoir un objectif final dans un domaine en constante évolution et qui offre tant de perspectives alors je dirais que mon intention est d'en apprendre le plus possible et de réussir en tant que développeuse.",
-			"Pour cela, je souhaite intégrer une autre formation afin de me spécialiser. Mon premier choix est une spécialisation frontend sur React car j'ai adoré apprendre à l'utiliser et que le frontend est, actuellement, ce que je maîtrise le mieux.",
-			"Cependant, je pense qu'il est important de ne pas se limiter en restant focalisé sur un objectif trop spécifique. C'est pourquoi j'envisage également de dévier vers le développement d'applications Android si l'occasion se présente."
-		]
+		"title": "Mes objectifs"
 	}
 ]

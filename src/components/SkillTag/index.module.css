@@ -1,0 +1,21 @@
+.container {
+	display: inline-flex;
+	flex-flow: column;
+	align-items: center;
+	width: 45%;
+	margin: 10px 0;
+}
+.circle {
+	background: var(--dark-bgc);
+	width: 80px;
+	height: 80px;
+	border-radius: 100px;
+	margin-bottom: 5px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.text {
+	color: var(--bright-color);
+	margin: 0;
+}

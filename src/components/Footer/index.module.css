@@ -1,0 +1,12 @@
+.container {
+	border-top: solid 1px var(--bright-color);
+	padding: 10px 0;
+}
+.social {
+	text-align: center;
+}
+.icon {
+	width: 30px;
+	height: 30px;
+	margin: 10px;
+}

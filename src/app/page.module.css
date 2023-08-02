@@ -13,8 +13,9 @@
 }
 
 /* CONTAINER */
-.introduction {
-	margin-bottom: 65px;
+.introduction,
+.skills {
+	margin-bottom: 70px;
 }
 .presentation {
 	margin: 15px 0 50px 0;
@@ -23,7 +24,7 @@
 	display: flex;
 }
 .darkblue_bgc {
-	background-color: var(--dark-color);
+	background-color: var(--dark-bgc);
 	padding-bottom: 55px;
 }
 
@@ -41,7 +42,7 @@
 }
 .hi_p {
 	font-size: 1rem;
-	color: var(--light-mode-bright-color);
+	color: var(--bright-color);
 	margin: 0;
 }
 .name_p {
@@ -59,56 +60,33 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: 400;
+	font-weight: 300;
 	font-size: 1.4rem;
-	margin-top: 40px;
+	margin-top: 35px;
 }
-.download .icon {
-	width: 1.5rem;
-	height: 1.5rem;
-	margin-left: 10px;
+.icon {
+	width: 1.4rem;
+	height: 1.4rem;
+	margin-left: 13px;
 }
-.download:hover,
+.download:hover {
+	color: var(--bright-color);
+}
 .download:hover > .icon {
-	color: var(--light-mode-bright-color);
+	fill: var(--bright-color);
 }
 
-.banner {
-	overflow: hidden;
+.skills_container {
+	background: var(--transp-color);
+	display: flex;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	padding: 25px 0;
 }
-.scroll_banner {
-	display: inline-flex;
-	animation: scrollBanner 30s linear infinite;
-	padding: 10px 0;
-}
-.banner ul {
-	flex: 1;
-	display: inline-flex;
-	margin: 0;
-}
-.scroll_banner li {
-	margin: 0 20px;
-	text-transform: uppercase;
-	background-image: repeating-radial-gradient(
-			circle at 0 0,
-			transparent 0,
-			#008294 6px
-		),
-		repeating-linear-gradient(#33c3cf, #074b61);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 400;
-	font-size: 1.2rem;
-}
-
-@keyframes scrollBanner {
-	0% {
-		transform: translateX(-50%);
-	}
-	100% {
-		transform: translateX(0);
-	}
+.skill_icon {
+	width: 45px;
+	height: 45px;
+	fill: var(--bright-color);
 }
 
 /* ANIMATION */
@@ -139,11 +117,6 @@
 }
 .anim8 {
 	animation: introAnimation 1s 1.3s forwards;
-}
-
-/* DARK MODE */
-html[data-theme='dark'] .hi_p {
-	color: var(--dark-mode-bright-color);
 }
 
 /* MEDIA QUERIES */

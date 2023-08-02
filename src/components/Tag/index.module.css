@@ -1,12 +1,13 @@
 .tag {
-	background-color: var(--dark-color);
+	background-color: var(--transp-color);
 	display: inline-block;
 	padding: 7px 20px;
-	color: white;
+	color: var(--bright-color);
 	border-radius: 25px;
 	font-size: 1.2rem;
 	margin-bottom: 10px;
 	text-align: center;
+	font-weight: 300;
 }
 
 .career_tags {

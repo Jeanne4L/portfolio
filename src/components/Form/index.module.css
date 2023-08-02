@@ -34,24 +34,11 @@
 	color: #cc1400;
 }
 .success {
-	color: var(--light-mode-bright-color);
+	color: var(--bright-color);
 }
 .general {
 	font-size: 1.2rem;
 	text-align: center;
-}
-
-/* DARK MODE */
-html[data-theme='dark'] .error,
-html[data-theme='dark'] .success,
-html[data-theme='dark'] .general {
-	font-weight: 300;
-}
-html[data-theme='dark'] .error {
-	color: #ff984c;
-}
-html[data-theme='dark'] .success {
-	color: var(--dark-mode-bright-color);
 }
 
 /* MEDIA QUERIES */
