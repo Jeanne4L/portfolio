@@ -1,6 +1,6 @@
 .title {
 	font-weight: 900;
-	font-size: clamp(2.7rem, 0.4609rem + 14.3304vw, 13rem);
+	font-size: clamp(2.7rem, -0.3519rem + 15.2593vw, 13rem);
 	text-transform: uppercase;
 	background-image: linear-gradient(
 		180deg,
@@ -11,4 +11,7 @@
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	margin-bottom: 20px;
+}
+.home_title {
+	font-size: clamp(2.7rem, 2.0185rem + 3.4074vw, 5rem);
 }
