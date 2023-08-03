@@ -10,16 +10,8 @@
 	text-align: center;
 }
 .hightlight {
-	background-image: repeating-radial-gradient(
-			circle at 0 0,
-			transparent 0,
-			#008294 6px
-		),
-		repeating-linear-gradient(#33c3cf, #074b61);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 500;
+	color: var(--bright-color);
+	font-weight: 400;
 }
 
 .tags,
@@ -37,16 +29,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: 400;
-	font-size: 1.5rem;
+	font-weight: 300;
+	font-size: 1.4rem;
 }
 .icon {
-	width: 2.2rem;
-	height: 2.2rem;
-	margin-left: 10px;
+	margin-left: 15px;
+	fill: var(--bright-color);
 }
-.download:hover,
-.download:hover > .icon {
+.download:hover {
 	color: var(--bright-color);
 }
 
@@ -57,11 +47,11 @@
 	width: 100%;
 	background: linear-gradient(
 		180deg,
-		rgba(255, 255, 255, 0) 0%,
-		rgba(255, 255, 255, 1) 40%,
-		rgba(255, 255, 255, 1) 100%
+		rgba(4, 43, 56, 0) 0%,
+		rgba(4, 43, 56, 1) 40%,
+		rgba(4, 43, 56, 1) 100%
 	);
-	padding: 50px 0 30px 0;
+	padding: 70px 0 30px 0;
 	text-align: center;
 }
 

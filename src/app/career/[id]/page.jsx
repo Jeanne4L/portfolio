@@ -1,5 +1,5 @@
 // import experiences from '@/data/career.json';
-import { BsFillCloudArrowDownFill } from "react-icons/bs";
+import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import Tag from '@/components/Tag';
 import XpStateReset from '@/components/XpStateReset';
 import Button from '@/components/Button';
@@ -121,7 +121,7 @@ export default function CareerXP({ params }) {
                     <div className={styles.footer}>
                         <a href='/CV_Petereau_Sandra.pdf' download className={styles.download} aria-label='Télécharger le cv au format pdf'>
                             Télécharger mon cv
-                            <BsFillCloudArrowDownFill className={styles.icon}/>
+                            <BsFillArrowDownCircleFill className={styles.icon} />
                         </a>
                     </div>
                 </div>

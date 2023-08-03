@@ -1,4 +1,5 @@
 import Form from '@/components/Form';
+import Footer from '@/components/Footer';
 import styles from './page.module.css'
 
 // METADATA
@@ -14,7 +15,7 @@ export const metadata = {
 
 export default function Contact() {
     return(
-        <div className='container'>
+        <div className={`container ${styles.container}`}>
             <h1 className={styles.h1}>
                 Besoin d&apos;une
                 <br/>
@@ -22,6 +23,7 @@ export default function Contact() {
             </h1>
 
             <Form/>
+            <Footer/>
         </div>
     )
 }

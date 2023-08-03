@@ -8,7 +8,7 @@ export default function SpinnerAnimation() {
     return (
         <div className={styles.overlay}>
             <div className={styles.container}>
-                <Lottie animationData={spinner} className={styles.svg}/>;
+                <Lottie animationData={spinner} className={styles.svg}/>
             </div>
         </div>
     )

@@ -2,10 +2,6 @@
 .introduction {
 	margin-bottom: 50px;
 }
-.introduction,
-.pictures {
-	text-align: center;
-}
 .presentation {
 	text-align: left;
 }
@@ -13,7 +9,7 @@
 	margin: 10px 0 45px 0;
 }
 .picture_container {
-	margin-top: 30px;
+	margin-top: 70px;
 }
 .overlay {
 	position: fixed;
@@ -22,7 +18,7 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: #042b38;
+	background-color: var(--dark-bgc);
 }
 
 /* ELEMENTS */
@@ -48,31 +44,24 @@
 	position: relative;
 	height: 350px;
 	overflow: hidden;
-	transition: 1s ease-out;
+	transition: 800ms ease-out;
 	transition-delay: 0.2s;
 	clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
-	border: solid 2px rgba(4, 43, 56, 0.15);
 	margin-bottom: 10px;
 }
-.img,
-.main_img {
-	object-fit: cover;
+.img_large {
+	max-width: 700px;
 }
-.main_img {
-	border-radius: 500px;
-	width: 285px;
-	height: 285px;
-	margin-bottom: 45px;
-}
+
 .img {
 	object-position: top;
 	transform: scale(1.3);
 	transition: 2s ease-out;
-	height: 350px;
-	width: 500px;
+	object-fit: cover;
 }
-.img:hover {
+.img_container:hover {
 	cursor: pointer;
+	opacity: 1;
 }
 
 /* ANIMATIONS */
@@ -85,20 +74,20 @@
 }
 
 /* MEDIA QUERIES */
-@media (min-width: 400px) {
-	.main_img {
-		width: 350px;
-		height: 350px;
-		min-width: 350px;
+@media (min-width: 500px) {
+	.picture_container {
+		height: 500px;
+		position: relative;
+	}
+	.img_container {
+		display: inline-flex;
+		position: absolute;
+		right: 0;
+		bottom: 0;
 	}
 }
 /* LAPTOP */
 @media (min-width: 900px) {
-	.introduction {
-		display: flex;
-		flex-direction: row-reverse;
-		align-items: center;
-	}
 	.introduction,
 	.pictures {
 		margin-bottom: 70px;
@@ -106,22 +95,18 @@
 	.presentation {
 		margin-right: 60px;
 	}
-	.main_img {
-		margin-bottom: 0;
-	}
 	.picture_container {
 		margin-top: 70px;
-		height: 530px;
-		position: relative;
+	}
+	.picture_container_tall {
+		height: 850px;
 	}
 	.img_container {
-		border: none;
 		margin-bottom: 0;
-		display: inline-flex;
-		position: absolute;
-		transform: translateX(-50%);
-		bottom: 0;
-		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.1);
+		opacity: 0.5;
+	}
+	.img_tall {
+		height: 700px;
 	}
 	.full_img {
 		max-width: 90%;
