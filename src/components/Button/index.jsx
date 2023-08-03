@@ -8,7 +8,7 @@ export default function Button({ link, externLink, text, onClick, page, ariaLabe
     // BUTTON WITH LINK INSIDE THE SITE
     if(link && text) {
         return(
-            <Link href={link} className={styles.btn}>
+            <Link href={link} className={styles.btn} onClick={onClick}>
                 {text}
             </Link> 
         )
