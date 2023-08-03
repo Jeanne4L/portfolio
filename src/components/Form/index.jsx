@@ -134,7 +134,7 @@ export default function Form() {
             </div>
 
             <label htmlFor='message' className={styles.label}>Votre message *</label>
-            <textarea name="message" id='message' placeholder="Je cherche justement une développeuse motivée !" className={styles.textarea} value={value.message} onChange={handleChange} required/>
+            <textarea name="message" id='message' className={styles.textarea} value={value.message} onChange={handleChange} required/>
 
             <Button text={'Envoyer'} onClick={handleSubmit} page={'contact'}/>
         </form>

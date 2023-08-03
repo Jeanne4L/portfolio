@@ -14,6 +14,18 @@ export default function CareerLogo() {
     const selected = useSelector(selectClickedXp);
     const hovered = useSelector(selectHoveredXp)
 
+    // CONVERT ID
+    const idMap = useMemo(() => ({
+        'commerce_peak': 'commerce',
+        'commerce': 'commerce',
+        'prep_peak': 'prep',
+        'prep': 'prep',
+        'training_peak': 'training',
+        'training': 'training',
+        'goals_peak': 'goals',
+        'goals': 'goals'
+    }), [])
+
     // CHANGE CLIC GLOBAL STATE TO COLOR LOGO PART AND TEXT AND REDIRECT TO XP PAGE
     function handleClick(e) {
         const id = idMap[e.target.id]
@@ -33,17 +45,6 @@ export default function CareerLogo() {
         }
     }
 
-    // CONVERT ID
-    const idMap = useMemo(() => ({
-        'commerce_peak': 'commerce',
-        'commerce': 'commerce',
-        'prep_peak': 'prep',
-        'prep': 'prep',
-        'training_peak': 'training',
-        'training': 'training',
-        'goals_peak': 'goals',
-        'goals': 'goals'
-    }), [])
     // GENERATE CLASS WITH STATE AND ID
     function generateClass(selected, hovered, id) {
         const isActive = selected === id || hovered === id;

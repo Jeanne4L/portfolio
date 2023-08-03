@@ -12,7 +12,7 @@ export default function NotFound() {
 				<br />
 				n&apos;existe pas !
 			</p>
-			<Button link={'/'} text={"Revenir à la page d'accueil"} page={'404'} />
+			<Button link={'/'} text={"Revenir à la page d'accueil"} />
 		</div>
 	);
 }
