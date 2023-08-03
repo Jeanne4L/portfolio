@@ -33,7 +33,7 @@ export default function CareerPageContent() {
 
     return (
         <div className={`container ${styles.main}`}>
-            <h1 className={styles.h1}>Mon parcours</h1>
+            <h1 className={styles.h1}>Parcours</h1>
             <h2 className={styles.explanations}>Cliquez sur les parties du logo pour découvrir mon évolution professionnelle !</h2>
             <div className={styles.desktop_container}>
                 <div className={styles.logo_container}>
@@ -48,7 +48,7 @@ export default function CareerPageContent() {
                             id={'commerce'}
                             hovered={hovered === 'commerce' ? hovered : ''}
                             selected={selected === 'commerce' ? selected : ''}
-                            // ADD THE OBJECTS EVENTS WITH THE ID
+                            // ADD THE EVENTS OBJECT WITH THE ID
                             {...createHandlers('commerce')}
                         />
                     </Link>

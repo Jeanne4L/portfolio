@@ -65,15 +65,19 @@ export default function Home() {
 
 					<div className={styles.presentation}>
 						<p className={`${styles.anim} ${styles.anim4}`}>
-							J’ai commencé à coder sur mon temps libre et j’ai adoré.
+							Anciennement dans le commerce, j’ai commencé le code par curiosité
+							et j’ai adoré.
 						</p>
 						<p className={`${styles.anim} ${styles.anim5}`}>
-							Maintenant, j’ai hâte d’en apprendre plus !
+							Maintenant, je veux me spécialiser en front end et apprendre{' '}
+							<span className={styles.hightlight}>Vue.js</span> ou{' '}
+							<span className={styles.hightlight}>Angular</span>.
 						</p>
 						<div>
 							<p className={`${styles.anim} ${styles.anim6}`}>
-								Je vous raconte tout sur la page Mon parcours. Allez y jeter un
-								œil
+								Si vous voulez en savoir plus sur mon évolution ou mes
+								objectifs, je vous raconte tout sur la page{' '}
+								<span className={styles.hightlight}>Parcours</span>
 								<Button link={'/career'} />
 							</p>
 

@@ -12,7 +12,7 @@ export default function ServerError() {
 				<br />
 				ne réponde pas !
 			</p>
-			<Button link={'/'} text={"Revenir à la page d'accueil"} page={'404'} />
+			<Button link={'/'} text={"Revenir à la page d'accueil"} />
 		</div>
 	);
 }

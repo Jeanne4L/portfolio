@@ -24,10 +24,7 @@ main {
 
 /* GENERAL */
 h1,
-h2,
-::placeholder,
-input,
-textarea {
+h2 {
 	font-weight: 400;
 }
 h2 {
@@ -57,7 +54,6 @@ li {
 	outline: none;
 }
 
-::placeholder,
 input,
 textarea {
 	font-family: '__Jost_fe0236';
@@ -72,21 +68,11 @@ input:focus,
 textarea:focus {
 	border: solid 1px var(--bright-color);
 }
-::placeholder {
-	color: rgba(4, 43, 56, 0.4);
-}
 
 .container {
 	width: 90%;
 	margin: auto;
 	max-width: 1200px;
-}
-
-.bright-c {
-	color: var(--bright-color);
-}
-.dark-bgc {
-	background-color: var(--dark-bgc);
 }
 
 /* 404 PAGE */
@@ -113,11 +99,16 @@ textarea:focus {
 	margin: 10px 0 100px 0;
 	line-height: 2.6rem;
 }
+.bright-c {
+	color: var(--bright-color);
+}
+.dark-bgc {
+	background-color: var(--dark-bgc);
+}
 
 /* MEDIA QUERIES */
 /* LAPTOP */
 @media (min-width: 900px) {
-	::placeholder,
 	input,
 	textarea {
 		font-size: 1.1rem;

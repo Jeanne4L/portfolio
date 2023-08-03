@@ -1,4 +1,3 @@
-// import experiences from '@/data/career.json';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import Tag from '@/components/Tag';
 import XpStateReset from '@/components/XpStateReset';

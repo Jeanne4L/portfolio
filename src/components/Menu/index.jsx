@@ -55,8 +55,10 @@ export default function Menu() {
                             <li className={styles.li}>Projets</li>
                         </Link>
                     </ul>
-                    <Button link={'/contact'} text={'Me contacter'} onClick={() => dispatch(menuActions.toggle())} tabIndex={menu ? 0 : -1} />
-                </nav>
+                    {menu &&
+                        <Button link={'/contact'} text={'Me contacter'} onClick={() => dispatch(menuActions.toggle())} />
+                    }
+                    </nav>
                 <nav className={styles.social}>
                     <a className={styles.link}
                         href={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} 

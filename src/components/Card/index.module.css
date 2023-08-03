@@ -25,16 +25,17 @@
 	clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
 	border: solid 2px rgba(4, 43, 56, 0.15);
 }
+.tags {
+	margin-top: 15px;
+}
+
+/* ANIMATION */
 .display_container {
 	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 .display_container .img {
 	transform: scale(1);
 	transition: 3s ease-out;
-}
-
-.tags {
-	margin-top: 15px;
 }
 
 /* HOVER */

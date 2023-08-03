@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Tag from '../Tag';
 import Button from '../Button';
 import GradientTtitle from '../GradientTitle';
+import Footer from '../Footer';
 import { useState, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer'
 import styles from './index.module.css'
@@ -40,7 +41,7 @@ export default function ProjectPageContent({project}) {
             <div className={styles.overlay} onClick={() => setIsOpenedImg(false)}>
                 <Image src={openedImgSrc} alt={openedImgAlt} className={styles.full_img} fill priority/>
             </div>
-        : <div className="container">
+        : <div className='container'>
             <div className={styles.introduction}>
                 <div className={styles.presentation}>
                     <h1 className={styles.h1}>{project.title}</h1>
@@ -104,6 +105,7 @@ export default function ProjectPageContent({project}) {
                     </div>
                 </div>
             </div>
+            <Footer/>
         </div>
     )
 }
