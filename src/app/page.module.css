@@ -68,12 +68,10 @@
 	width: 1.4rem;
 	height: 1.4rem;
 	margin-left: 13px;
+	fill: var(--bright-color);
 }
 .download:hover {
 	color: var(--bright-color);
-}
-.download:hover > .icon {
-	fill: var(--bright-color);
 }
 
 .skills_container {

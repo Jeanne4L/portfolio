@@ -1,7 +1,7 @@
 'use client';
 
 import { GrMail, GrLinkedinOption, GrGithub } from "react-icons/gr";
-import { BiMenuAltLeft } from "react-icons/bi";
+import { MdGraphicEq } from "react-icons/md";
 import dynamic from 'next/dynamic';
 const Menu = dynamic(() => import('../Menu'), { ssr: false });
 import Link from 'next/link'
@@ -35,7 +35,7 @@ export default function Header() {
                         priority
                     />
                 </Link>
-                <BiMenuAltLeft onClick={() => dispatch(menuActions.toggle())} className={styles.menu_icon}  role='button' aria-label='Afficher le menu' aria-haspopup="true" aria-expanded="false" aria-controls='menu' tabIndex={0}/>
+                <MdGraphicEq onClick={() => dispatch(menuActions.toggle())} className={styles.menu_icon}  role='button' aria-label='Afficher le menu' aria-haspopup="true" aria-expanded="false" aria-controls='menu' tabIndex={0}/>
                 <Menu/>
 
             </div>

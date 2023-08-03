@@ -2,16 +2,24 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	height: 100%;
 }
 .logo_container {
 	position: sticky;
-	top: 52px;
+	top: 57px;
 	width: 100vw;
 	padding: 20px;
 	margin: 20px 0 10px 0;
 	display: flex;
 	justify-content: center;
-	background-color: white;
+	background: linear-gradient(
+		0deg,
+		rgba(4, 43, 56, 0) 0%,
+		rgba(4, 43, 56, 1) 40%,
+		rgba(4, 43, 56, 1) 100%
+	);
+	backdrop-filter: blur(5px);
 }
 .explanations {
 	display: none;
@@ -31,6 +39,10 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-evenly;
+		margin-top: 70px;
+	}
+	.xp_summary {
+		margin: 0 50px;
 	}
 }
 @media (min-width: 900px) {

@@ -1,9 +1,5 @@
 .header {
-	background: linear-gradient(
-		180deg,
-		rgba(4, 43, 56, 1) 0%,
-		rgba(4, 43, 56, 0.5) 100%
-	);
+	background: rgba(7, 232, 228, 0.07);
 	backdrop-filter: blur(5px);
 	padding: 10px 0;
 	position: fixed;
@@ -26,9 +22,10 @@
 }
 
 .menu_icon {
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 	fill: white;
+	transform: rotate(90deg);
 }
 .social {
 	display: none;
@@ -47,6 +44,8 @@
 .social a:focus > .icon {
 	fill: var(--bright-color);
 	cursor: pointer;
+	transition: 200ms ease;
+	transform: scale(1.1) rotate(90deg);
 }
 
 /* MEDIA QUERIES */

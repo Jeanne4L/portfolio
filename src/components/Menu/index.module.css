@@ -67,19 +67,13 @@
 .icon:focus {
 	fill: var(--bright-color);
 	cursor: pointer;
+	transition: 200ms ease;
+	transform: scale(1.1);
 }
 .link:hover > .li,
 .link:focus > .li {
-	background-image: repeating-radial-gradient(
-			circle at 0 0,
-			transparent 0,
-			#008294 6px
-		),
-		repeating-linear-gradient(#33c3cf, #074b61);
-	background-clip: text;
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-weight: 400;
+	color: var(--bright-color);
+	font-weight: 300;
 }
 
 /* MEDIA QUERIES */

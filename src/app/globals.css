@@ -19,7 +19,7 @@ body {
 main {
 	flex: 1;
 	margin-top: 57px;
-	padding-top: 30px;
+	padding-top: 50px;
 }
 
 /* GENERAL */
@@ -66,7 +66,7 @@ textarea {
 }
 input,
 textarea {
-	border: solid 1px var(--transp-color);
+	border: solid 1px rgba(7, 232, 228, 0.3);
 }
 input:focus,
 textarea:focus {

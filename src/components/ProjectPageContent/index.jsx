@@ -42,7 +42,6 @@ export default function ProjectPageContent({project}) {
             </div>
         : <div className="container">
             <div className={styles.introduction}>
-                <Image src={project.mainImg} alt={project.title} width={350} height={350} className={styles.main_img} priority/>
                 <div className={styles.presentation}>
                     <h1 className={styles.h1}>{project.title}</h1>
                     <div className={styles.tags}>
@@ -61,11 +60,11 @@ export default function ProjectPageContent({project}) {
             <div className={styles.pictures}>
                 <div className={styles.picture_container}>
                     <GradientTtitle text={'Home'}/>
-                    <div href={project.pictures[0]} className={`${styles.img_container} ${imgDisplayed[0] ? styles.display_container : ''}`} ref={ref1} aria-label="Afficher l'image de la page principale" >
+                    <div href={project.pictures[0]} className={`${styles.img_container} ${styles.img_large} ${imgDisplayed[0] ? styles.display_container : ''}`} ref={ref1} aria-label="Afficher l'image de la page principale" >
                         <Image 
                             src={project.pictures[0]} alt={`Page d'accueil ${project.title}`} 
                             fill sizes='(max-width: 500px) 100vw, 600px' quality={100}
-                            className={`${styles.img} ${imgDisplayed[0] ? styles.display_img : ''}`} priority
+                            className={`${styles.img} ${styles.img_large} ${imgDisplayed[0] ? styles.display_img : ''}`} priority
                             onClick={() => {
                                 setIsOpenedImg(true)
                                 setOpenedImgSrc(project.pictures[0])
@@ -76,7 +75,7 @@ export default function ProjectPageContent({project}) {
                 </div>
                 <div className={styles.picture_container}>
                     <GradientTtitle text={'Desktop'}/>
-                    <div href={project.pictures[1]} className={`${styles.img_container} ${imgDisplayed[1] ? styles.display_container : ''}`} ref={ref2} aria-label="Afficher l'image du site sur ordinateur">
+                    <div href={project.pictures[1]} className={`${styles.img_container} ${styles.img_large} ${imgDisplayed[1] ? styles.display_container : ''}`} ref={ref2} aria-label="Afficher l'image du site sur ordinateur">
                         <Image 
                             src={project.pictures[1]} alt={`Page ${project.title}`} 
                             fill sizes='(max-width: 500px) 100vw, 600px' quality={100}
@@ -89,9 +88,9 @@ export default function ProjectPageContent({project}) {
                         />
                     </div>
                 </div>
-                <div className={styles.picture_container}>
+                <div className={`${styles.picture_container} ${styles.picture_container_tall}`}>
                     <GradientTtitle text={'Mobile'}/>
-                    <div href={project.pictures[2]} className={`${styles.img_container} ${imgDisplayed[2] ? styles.display_container : ''}`} ref={ref3} aria-label="Afficher l'image du site sur mobile">
+                    <div href={project.pictures[2]} className={`${styles.img_container} ${styles.img_tall} ${imgDisplayed[2] ? styles.display_container : ''}`} ref={ref3} aria-label="Afficher l'image du site sur mobile">
                         <Image 
                             src={project.pictures[2]} alt={`${project.title} sur mobile`} 
                             fill sizes='(max-width: 500px) 100vw, 500px' quality={100}
