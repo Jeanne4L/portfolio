@@ -45,7 +45,14 @@
 	fill: var(--bright-color);
 	cursor: pointer;
 	transition: 200ms ease;
+}
+.menu_icon:hover,
+.menu_icon:focus {
 	transform: scale(1.1) rotate(90deg);
+}
+.social a:hover > .icon,
+.social a:focus > .icon {
+	transform: scale(1.1);
 }
 
 /* MEDIA QUERIES */
