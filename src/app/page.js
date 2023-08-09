@@ -5,7 +5,6 @@ import GradientTtitle from '@/components/GradientTitle';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
 import projects from '@/data/projects';
-import { FiArrowUpRight } from 'react-icons/fi';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import {
 	FaHtml5,
@@ -75,9 +74,9 @@ export default function Home() {
 							<p className={`${styles.anim} ${styles.anim6}`}>
 								Si vous voulez en savoir plus sur mon évolution ou mes
 								objectifs, je vous raconte tout sur la page{' '}
-								<Link href={'/career'} className={styles.hightlight}>
-									<b>Parcours</b>
-									<FiArrowUpRight className={styles.arrow_icon} />
+								<Link href={'/career'} className={styles.link}>
+									Parcours
+									<BsFillArrowDownCircleFill className={styles.icon} />
 								</Link>
 							</p>
 
