@@ -1,7 +1,7 @@
 'use client'
 
 import Link from "next/link"
-import { FiArrowUpRight } from "react-icons/fi";
+// import { FiArrowUpRight } from "react-icons/fi";
 import styles from './index.module.css'
 
 export default function Button({ link, externLink, text, onClick, page, ariaLabel }) {
@@ -20,21 +20,22 @@ export default function Button({ link, externLink, text, onClick, page, ariaLabe
             </a>     
         )
     // BUTTON ICON
-    } else if(!text) {
-        if(link) {
-            return (
-                <Link href={link} className={styles.arrow_btn} aria-label='Aller sur la page Parcours'>
-                    <FiArrowUpRight className={styles.icon} />
-                </Link>
-            )
-        }
-        if(externLink) {
-            return (
-                <a href={externLink} className={styles.arrow_btn} aria-label={ariaLabel} target='_blank'>
-                    <FiArrowUpRight className={styles.icon}/>
-                </a>
-            )
-        }
+    } 
+    else if(!text) {
+        // if(link) {
+        //     return (
+        //         <Link href={link} className={styles.arrow_btn} aria-label='Aller sur la page Parcours'>
+        //             <FiArrowUpRight className={styles.icon} />
+        //         </Link>
+        //     )
+        // }
+        // if(externLink) {
+        //     return (
+        //         <a href={externLink} className={styles.arrow_btn} aria-label={ariaLabel} target='_blank'>
+        //             <FiArrowUpRight className={styles.icon}/>
+        //         </a>
+        //     )
+        // }
 
     // SUBMIT BUTTON
     } else {

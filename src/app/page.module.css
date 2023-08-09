@@ -25,9 +25,6 @@
 }
 
 .h1 {
-	font-size: 2rem;
-	font-weight: 400;
-	line-height: inherit;
 	font-size: clamp(2.1rem, 1.9359rem + 0.8205vw, 2.5rem);
 	font-weight: 900;
 	text-transform: uppercase;
@@ -54,26 +51,45 @@
 	margin: 50px 0 70px 0;
 	color: white;
 }
-.hightlight {
+
+.hightlight,
+.link,
+.download {
 	font-weight: 300;
 }
-
+.link {
+	display: inline-flex;
+	align-items: center;
+}
 .download {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-weight: 300;
 	font-size: 1.4rem;
 	margin-top: 35px;
 }
-.icon {
+
+.link .icon,
+.download .icon {
+	transition: 500ms ease;
+}
+.download .icon {
 	width: 1.4rem;
 	height: 1.4rem;
 	margin-left: 13px;
-	fill: var(--bright-color);
 }
-.download:hover {
-	color: var(--bright-color);
+.link .icon {
+	transform: rotate(-135deg);
+	width: 1rem;
+	height: 1rem;
+	margin-left: 8px;
+}
+.link:hover > .icon {
+	transform: rotate(225deg);
+}
+.download:hover > .icon {
+	transform: rotate(360deg);
+	fill: var(--bright-color);
 }
 
 .skills_container {
@@ -161,8 +177,5 @@
 	}
 	.presentation p {
 		margin: 10px 0;
-	}
-	.arrow_btn {
-		margin-bottom: -5px;
 	}
 }
