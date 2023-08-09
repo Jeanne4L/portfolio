@@ -1,3 +1,12 @@
+@keyframes rotate {
+	0% {
+		transform: rotateX(0deg) rotateY(80deg) rotateZ(0deg);
+	}
+	100% {
+		transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+	}
+}
+
 .container {
 	display: inline-flex;
 	flex-flow: column;
@@ -14,10 +23,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	transform: rotateX(0deg) rotateY(74deg) rotateZ(0deg);
 }
 .text {
 	color: var(--bright-color);
 	margin: 0;
+}
+
+.anim {
+	animation: rotate 500ms forwards;
 }
 
 @media (min-width: 600px) {
