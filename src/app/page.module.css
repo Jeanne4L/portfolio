@@ -58,6 +58,10 @@
 	font-weight: 300;
 }
 
+.arrow_icon {
+	transform: rotate(360deg);
+}
+
 .download {
 	display: flex;
 	justify-content: center;

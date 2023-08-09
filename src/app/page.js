@@ -3,7 +3,9 @@ import Card from '@/components/Card';
 import SkillTag from '@/components/SkillTag';
 import GradientTtitle from '@/components/GradientTitle';
 import Footer from '@/components/Footer';
+import Link from 'next/link';
 import projects from '@/data/projects';
+import { FiArrowUpRight } from 'react-icons/fi';
 import { BsFillArrowDownCircleFill } from 'react-icons/bs';
 import {
 	FaHtml5,
@@ -37,10 +39,6 @@ export let metadata = {
 		locale: 'fr_FR',
 		type: 'website',
 	},
-	themeColor: [
-		{ media: '(prefers-color-scheme: light)', color: 'white' },
-		{ media: '(prefers-color-scheme: dark)', color: '#074b61' },
-	],
 	robots: {
 		index: true,
 		follow: true,
@@ -77,8 +75,10 @@ export default function Home() {
 							<p className={`${styles.anim} ${styles.anim6}`}>
 								Si vous voulez en savoir plus sur mon évolution ou mes
 								objectifs, je vous raconte tout sur la page{' '}
-								<span className={styles.hightlight}>Parcours</span>
-								<Button link={'/career'} />
+								<Link href={'/career'} className={styles.hightlight}>
+									<b>Parcours</b>
+									<FiArrowUpRight className={styles.arrow_icon} />
+								</Link>
 							</p>
 
 							<p className={`${styles.anim} ${styles.anim7}`}>
