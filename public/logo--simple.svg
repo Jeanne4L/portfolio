@@ -9,7 +9,7 @@
    id="svg5"
    xml:space="preserve"
    inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
-   sodipodi:docname="charte-graphique.svg"
+   sodipodi:docname="logo--simple.svg"
    inkscape:export-filename="..\..\..\..\dev\cours\openclassrooms\projets\developpeur_web\session_8-portfolio\logo1.png"
    inkscape:export-xdpi="96"
    inkscape:export-ydpi="96"
@@ -28,8 +28,8 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="8.5971032"
-     inkscape:cx="-4.2456161"
-     inkscape:cy="17.622215"
+     inkscape:cx="-4.3619344"
+     inkscape:cy="17.738533"
      inkscape:window-width="1920"
      inkscape:window-height="1051"
      inkscape:window-x="-9"
@@ -50,13 +50,7 @@
        lpeversion="0"
        join="true"
        close="true"
-       autoreverse="true" /></defs><ellipse
-     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+       autoreverse="true" /></defs><path
      id="ellipse345"
-     cx="5.2025499"
-     cy="5.294878"
-     rx="4.8947911"
-     ry="4.8947916" /><path
-     id="path347"
-     style="fill:#042b38;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
-     d="m 5.2139034,0.9783336 c 0,0 -1.3466334,2.3439313 -1.3502316,2.350508 l 4.9008717,3.8290216 z m -2.3960551,1.8285065 0.00462,2.310957 6.1744486,2.3936612 z M 8.374101,3.7795275 7.422091,4.4627454 c 0,0 1.6206369,2.8655351 1.6235229,2.8701176 z M 1.3486247,4.8145442 1.3480419,7.7086331 9.1070894,7.7080522 Z" /></svg>
+     style="fill:#ffffff;fill-opacity:1;fill-rule:evenodd;stroke:none;stroke-width:0.2;stroke-linecap:round;stroke-miterlimit:0;stroke-dasharray:none;stroke-opacity:1;paint-order:fill markers stroke"
+     d="M 5.2027832 0.39997559 A 4.8947911 4.8947916 0 0 0 0.30799154 5.2947673 A 4.8947911 4.8947916 0 0 0 5.2027832 10.189559 A 4.8947911 4.8947916 0 0 0 10.097575 5.2947673 A 4.8947911 4.8947916 0 0 0 5.2027832 0.39997559 z M 5.214152 0.97823486 L 8.7643229 7.1577026 L 3.8638468 3.3289958 C 3.867445 3.3224191 5.214152 0.97823486 5.214152 0.97823486 z M 2.8179159 2.8070638 L 8.9968669 7.5116862 L 2.8225667 5.1180339 L 2.8179159 2.8070638 z M 8.3741659 3.7796143 L 9.0454427 7.3328857 C 9.0425567 7.3283032 7.422286 4.4627767 7.422286 4.4627767 L 8.3741659 3.7796143 z M 1.3487549 4.8146932 L 9.1069377 7.7080566 L 1.3482381 7.7085734 L 1.3487549 4.8146932 z " /></svg>
