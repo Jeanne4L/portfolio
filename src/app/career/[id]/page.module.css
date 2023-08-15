@@ -13,13 +13,13 @@
 	color: var(--bright-color);
 }
 .hightlight,
-.download,
-.link {
+.download {
 	font-weight: 300;
 }
 .link {
 	display: inline-flex;
 	align-items: center;
+	font-weight: 400;
 }
 .link .icon,
 .download .icon {
@@ -38,10 +38,6 @@
 }
 .link:hover > .icon {
 	transform: rotate(225deg);
-}
-.download:hover > .icon {
-	transform: rotate(360deg);
-	fill: var(--bright-color);
 }
 
 .tags,
@@ -64,10 +60,6 @@
 .icon {
 	margin-left: 15px;
 	fill: white;
-	transition: 500ms ease;
-}
-.download:hover {
-	color: var(--bright-color);
 }
 .download:hover > .icon {
 	fill: var(--bright-color);
