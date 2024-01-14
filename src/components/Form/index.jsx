@@ -32,15 +32,14 @@ export default function Form() {
 
             try {
                 const req = await sendEmail(value.name, value.email, value.message)
-
+                // RESET FORM
+                setValue({
+                    name: '',
+                    email: '',
+                    message: ''
+                });
                 if(req.status === 200) {
                     setSubmit({success:true, message:'Message envoyé, je vous réponds au plus vite !'});
-                    // RESET FORM
-                    setValue({
-                        name: '',
-                        email: '',
-                        message: ''
-                    });
                 } else {
                     setSubmit({success:false, message:`Message non envoyé, vous pouvez me contacter à ${process.env.NEXT_PUBLIC_EMAIL}!`});
                 }
