@@ -2,7 +2,7 @@
 	{
 		"id": "Ohmyfood",
 		"title": "Ohmyfood",
-		"date": 2022,
+		"date": 2023,
 		"summary": "Intégration et animation d’une page web",
 		"description": [
 			"En suivant les maquettes fournies, j'ai intégré la page d'accueil ainsi que les pages menu du site Ohmyfood. En utilisant le préprocesseur Sass, j'ai ensuite ajouté des animations CSS.",
@@ -14,8 +14,8 @@
 			"/images/ohmyfood/ohmyfood_2.png",
 			"/images/ohmyfood/ohmyfood_3.png"
 		],
-		"website": "https://jeanne4l.github.io/oc-oh-my-food/",
-		"repository": "https://github.com/Jeanne4L/oc-oh-my-food"
+		"website": "https://jeanne4l.github.io/oc-ohmyfood/",
+		"repository": "https://github.com/Jeanne4L/oc-ohmyfood"
 	},
 	{
 		"id": "Booki",

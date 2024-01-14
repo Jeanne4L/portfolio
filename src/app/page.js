@@ -62,13 +62,13 @@ export default function Home() {
 
 					<div className={styles.presentation}>
 						<p className={`${styles.anim} ${styles.anim4}`}>
-							Anciennement dans le commerce, j’ai commencé le code par curiosité
-							et j’ai adoré.
+							Anciennement dans le commerce, j&apos;ai commencé le code par curiosité
+							et j&apos;ai adoré.
 						</p>
 						<p className={`${styles.anim} ${styles.anim5}`}>
-							Maintenant, je veux me spécialiser en front end et apprendre{' '}
-							<span className={styles.hightlight}>Vue.js</span> ou{' '}
-							<span className={styles.hightlight}>Angular</span>.
+							Aujourd&apos;hui, j&apos;apprends React et le green code chez {' '}
+                            <span className={styles.hightlight}>Yetic</span>. Mais je ne compte pas m&apos;arrêter là et j&apos;ai commencé à me apprendre les concepts de {' '}
+							<span className={styles.hightlight}>Python</span>.
 						</p>
 						<div>
 							<p className={`${styles.anim} ${styles.anim6}`}>
