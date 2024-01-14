@@ -2,7 +2,7 @@
 
 import styles from './index.module.css'
 import Button from '../Button'
-import { useState, useRef } from 'react'
+import { useState } from 'react'
 import sendEmail from '@/lib/sendEmail';
 
 export default function Form() {
@@ -19,13 +19,10 @@ export default function Form() {
         email: '',
         message: ''
     });
-    const formRef = useRef(null);
 
     // SUBMIT THE FORM
     async function handleSubmit(e) {
         e.preventDefault();
-
-        formRef.current.reset();
 
         // CHECK IF FIELD VALUE IS EMPTY
         if(value.name === '' || value.email === '' || value.message === '' || invalidText || invalidEmail){
@@ -82,7 +79,7 @@ export default function Form() {
     }
 
     return(
-        <form className={styles.form} ref={formRef} onSubmit={handleSubmit}>
+        <form className={styles.form} onSubmit={handleSubmit}>
             {incompleteForm ? 
                 <p className={`${styles.error} ${styles.general}`}
                     role='alert' aria-live='assertive'
