@@ -104,6 +104,9 @@
 		margin-bottom: 0;
 		opacity: 0.5;
 	}
+    .display_container {
+        opacity: 1;
+    }
 	.img_tall {
 		height: 700px;
 	}
