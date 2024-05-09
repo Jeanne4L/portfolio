@@ -56,7 +56,7 @@ export default function Menu() {
                         </Link>
                     </ul>
                     {menu &&
-                        <Button link={'/contact'} text={'Me contacter'} onClick={() => dispatch(menuActions.toggle())} />
+                        <Button link={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`} text={'Me contacter'} onClick={() => dispatch(menuActions.toggle())} />
                     }
                     </nav>
                 <nav className={styles.social}>

@@ -3,7 +3,7 @@
 import Link from "next/link"
 import styles from './index.module.css'
 
-export default function Button({ link, externLink, text, onClick, page }) {
+export default function Button({ link, externLink, text, onClick }) {
     // BUTTON WITH LINK INSIDE THE SITE
     if(link && text) {
         return(
@@ -18,13 +18,5 @@ export default function Button({ link, externLink, text, onClick, page }) {
                 {text}
             </a>     
         )
-    // SUBMIT BUTTON
-    } else {
-        return(
-            <div className={`${styles.btn} ${page === 'contact' ? styles.large_btn : ''}`} 
-                onClick={onClick} role='button' tabIndex={0}>
-                {text}
-            </div>
-        )
-    }
+    } 
 }
