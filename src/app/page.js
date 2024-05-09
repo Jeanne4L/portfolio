@@ -1,11 +1,11 @@
-import Button from '@/components/Button';
-import Card from '@/components/Card';
-import SkillTag from '@/components/SkillTag';
-import GradientTtitle from '@/components/GradientTitle';
-import Footer from '@/components/Footer';
-import Link from 'next/link';
-import projects from '@/data/projects';
-import { BsFillArrowDownCircleFill } from 'react-icons/bs';
+import Button from '@/components/Button'
+import Card from '@/components/Card'
+import SkillTag from '@/components/SkillTag'
+import GradientTtitle from '@/components/GradientTitle'
+import Footer from '@/components/Footer'
+import Link from 'next/link'
+import projects from '@/data/projects'
+import { BsFillArrowDownCircleFill } from 'react-icons/bs'
 import {
 	FaHtml5,
 	FaCss3Alt,
@@ -13,26 +13,26 @@ import {
 	FaSass,
 	FaReact,
 	FaNodeJs,
-} from 'react-icons/fa';
-import { SiNextdotjs, SiExpress } from 'react-icons/si';
-import styles from './page.module.css';
+} from 'react-icons/fa'
+import { SiNextdotjs, SiExpress } from 'react-icons/si'
+import styles from './page.module.css'
 
 // METADATA
 export let metadata = {
 	title: 'Sandra Petereau | Développeuse web',
 	description:
-		"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
+		"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Python 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
 	twitter: {
 		card: 'summary_large_image',
 		title: 'Sandra Petereau | Développeuse web',
 		description:
-			"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
+			"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Python 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
 		images: ['/profile.jpg'],
 	},
 	openGraph: {
 		title: 'Sandra Petereau | Développeuse web',
 		description:
-			"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Java ou Kotlin 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
+			"Développeuse web junior depuis peu, ma soif d'apprendre m'incite à explorer React, Next.js 💻 ou encore Python 📱. Si vous recherchez une alternante curieuse et motivée, contactez-moi!",
 		url: process.env.NEXT_PUBLIC_URL,
 		images: [{ url: '/profile.jpg' }],
 		locale: 'fr_FR',
@@ -43,7 +43,7 @@ export let metadata = {
 		follow: true,
 		nocache: false,
 	},
-};
+}
 
 export default function Home() {
 	return (
@@ -51,24 +51,25 @@ export default function Home() {
 			<div className='container'>
 				<div className={styles.introduction}>
 					<p className={`${styles.hi_p} ${styles.anim} ${styles.anim1}`}>
-						Bonjour, je suis
+						Salut, je suis
 					</p>
 					<p className={`${styles.name_p} ${styles.anim} ${styles.anim2}`}>
 						Sandra Petereau
 					</p>
 					<h1 className={`${styles.h1} ${styles.anim} ${styles.anim3}`}>
-						Développeuse web junior
+						Développeuse front junior
 					</h1>
 
 					<div className={styles.presentation}>
 						<p className={`${styles.anim} ${styles.anim4}`}>
-							Anciennement dans le commerce, j&apos;ai commencé le code par curiosité
-							et j&apos;ai adoré.
+							Anciennement dans le commerce, j&apos;ai commencé le code par
+							curiosité et j&apos;ai adoré.
 						</p>
 						<p className={`${styles.anim} ${styles.anim5}`}>
-							Aujourd&apos;hui, j&apos;apprends React et le green code chez {' '}
-                            <span className={styles.hightlight}>Yetic</span>. Mais je ne compte pas m&apos;arrêter là et j&apos;ai commencé à me apprendre les concepts de {' '}
-							<span className={styles.hightlight}>Python</span>.
+							Aujourd&apos;hui, j&apos;apprends React et le green code chez{' '}
+							<span className={styles.hightlight}>Yetic</span>. Mais je ne
+							compte pas m&apos;arrêter là et j&apos;ai commencé à me apprendre
+							les concepts de <span className={styles.hightlight}>Python</span>.
 						</p>
 						<div>
 							<p className={`${styles.anim} ${styles.anim6}`}>
@@ -86,7 +87,10 @@ export default function Home() {
 						</div>
 					</div>
 					<div className={`${styles.anim} ${styles.anim8} ${styles.buttons}`}>
-						<Button link={'/contact'} text={'Envoyer un message'} />
+						<Button
+							link={`mailto:${process.env.NEXT_PUBLIC_EMAIL}`}
+							text={'Envoyer un message'}
+						/>
 						<a
 							href='/CV_Petereau_Sandra.pdf'
 							download
@@ -147,5 +151,5 @@ export default function Home() {
 				<Footer />
 			</div>
 		</>
-	);
+	)
 }

@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
-Disallow: /contact/
+Disallow:
 Sitemap: https://spetereau-dev.com/sitemap.xml

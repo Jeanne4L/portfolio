@@ -1,6 +1,6 @@
 # Sandra Petereau's portfolio
 
-Welcome to my portfolio! I'm Sandra Petereau, a passionate web developer. Here are my school projects and soon there will be my professional and personal projects.
+Hi! Welcome to my portfolio! I'm Sandra Petereau, a front-end developer. Here are my school projects and soon there will be my professional and personal projects.
 
 ## Preview
 
@@ -23,8 +23,6 @@ pnpm run dev
 Change the .env.dist file to .env and add:
 
 - your email
-- your gmail email for the contact form
-- your gmail email password
 - the website url
 
 ## Projects tech
@@ -73,4 +71,4 @@ Repo: https://github.com/Jeanne4L/oc-mon-vieux-grimoire
 
 ## Contact
 
-If you are looking for a work-study React developer (or other language, I love to learn), contact me with: sandra.petereau@outlook.fr or on LinkedIn : https://www.linkedin.com/in/sandra-petereau/
+You can contact me at the following address: sandra.petereau@outlook.fr or on LinkedIn : https://www.linkedin.com/in/sandra-petereau/
