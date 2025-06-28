@@ -1,5 +1,8 @@
+import { useEffect, useState } from "react"
+
 import ContactIcons from "../../../components/ContactIcons"
 import MosaicOverlay from "../../../components/MosaicOverlay"
+import ScrollIndicator from "../../../components/ScrollIndicator"
 import H1 from "../../../components/text/H1"
 import H2 from "../../../components/text/H2"
 import P from "../../../components/text/P"
@@ -9,6 +12,24 @@ import { contactStyle, Content, h1SpanStyle, HeroContainer, ImgContainer, Profil
 const profileImg = '../../../../public/assets/images/profile.jpg'
 
 const Hero = () => {
+  const [isIndicatorVisible, setIsIndicatorVisible] = useState<boolean>(true)
+
+  useEffect(() => {
+    const toggleVisibility = () => {
+      if (window.scrollY < 1) {
+        setIsIndicatorVisible(true)
+      } else {
+        setIsIndicatorVisible(false)
+      }
+    }
+
+    window.addEventListener("scroll", toggleVisibility)
+
+    return () => {
+      window.removeEventListener("scroll", toggleVisibility)
+    }
+  }, [])
+  
   return (
     <HeroContainer>
       <Title>
@@ -31,6 +52,8 @@ const Hero = () => {
 
         <ContactIcons style={contactStyle} />
       </Content>
+
+      {isIndicatorVisible && <ScrollIndicator />}
     </HeroContainer>
   )
 }
