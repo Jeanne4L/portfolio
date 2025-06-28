@@ -10,6 +10,7 @@ import { Colors } from "../../../../constants/colors"
 export const HeroContainer = newStyled.div`
   display: grid;
   grid-template-columns: 1fr auto;
+  position: relative;
 
   @media(min-width: ${Breakpoints.MOBILE}) {
     grid-template-columns: 1fr 1fr;
