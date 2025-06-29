@@ -9,7 +9,7 @@ export const routes = [
   },
   {
     component: <ProjectPage />,
-    path: '/projects/:projectId',
+    path: '/:projectUri',
     id: 'project'
   }
 ]
