@@ -1,3 +1,4 @@
+import withPageStructure from "../../hoc/withPageStructure"
 import { projects } from "../../mocks/projects"
 import Hero from "./Hero"
 import ProjectsSection from "./ProjectsSection"
@@ -12,4 +13,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default withPageStructure(Home)
