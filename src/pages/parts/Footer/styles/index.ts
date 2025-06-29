@@ -63,7 +63,7 @@ export const List = newStyled.ul`
 
 export const DownloadLink = newStyled.a`
   display: flex;
-  gap: ${Margins.M1};
+  gap: ${Margins.M2};
   align-items: center;
   cursor: pointer;
 
