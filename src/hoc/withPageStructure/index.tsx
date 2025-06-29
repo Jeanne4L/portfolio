@@ -1,6 +1,7 @@
 import { type ComponentType } from 'react'
 
 import Header from '../../pages/parts/Header'
+import Footer from '../../pages/parts/Footer'
 import { Main } from './styles'
 
 const withPageStructure = (Component: ComponentType) => {
@@ -10,6 +11,7 @@ const withPageStructure = (Component: ComponentType) => {
         <Main>
           <Component {...props} />
         </Main>
+        <Footer />
       </>
     )
 }
