@@ -11,8 +11,9 @@ export const HeroContainer = newStyled.div`
   grid-template-columns: 1fr;
     
   @media(min-width: ${Breakpoints.LAPTOP}) {
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     min-height: 100vh;
+    align-items: stretch;
   }
 `
 
@@ -46,8 +47,8 @@ export const Content = newStyled.div`
   margin-top: 120px;
 
   @media(min-width: ${Breakpoints.LAPTOP}) {
-    grid-column: 1 / 2;
-    align-self: center;
+    width: 50vw;
+    justify-content: center;
     margin-top: 0;
   }
 `
@@ -79,11 +80,12 @@ export const ImgContainer = newStyled.div`
   }
 
   @media(min-width: ${Breakpoints.LAPTOP}) {
-    grid-column: 2 / 3;
-    height: 100vh;
+    width: 50vw;
+    justify-content: center;
+    flex: 1;
 
     img {
-      max-height: max-content;
+      max-height: 600px;
     }
   }
 `
