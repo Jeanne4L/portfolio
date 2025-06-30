@@ -56,8 +56,12 @@ const Hero = ({ project, imgUrl }: HeroProps) => {
         </Description>
 
         <ButtonsContainer>
-          {website && <Button label='Voir le site' variant='primary' link='website' />}
-          {repo && <Button label='Voir le code' variant={website ? 'secondary' : 'primary'} link='repo' />}
+          {website && (
+            <Button label='Voir le site' variant='primary' link={website} isExternLink />
+          )}
+          {repo && (
+            <Button label='Voir le code' variant={website ? 'secondary' : 'primary'} link={repo} isExternLink />
+          )}
         </ButtonsContainer>
       </Content>
 

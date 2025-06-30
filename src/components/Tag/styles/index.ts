@@ -2,7 +2,7 @@ import newStyled from "@emotion/styled"
 
 import { Paddings } from "../../../constants/paddings"
 import { Colors } from "../../../constants/colors"
-import { FontWeights } from "../../../constants/fonts"
+import { FontSizes, FontWeights } from "../../../constants/fonts"
 
 export const Container = newStyled.div<{bgColor: string}>`
   padding: 4px ${Paddings.P2};
@@ -12,4 +12,5 @@ export const Container = newStyled.div<{bgColor: string}>`
   text-transform: uppercase;
   color: ${Colors.WHITE};
   font-weight: ${FontWeights.MEDIUM};
+  font-size: ${FontSizes.SMALL_TEXT};
 `

@@ -18,7 +18,7 @@ export const projects: ProjectsType = [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
     ],
-    tags: ['React'],
+    tags: ['React', 'Vitest'],
     link: 'hrnet',
     repo: 'https://github.com/Jeanne4L/oc-hrnet'
   },
@@ -26,12 +26,12 @@ export const projects: ProjectsType = [
     id: 'optiqueDesFleurs',
     name: 'Optique des fleurs',
     tagline: 'Site vitrine pour un opticien',
-    desktopImg: ['/assets/images/optique-des-fleurs/desktop1.png'],
-    mobileImg: ['/assets/images/optique-des-fleurs/mobile1.png'],
+    desktopImg: ['/assets/images/optique-des-fleurs/desktop1.png', '/assets/images/optique-des-fleurs/desktop2.png'],
+    mobileImg: ['/assets/images/optique-des-fleurs/mobile1.png', '/assets/images/optique-des-fleurs/mobile2.png', '/assets/images/optique-des-fleurs/mobile3.png'],
     texts: [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
     ],
-    tags: ['Design'],
+    tags: ['Design', 'HTML/CSS'],
     link: 'optique-des-fleurs',
     website: 'optique-des-fleurs.fr',
   },
@@ -77,7 +77,7 @@ export const projects: ProjectsType = [
     texts: [
       'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.'
     ],
-    tags: ['React', 'Recharts'],
+    tags: ['React'],
     link: 'sportsee',
     repo: 'https://github.com/Jeanne4L/oc-sportsee-front'
   }
