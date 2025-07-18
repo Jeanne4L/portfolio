@@ -15,7 +15,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
     <Container>
       {projects.map((project) => (
         <ProjectCard 
-          bgImg={project.desktopImg[0]} 
+          bgImg={project.preview} 
           tags={project.tags} 
           name={project.name} 
           onClick={() => navigate(project.link)}

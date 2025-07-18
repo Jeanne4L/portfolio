@@ -1,5 +1,5 @@
 import withPageStructure from "../../hoc/withPageStructure"
-import { projects } from "../../mocks/projects"
+import { projects } from "../../data/projects"
 import Hero from "./Hero"
 import ProjectsSection from "./ProjectsSection"
 

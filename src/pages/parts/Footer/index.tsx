@@ -5,7 +5,7 @@ import Logo from "../../../components/icons/Logo"
 import DownloadIcon from "../../../components/icons/Download"
 import Span from "../../../components/text/Span"
 import P from "../../../components/text/P"
-import { projects } from "../../../mocks/projects"
+import { projects } from "../../../data/projects"
 import MaxWidthSection from "../MaxWidthSection"
 import { Container, copyrightStyle, DownloadLink, List, Nav, NavItem, spanStyle } from "./styles"
 
@@ -23,7 +23,7 @@ const Footer = () => {
             <Span style={spanStyle}>Mes projets</Span>
             <List>
               {projects.map((project) => (
-                <li onClick={() => navigate(project.link)} key={project.id}>
+                <li onClick={() => navigate(`/${project.link}`)} key={project.id}>
                   {project.name}
                 </li>
               ))}

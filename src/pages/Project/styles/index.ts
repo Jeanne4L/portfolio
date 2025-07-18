@@ -4,11 +4,12 @@ import { Breakpoints } from "../../../constants/breakpoints"
 import { Colors } from "../../../constants/colors"
 
 export const ProjectImages = newStyled.div`
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
 
   @media(min-width: ${Breakpoints.TABLET}) {
-    grid-template-columns: 1fr 1fr;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 `
 
@@ -22,8 +23,8 @@ export const ImgContainer = newStyled.div<{isDesktop: boolean, isBlackBg: boolea
   
   img {
     display: block;
-    width: ${props => props.isDesktop ? '70%' : 'auto'};
-    height:  ${props => props.isDesktop ? 'auto' : '70%'};
+    width: ${props => props.isDesktop ? '90%' : 'auto'};
+    height:  ${props => props.isDesktop ? 'auto' : '90%'};
     max-height: max-content;
     max-width: max-content;
     border-radius: 16px;
@@ -31,6 +32,13 @@ export const ImgContainer = newStyled.div<{isDesktop: boolean, isBlackBg: boolea
   }
 
   @media(min-width: ${Breakpoints.TABLET}) {
-    width: 50vw;
+    width: 50%;
+  }
+
+  @media(min-width: ${Breakpoints.LAPTOP}) {
+    img {
+      width: ${props => props.isDesktop ? '70%' : 'auto'};
+      height:  ${props => props.isDesktop ? 'auto' : '70%'};
+    }
   }
 `

@@ -1,10 +1,13 @@
+import type { ReactNode } from "react"
+
 export type ProjectType = {
   id: string
   name: string
   tagline: string
+  preview: string
   desktopImg: string[]
   mobileImg: string[]
-  texts: string[]
+  texts: ReactNode
   link: string 
   tags: string[]
   website?: string

@@ -44,13 +44,7 @@ export const NavItem = newStyled.div`
 `
 
 export const List = newStyled.ul`
-  display: flex;
-  flex-direction: column;
-  gap${Margins.M1};
-  padding-left: 0;
-
   li {
-    list-style-type: none;
     cursor: pointer;
   }
 
