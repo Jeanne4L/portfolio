@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router"
 
-import { projects } from "../../mocks/projects"
+import { projects } from "../../data/projects"
 import { mergeAlternating } from "../../helpers/mergeAlternating"
 import { useMediaQuery } from "../../hooks/useMediaQuery"
 import type { ProjectType } from "../../types/projects"

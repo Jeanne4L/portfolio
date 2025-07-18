@@ -21,7 +21,6 @@ export const Title = newStyled.div`
   display: flex;
   flex-direction: column;
   gap: ${Margins.M1};
-  margin-bottom: ${Margins.M4};
 
   h1 {
     line-height: 0.9;
@@ -36,6 +35,7 @@ export const TagsContainer = newStyled.div`
   display: flex;
   align-items: center;
   gap: ${Margins.M1};
+  margin-bottom: ${Margins.M3};
 `
 
 export const Content = newStyled.div`
@@ -47,7 +47,7 @@ export const Content = newStyled.div`
   margin-top: 120px;
 
   @media(min-width: ${Breakpoints.LAPTOP}) {
-    width: 50vw;
+    width: 50%;
     justify-content: center;
     margin-top: 0;
   }
@@ -62,6 +62,7 @@ export const Description = newStyled.div`
 export const ButtonsContainer = newStyled.div`
   display: flex;
   gap: ${Margins.M2};
+  margin-top: ${Margins.M3};
 `
 
 export const ImgContainer = newStyled.div`

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react"
 
 import ScrollIndicator from "../../../components/ScrollIndicator"
 import H1 from "../../../components/text/H1"
-import P from "../../../components/text/P"
 import Span from "../../../components/text/Span"
 import Tag from "../../../components/Tag"
 import Button from "../../../components/Button"
@@ -50,9 +49,7 @@ const Hero = ({ project, imgUrl }: HeroProps) => {
         </TagsContainer>
         
         <Description>
-          {texts.map((text, index) => (
-            <P key={`text-${index}`}>{text}</P>
-          ))}
+          {texts}
         </Description>
 
         <ButtonsContainer>
