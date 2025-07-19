@@ -38,7 +38,8 @@ export const h1SpanStyle: CSSProperties = {
   fontSize: 'clamp(1.5rem, 0.875rem + 3.125vw, 4rem)',
   display: 'inline-block',
   textTransform: 'uppercase',
-  fontFamily: FontFamily.H1
+  fontFamily: FontFamily.H1,
+  lineHeight: 'normal'
 }
 
 export const Content = newStyled.div`
