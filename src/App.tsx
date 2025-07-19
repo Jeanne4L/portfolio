@@ -1,14 +1,14 @@
 import { BrowserRouter, Route, Routes } from "react-router"
 
 import { routes } from "./routes"
-import ScrollToAnchor from "./components/ScrollToAnchor"
+import ScrollHandler from "./components/ScrollHandler"
 
 const App = () => {
 
 
   return (
     <BrowserRouter>
-      <ScrollToAnchor />
+      <ScrollHandler />
       
       <Routes>
         {routes.map((route) => (
