@@ -5,7 +5,7 @@ import { Margins } from "../../../constants/margins"
 import { Paddings } from "../../../constants/paddings"
 import { FontWeights } from "../../../constants/fonts"
 
-export const Container = newStyled.div`
+export const Container = newStyled.a`
   width: 36px;
   height: 36px;
   border-radius: 4px;

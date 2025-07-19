@@ -1,5 +1,4 @@
 import type { JSX } from "react"
-import { useNavigate } from "react-router"
 
 import { Container } from "./styles"
 
@@ -10,10 +9,8 @@ type SocialLinkProps = {
 }
 
 const SocialLink = ({ icon, link, label }: SocialLinkProps) => {
-  const navigate = useNavigate()
-
   return (
-    <Container onClick={() => navigate(link)}>
+    <Container href={link}>
       {icon}
       <span>{label}</span>
     </Container>
