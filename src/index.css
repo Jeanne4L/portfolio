@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Imbue:opsz,wght@10..100,100..900&family=Jost:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  font-family: "Jost", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul {
+  padding-left: 16px;
+}
+
+li {
+  list-style: square;
+  margin-bottom: 8px;
+}
+
+p, span {
+  line-height: 1.7;
+}
