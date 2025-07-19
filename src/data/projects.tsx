@@ -40,7 +40,7 @@ export const projects: ProjectsType = [
     ),
     tags: ['React', 'Vitest', 'Design'],
     link: 'hrnet',
-    website: 'https://jeanne4l.github.io/oc-hrnet/',
+    // website: 'https://jeanne4l.github.io/oc-hrnet/',
     repo: 'https://github.com/Jeanne4L/oc-hrnet'
   },
   // {

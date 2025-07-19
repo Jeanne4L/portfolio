@@ -38,7 +38,7 @@ const ProjectPage = () => {
     <>
       <Hero project={project} imgUrl={images[0]} />
 
-      <ProjectImages>
+      <ProjectImages id="gallery">
         {images.slice(1).map((image, index) => (
           <ImgContainer 
             isDesktop={index % 2 === 0} 
