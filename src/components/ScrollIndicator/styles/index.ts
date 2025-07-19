@@ -29,6 +29,7 @@ export const Container = newStyled.div`
     bottom: 24px;
     left: 50%;
     transform: translateX(-50%);
+    cursor: pointer;
   }
 `
 

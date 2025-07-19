@@ -1,9 +1,13 @@
 import Chevron from "../icons/Chevron"
 import { AnimatedContent, Container } from "./styles"
 
-const ScrollIndicator = () => {
+type ScrollIndicatorProps = {
+  onClick: () => void
+}
+
+const ScrollIndicator = ({ onClick }: ScrollIndicatorProps) => {
   return (
-    <Container>
+    <Container onClick={onClick}>
       <AnimatedContent>
         <Chevron />
       </AnimatedContent>

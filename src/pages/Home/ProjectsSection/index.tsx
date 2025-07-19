@@ -12,7 +12,7 @@ const ProjectsSection = ({ projects }: ProjectsSectionProps) => {
   const navigate = useNavigate()
 
   return (
-    <Container>
+    <Container id="projects">
       {projects.map((project) => (
         <ProjectCard 
           bgImg={project.preview} 

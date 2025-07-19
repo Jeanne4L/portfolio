@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router"
 
 import ScrollIndicator from "../../../components/ScrollIndicator"
 import H1 from "../../../components/text/H1"
@@ -15,6 +16,8 @@ type HeroProps = {
 
 const Hero = ({ project, imgUrl }: HeroProps) => {
   const [isIndicatorVisible, setIsIndicatorVisible] = useState<boolean>(true)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -67,7 +70,7 @@ const Hero = ({ project, imgUrl }: HeroProps) => {
       </ImgContainer>
       
 
-      {isIndicatorVisible && <ScrollIndicator />}
+      {isIndicatorVisible && <ScrollIndicator onClick={() => navigate('#gallery')} />}
     </HeroContainer>
   )
 }

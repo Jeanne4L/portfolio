@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react"
+import { useNavigate } from "react-router"
 
 import ContactIcons from "../../../components/ContactIcons"
 import MosaicOverlay from "../../../components/MosaicOverlay"
@@ -13,6 +14,8 @@ const profileImg = '../../../../public/assets/images/profile.jpg'
 
 const Hero = () => {
   const [isIndicatorVisible, setIsIndicatorVisible] = useState<boolean>(true)
+
+  const navigate = useNavigate()
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -45,15 +48,16 @@ const Hero = () => {
       <Content>
         <H2>Développeuse <Span colored bold>React</Span> junior</H2>
         <P>
-          Deux ans d'alternance en développement React m'ont appris à concevoir des expériences qui combinent esthétisme et performance.
-          <br />
-          Concrétisons votre vision, pixel après pixel.
+          Pixels alignés, états maîtrisés, structure pensée.
+        </P>
+        <P>
+          Le front-end, c'est l'articulation de l'intuition visuelle et de la rigueur logique.
         </P>
 
         <ContactIcons style={contactStyle} />
       </Content>
 
-      {isIndicatorVisible && <ScrollIndicator />}
+      {isIndicatorVisible && <ScrollIndicator onClick={() => navigate('#projects')} />}
     </HeroContainer>
   )
 }
