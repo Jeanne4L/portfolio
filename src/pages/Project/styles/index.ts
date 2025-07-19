@@ -25,8 +25,7 @@ export const ImgContainer = newStyled.div<{isDesktop: boolean, isBlackBg: boolea
     display: block;
     width: ${props => props.isDesktop ? '90%' : 'auto'};
     height:  ${props => props.isDesktop ? 'auto' : '90%'};
-    max-height: max-content;
-    max-width: max-content;
+    max-height: 450px;
     border-radius: 16px;
     border: solid 1px ${props => props.isBlackBg ? Colors.WHITE : Colors.BLACK};
   }
@@ -39,6 +38,8 @@ export const ImgContainer = newStyled.div<{isDesktop: boolean, isBlackBg: boolea
     img {
       width: ${props => props.isDesktop ? '70%' : 'auto'};
       height:  ${props => props.isDesktop ? 'auto' : '70%'};
+      max-width: max-content;
+      max-height: max-content;
     }
   }
 `

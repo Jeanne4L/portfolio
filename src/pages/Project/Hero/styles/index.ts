@@ -33,6 +33,7 @@ export const Title = newStyled.div`
 
 export const TagsContainer = newStyled.div`
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: ${Margins.M1};
   margin-bottom: ${Margins.M3};
@@ -61,6 +62,7 @@ export const Description = newStyled.div`
 
 export const ButtonsContainer = newStyled.div`
   display: flex;
+  flex-wrap: wrap;
   gap: ${Margins.M2};
   margin-top: ${Margins.M3};
 `
