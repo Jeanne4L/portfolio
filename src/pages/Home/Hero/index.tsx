@@ -10,7 +10,7 @@ import P from "../../../components/text/P"
 import Span from "../../../components/text/Span"
 import { contactStyle, Content, h1SpanStyle, HeroContainer, ImgContainer, ProfileImg, rotatedH1Style, Title } from "./styles"
 
-const profileImg = '../../../../public/assets/images/profile.jpg'
+const profileImg = '/assets/images/profile.jpg'
 
 const Hero = () => {
   const [isIndicatorVisible, setIsIndicatorVisible] = useState<boolean>(true)
