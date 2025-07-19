@@ -12,7 +12,7 @@ const ContactIcons = ({ style }: ContactIconsProps) => {
   return (
     <Container style={style}>
       {contactLinks.map((social) => (
-        <SocialLink icon={social.icon} link={social.link} label={social.name} key={social.name} />
+        <SocialLink icon={social.icon} link={social.link} label={social.name} key={social.name} />
       ))}
     </Container>
   )
