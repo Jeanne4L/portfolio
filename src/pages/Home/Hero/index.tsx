@@ -48,10 +48,10 @@ const Hero = () => {
       <Content>
         <H2>Développeuse <Span colored bold>React</Span> junior</H2>
         <P>
-          Pixels alignés, états maîtrisés, structure pensée.
+          Je ne me contente pas de coder, j'apprends et j'évolue.
         </P>
         <P>
-          Le front-end, c'est l'articulation de l'intuition visuelle et de la rigueur logique.
+          Chaque projet est l'opportunité de m'adapter aux défis techniques pour créer des solutions esthétiques et performantes.
         </P>
 
         <ContactIcons style={contactStyle} />
